@@ -1,0 +1,190 @@
+# Module 3: Patch and Update Hygiene
+# is_end_of_life looks up data/reference/eol_table.csv (snapshot of endoflife.date).
+# in_kev looks up data/reference/kev_smb_snapshot.csv (snapshot of the CISA KEV catalog).
+module: patching
+version: "0.1.0"
+rules:
+  - id: PAT-001
+    module: patching
+    title: "Automatic updates are off"
+    evidence: both
+    trigger:
+      any_of:
+        - {kind: answer, q: pat_auto_updates, in: ["no", "dont_know"]}
+        - kind: rows
+          table: patch_inventory
+          where:
+            - {col: auto_update_enabled, op: eq, value: "N"}
+            - {col: device_type, op: in, value: [desktop, laptop, server, tablet, phone]}
+    severity: high
+    cis_safeguards: ["7.3", "7.4"]
+    nist_csf: [PR.PS-02]
+    attack: [T1190, T1204]
+    scenario: ransomware_primary_system
+    finding_plain: "Your computers do not update themselves. Criminals start using a new weakness within days of a fix being released."
+    finding_technical: "Automatic OS/application patching disabled or unknown. Enable Windows Update (or Intune/WUfB policy), macOS automatic updates, and app auto-update."
+    fixes:
+      - {action: "Turn on automatic updates on every computer (Windows: Settings > Windows Update; Mac: System Settings > Software Update).", cost_tier: free, effort: "10 minutes per computer", effort_minutes: 30, who: owner}
+    sources: [cis_ig1, cisa_cyber_essentials]
+
+  - id: PAT-002
+    module: patching
+    title: "Computer running an operating system with no more security fixes"
+    evidence: questionnaire
+    trigger: {kind: answer, q: pat_old_os, in: ["yes", "dont_know"]}
+    severity: high
+    cis_safeguards: ["2.2", "7.3"]
+    nist_csf: [ID.AM-02, PR.PS-02]
+    attack: [T1190]
+    scenario: ransomware_primary_system
+    finding_plain: "At least one computer runs a version of Windows or macOS that no longer gets security fixes. Every new weakness found from now on stays open forever."
+    finding_technical: "End-of-life OS reported (Windows 7/8/10 or macOS older than ~7 years). Windows 10 22H2 reached end of support 2025-10-14; ESU is a paid stop-gap. Upgrade or replace."
+    fixes:
+      - {action: "Check if the computer can upgrade to Windows 11 for free (Settings > Windows Update). If not, plan to replace it.", cost_tier: free, effort: "2 hours", effort_minutes: 120, who: owner_or_contractor}
+      - {action: "Replace computers that cannot be upgraded; refurbished business PCs often cost under $500.", cost_tier: moderate, effort: "1 day", effort_minutes: 480, who: owner_or_contractor}
+    sources: [ms_win10_eos, endoflife_date, cis_ig1]
+
+  - id: PAT-003
+    module: patching
+    title: "Register or booking software no longer supported"
+    evidence: questionnaire
+    trigger: {kind: answer, q: pat_pos_supported, in: ["no", "dont_know"]}
+    severity: high
+    cis_safeguards: ["2.2"]
+    nist_csf: [ID.AM-02]
+    attack: [T1190]
+    scenario: pos_tampering_or_outage
+    finding_plain: "The company that makes your register or booking software may no longer fix it. Unsupported card systems are a common target."
+    finding_technical: "Business-critical application vendor support unknown/ended. Confirm support status in writing; plan migration. For card acceptance, confirm the payment application/terminal is on the PCI SSC validated list."
+    fixes:
+      - {action: "Call the register or booking company and ask: 'Is my version still supported and getting security updates?' Write down the answer.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner}
+    sources: [cis_ig1, pci_ssc_small_merchant]
+
+  - id: PAT-004
+    module: patching
+    title: "Updates waiting for more than a month"
+    evidence: questionnaire
+    trigger: {kind: answer, q: pat_update_reminder_month, in: ["yes", "dont_know"]}
+    severity: medium
+    cis_safeguards: ["7.3"]
+    nist_csf: [PR.PS-02]
+    attack: [T1190]
+    scenario: ransomware_primary_system
+    finding_plain: "A computer has been asking to update for over a month. Until it restarts and installs, the fix does nothing."
+    finding_technical: "Pending updates > 30 days. Schedule restarts outside business hours (active hours) and confirm install."
+    fixes:
+      - {action: "Restart and install updates tonight after closing. Set 'active hours' so it never restarts during business.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner}
+    sources: [cis_ig1]
+
+  - id: PAT-005
+    module: patching
+    title: "Critical updates pending for over 30 days"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: patch_inventory
+      where:
+        - {col: pending_critical_updates, op: gt, value: 0}
+        - {col: last_patch_date, op: older_than_days, value: 30}
+    severity: high
+    cis_safeguards: ["7.3", "7.2"]
+    nist_csf: [PR.PS-02, ID.RA-01]
+    attack: [T1190]
+    scenario: ransomware_primary_system
+    finding_plain: "Some devices have important security updates waiting and have not updated in over a month."
+    finding_technical: "pending_critical_updates > 0 and last_patch_date > 30 days. Remediate within 30 days per a documented remediation process (7.2)."
+    fixes:
+      - {action: "Install the waiting updates on the listed devices this week and restart them.", cost_tier: free, effort: "1 hour", effort_minutes: 60, who: owner_or_contractor}
+    sources: [cis_ig1]
+
+  - id: PAT-006
+    module: patching
+    title: "Device operating system past end of life"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: patch_inventory
+      where:
+        - {col: os_version, op: is_end_of_life}
+    severity: critical
+    cis_safeguards: ["2.2", "7.3"]
+    nist_csf: [ID.AM-02, PR.PS-02]
+    attack: [T1190]
+    scenario: ransomware_primary_system
+    finding_plain: "Your device list shows at least one operating system that its maker has stopped fixing."
+    finding_technical: "os_name/os_version matched an entry in data/reference/eol_table.csv with eol <= assessment date (source: endoflife.date snapshot; date shown in evidence)."
+    fixes:
+      - {action: "Upgrade the device to a supported version, or replace it.", cost_tier: moderate, effort: "1 day", effort_minutes: 480, who: owner_or_contractor}
+    sources: [endoflife_date, ms_lifecycle, cis_ig1]
+
+  - id: PAT-007
+    module: patching
+    title: "Key software no longer supported by its maker"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: patch_inventory
+      where:
+        - {col: vendor_supported, op: in, value: ["N", "unknown"]}
+    severity: high
+    cis_safeguards: ["2.2"]
+    nist_csf: [ID.AM-02]
+    attack: [T1190]
+    scenario: pos_tampering_or_outage
+    finding_plain: "A program your business depends on is no longer supported, or nobody knows if it is."
+    finding_technical: "vendor_supported N/unknown for key software. Document an exception with mitigations or migrate (IG1 2.2)."
+    fixes:
+      - {action: "Ask the software company if your version is supported; plan an upgrade if not.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner}
+    sources: [cis_ig1]
+
+  - id: PAT-008
+    module: patching
+    title: "Software with weaknesses criminals are actively using"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: patch_inventory
+      where:
+        - {col: key_software_name, op: in_kev}
+    severity: high
+    cis_safeguards: ["7.2", "7.4"]
+    nist_csf: [ID.RA-01, ID.RA-08]
+    attack: [T1190]
+    scenario: ransomware_primary_system
+    finding_plain: "A program on your list has a weakness that U.S. government security staff have confirmed criminals are using right now."
+    finding_technical: "Vendor/product matched the CISA KEV snapshot. Check installed version against the KEV entry's required action and patch or mitigate. Advisory only: matching is by product name, not version. Match rule: the KEV product name (4+ characters, not equal to its vendor name, not a generic term such as Windows/Office/Multiple Devices) appears in key_software_name. Found in Week 1: KEV lists a product literally named 'Microsoft', which would flag every Microsoft program."
+    fixes:
+      - {action: "Update the named program to its newest version this week.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner_or_contractor}
+    sources: [cisa_kev]
+
+  - id: PAT-009
+    module: patching
+    title: "Web browsers may be out of date"
+    evidence: questionnaire
+    trigger: {kind: answer, q: pat_browser_updates, in: ["no", "dont_know"]}
+    severity: medium
+    cis_safeguards: ["9.1"]
+    nist_csf: [PR.PS-02]
+    attack: [T1204]
+    scenario: malware_outbreak
+    finding_plain: "Web browsers may not be updating. The browser is the program most exposed to bad websites."
+    finding_technical: "Browser auto-update not confirmed. Ensure only supported browsers/email clients are in use (IG1 9.1); remove legacy browsers."
+    fixes:
+      - {action: "Open each browser's 'About' page once a month; it updates itself when you do.", cost_tier: free, effort: "10 minutes", effort_minutes: 10, who: owner}
+    sources: [cis_ig1, cisa_secure_our_world]
+
+  - id: PAT-010
+    module: patching
+    title: "No list of software in use"
+    evidence: questionnaire
+    trigger: {kind: answer, q: pat_software_list, in: ["no", "dont_know"]}
+    severity: low
+    cis_safeguards: ["2.1"]
+    nist_csf: [ID.AM-02]
+    attack: []
+    scenario: ransomware_primary_system
+    finding_plain: "There is no list of the programs and apps the business uses. You cannot keep up to date what you have not written down."
+    finding_technical: "No software inventory (IG1 2.1). Start one: name, version, vendor, owner, support status; review every 6 months."
+    fixes:
+      - {action: "List the programs and online services you use and who the company is. Our upload template is a good start.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner}
+    sources: [cis_ig1]

@@ -1,0 +1,5 @@
+rule_id,enabled,action,direction,source,destination,service_or_port,comment
+dmz,Y,allow,inbound,any,any,any,
+fwd-1,Y,allow,inbound,wan,192.168.0.50,8080,Camera DVR
+guest,Y,allow,outbound,guest,wan,any,Guest internet only
+guest-tv,Y,allow,outbound,guest,lan,any,Let clients cast to the lobby TV

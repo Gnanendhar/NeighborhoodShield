@@ -1,0 +1,4 @@
+device_id,device_type,protection_product,protection_enabled,definitions_date,disk_encryption,screen_lock,last_seen_date
+office-pc,desktop,Microsoft Defender Antivirus,Y,2026-11-03,unknown,N,2026-11-04
+counter-ipad,tablet,,Y,,Y,Y,2026-11-04
+owner-phone,phone,,Y,,Y,Y,2026-11-04

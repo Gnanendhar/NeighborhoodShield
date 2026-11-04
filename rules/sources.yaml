@@ -1,0 +1,124 @@
+# Citation registry. Rules cite these keys, so a moved link is fixed in one place.
+# accessed: date the link was last checked by a human.
+version: "1.0.0"
+sources:
+  cis_ig1:
+    title: "CIS Critical Security Controls v8.1, Implementation Group 1"
+    publisher: "Center for Internet Security"
+    url: "https://www.cisecurity.org/controls/implementation-groups/ig1"
+    accessed: "2026-11-04"
+  cis_v81:
+    title: "CIS Critical Security Controls Version 8.1"
+    publisher: "Center for Internet Security"
+    url: "https://www.cisecurity.org/controls/v8-1"
+    accessed: "2026-11-04"
+  cis_navigator:
+    title: "CIS Controls Navigator (framework mappings)"
+    publisher: "Center for Internet Security"
+    url: "https://www.cisecurity.org/controls/cis-controls-navigator"
+    accessed: "2026-11-04"
+  nist_csf2:
+    title: "NIST Cybersecurity Framework 2.0 (CSWP 29)"
+    publisher: "NIST"
+    url: "https://doi.org/10.6028/NIST.CSWP.29"
+    accessed: "2026-11-04"
+  nist_sp1300:
+    title: "NIST SP 1300, CSF 2.0 Small Business Quick-Start Guide"
+    publisher: "NIST"
+    url: "https://doi.org/10.6028/NIST.SP.1300"
+    accessed: "2026-11-04"
+  nist_ir7621:
+    title: "NIST IR 7621 Rev. 1, Small Business Information Security: The Fundamentals"
+    publisher: "NIST"
+    url: "https://doi.org/10.6028/NIST.IR.7621r1"
+    accessed: "2026-11-04"
+  cisa_cyber_essentials:
+    title: "CISA Cyber Essentials"
+    publisher: "CISA"
+    url: "https://www.cisa.gov/resources-tools/resources/cyber-essentials"
+    accessed: "2026-11-04"
+  cisa_secure_our_world:
+    title: "Secure Our World"
+    publisher: "CISA"
+    url: "https://www.cisa.gov/secure-our-world"
+    accessed: "2026-11-04"
+  cisa_mfa:
+    title: "More than a Password (multi-factor authentication)"
+    publisher: "CISA"
+    url: "https://www.cisa.gov/MFA"
+    accessed: "2026-11-04"
+  cisa_ransomware_guide:
+    title: "#StopRansomware Guide"
+    publisher: "CISA, FBI, NSA, MS-ISAC"
+    url: "https://www.cisa.gov/stopransomware/ransomware-guide"
+    accessed: "2026-11-04"
+  cisa_kev:
+    title: "Known Exploited Vulnerabilities Catalog"
+    publisher: "CISA"
+    url: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    accessed: "2026-11-04"
+  cisa_cyber_hygiene:
+    title: "Cyber Hygiene Services (free vulnerability scanning)"
+    publisher: "CISA"
+    url: "https://www.cisa.gov/cyber-hygiene-services"
+    accessed: "2026-11-04"
+  ftc_small_business:
+    title: "Cybersecurity for Small Business"
+    publisher: "Federal Trade Commission"
+    url: "https://www.ftc.gov/business-guidance/small-businesses/cybersecurity"
+    accessed: "2026-11-04"
+  fbi_bec:
+    title: "Business Email Compromise"
+    publisher: "FBI"
+    url: "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/business-email-compromise"
+    accessed: "2026-11-04"
+  ic3:
+    title: "FBI Internet Crime Complaint Center (report fraud)"
+    publisher: "FBI"
+    url: "https://www.ic3.gov/"
+    accessed: "2026-11-04"
+  endoflife_date:
+    title: "endoflife.date (product lifecycle data)"
+    publisher: "endoflife.date community"
+    url: "https://endoflife.date/"
+    accessed: "2026-11-04"
+  ms_lifecycle:
+    title: "Microsoft Lifecycle Policy"
+    publisher: "Microsoft"
+    url: "https://learn.microsoft.com/lifecycle/"
+    accessed: "2026-11-04"
+  ms_win10_eos:
+    title: "Windows 10 end of support"
+    publisher: "Microsoft"
+    url: "https://learn.microsoft.com/lifecycle/products/windows-10-home-and-pro"
+    accessed: "2026-11-04"
+  pci_ssc_small_merchant:
+    title: "PCI SSC Small Merchant resources"
+    publisher: "PCI Security Standards Council"
+    url: "https://www.pcisecuritystandards.org/merchants/"
+    accessed: "2026-11-04"
+  mitre_attack:
+    title: "MITRE ATT&CK Enterprise"
+    publisher: "MITRE"
+    url: "https://attack.mitre.org/"
+    accessed: "2026-11-04"
+  hibp:
+    title: "Have I Been Pwned (breach search, notifications, Pwned Passwords k-anonymity API)"
+    publisher: "Troy Hunt"
+    url: "https://haveibeenpwned.com/"
+    accessed: "2026-11-04"
+  il_bipa:
+    title: "Biometric Information Privacy Act, 740 ILCS 14"
+    publisher: "Illinois General Assembly"
+    url: "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=3004&ChapterID=57"
+    accessed: "2026-11-04"
+  il_pipa:
+    title: "Personal Information Protection Act, 815 ILCS 530/10 (notice of breach)"
+    publisher: "Illinois General Assembly"
+    url: "https://ilga.gov/legislation/ilcs/documents/081505300K10.htm"
+    accessed: "2026-11-04"
+  nationwide_2024:
+    title: "Nationwide small business owner survey (AI scams, cyber coverage, claims)"
+    publisher: "Nationwide"
+    url: "https://prnewswire.com/news-releases/survey-one-quarter-of-small-business-owners-have-been-targeted-by-ai-driven-scams-302258726.html"
+    accessed: "2026-11-04"

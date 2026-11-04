@@ -1,0 +1,78 @@
+# Cyber-insurance readiness view (Week 1 extension).
+# Maps controls commonly asked about on small-business cyber-insurance applications
+# to our rules. A control is READY when none of its gap_if_rules fired.
+version: "0.1.0"
+caveat: "Every insurer's application is different. This view helps an owner prepare; it does not predict approval or price."
+controls:
+  - id: INS-01
+    control: "MFA on email"
+    typical_application_question: "Do you require multi-factor authentication for all email access?"
+    gap_if_rules: [IAM-002, IAM-010]
+    why_insurers_ask: "Stolen email logins drive business email compromise and funds-transfer fraud claims."
+    sources: ["https://beancount.io/blog/2026/09/05/cyber-insurance-assessment-failure-mfa-edr-backup-requirements-guide"]
+  - id: INS-02
+    control: "MFA on remote access"
+    typical_application_question: "Is MFA required for all remote access to your network (VPN, remote desktop, remote support tools)?"
+    gap_if_rules: [NET-002, NET-003]
+    why_insurers_ask: "Exposed remote access is a leading ransomware entry point."
+    sources: ["https://beancount.io/blog/2026/09/05/cyber-insurance-assessment-failure-mfa-edr-backup-requirements-guide", "https://www.cisa.gov/stopransomware/ransomware-guide"]
+  - id: INS-03
+    control: "MFA on admin accounts"
+    typical_application_question: "Do administrator and privileged accounts require MFA?"
+    gap_if_rules: [IAM-009, IAM-006]
+    why_insurers_ask: "Admin accounts give attackers full control."
+    sources: ["https://beancount.io/blog/2026/09/05/cyber-insurance-assessment-failure-mfa-edr-backup-requirements-guide"]
+  - id: INS-04
+    control: "Endpoint protection on every computer"
+    typical_application_question: "Is endpoint protection or EDR deployed on all computers and servers?"
+    gap_if_rules: [END-001, END-006, END-007]
+    why_insurers_ask: "Unprotected devices let malware spread before anyone notices."
+    sources: ["https://beancount.io/blog/2026/09/05/cyber-insurance-assessment-failure-mfa-edr-backup-requirements-guide"]
+  - id: INS-05
+    control: "Backups kept separate and tested"
+    typical_application_question: "Are backups stored offline or separated from your network, and when were they last tested?"
+    gap_if_rules: [BKP-001, BKP-002, BKP-003, BKP-007]
+    why_insurers_ask: "Working backups decide whether a ransomware event costs days or weeks."
+    sources: ["https://beancount.io/blog/2026/09/05/cyber-insurance-assessment-failure-mfa-edr-backup-requirements-guide"]
+  - id: INS-06
+    control: "Supported, patched software"
+    typical_application_question: "Do you run any end-of-life software, and how quickly are critical patches applied?"
+    gap_if_rules: [PAT-001, PAT-002, PAT-005, PAT-006]
+    why_insurers_ask: "Unpatched and unsupported systems are routinely exploited."
+    sources: ["https://beancount.io/blog/2026/09/05/cyber-insurance-assessment-failure-mfa-edr-backup-requirements-guide"]
+  - id: INS-07
+    control: "Email spoofing protection"
+    typical_application_question: "Have you implemented SPF, DKIM and DMARC on your email domain?"
+    gap_if_rules: [NET-013, NET-014, NET-015]
+    why_insurers_ask: "Spoofed email is used for invoice fraud against your customers and suppliers."
+    sources: ["https://beancount.io/blog/2026/09/05/cyber-insurance-assessment-failure-mfa-edr-backup-requirements-guide"]
+  - id: INS-08
+    control: "Limited admin rights"
+    typical_application_question: "Are administrative rights restricted to the people who need them?"
+    gap_if_rules: [IAM-007, IAM-008]
+    why_insurers_ask: "Limits the damage one compromised account can do."
+    sources: ["https://beancount.io/blog/2026/09/05/cyber-insurance-assessment-failure-mfa-edr-backup-requirements-guide"]
+  - id: INS-09
+    control: "Staff security training"
+    typical_application_question: "Do employees receive security awareness or phishing training?"
+    gap_if_rules: [IAM-012]
+    why_insurers_ask: "Most incidents start with a person being tricked."
+    sources: ["https://beancount.io/blog/2026/09/05/cyber-insurance-assessment-failure-mfa-edr-backup-requirements-guide"]
+  - id: INS-10
+    control: "Incident response plan"
+    typical_application_question: "Do you have a written incident response plan with named roles and contacts?"
+    gap_if_rules: [BKP-005, BKP-006]
+    why_insurers_ask: "A plan shortens downtime and keeps claim steps in the right order."
+    sources: ["https://beancount.io/blog/2026/09/05/cyber-insurance-assessment-failure-mfa-edr-backup-requirements-guide"]
+  - id: INS-11
+    control: "Verify payment changes and protect bank logins"
+    typical_application_question: "Do you verify changes to vendor bank details by a call-back to a known number, and is MFA required on online banking?"
+    gap_if_rules: [IAM-013, IAM-005]
+    why_insurers_ask: "Required by many carriers before covering social-engineering or funds-transfer fraud."
+    sources: ["https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/business-email-compromise"]
+  - id: INS-12
+    control: "Encrypted laptops"
+    typical_application_question: "Are laptops and portable devices encrypted?"
+    gap_if_rules: [END-002, END-008]
+    why_insurers_ask: "A lost encrypted laptop is usually not a reportable breach."
+    sources: ["https://beancount.io/blog/2026/09/05/cyber-insurance-assessment-failure-mfa-edr-backup-requirements-guide"]

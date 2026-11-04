@@ -1,0 +1,972 @@
+product,product_label,release_cycle,release_label,release_date,active_support_until,eol,extended_support_until,latest,source,snapshot_date
+windows,Microsoft Windows (client),11-26h2-e,11 26H2 (E),2026-09-29,2029-10-09,2029-10-09,,10.0.26300,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-26h2-w,11 26H2 (W),2026-09-29,2028-10-10,2028-10-10,,10.0.26300,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-26h1-e,11 26H1 (E),2026-02-10,2029-03-13,2029-03-13,,10.0.28000,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-26h1-w,11 26H1 (W),2026-02-10,2028-03-14,2028-03-14,,10.0.28000,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-25h2-e,11 25H2 (E),2025-09-30,2028-10-10,2028-10-10,,10.0.26200,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-25h2-w,11 25H2 (W),2025-09-30,2027-10-12,2027-10-12,,10.0.26200,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-24h2-iot-lts,11 24H2 IoT,2024-10-01,2029-10-09,2034-10-10,,10.0.26100,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-24h2-e-lts,11 24H2 (E),2024-10-01,2029-10-09,2029-10-09,,10.0.26100,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-24h2-e,11 24H2 (E),2024-10-01,2027-10-12,2027-10-12,,10.0.26100,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-24h2-w,11 24H2 (W),2024-10-01,2026-10-13,2026-10-13,,10.0.26100,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-23h2-e,11 23H2 (E),2023-10-31,2026-11-10,2026-11-10,,10.0.22631,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-23h2-w,11 23H2 (W),2023-10-31,2025-11-11,2025-11-11,,10.0.22631,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-22h2,10 22H2,2022-10-18,2025-10-14,2025-10-14,2028-10-10,10.0.19045,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-22h2-e,11 22H2 (E),2022-09-20,2025-10-14,2025-10-14,,10.0.22621,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-22h2-w,11 22H2 (W),2022-09-20,2024-10-08,2024-10-08,,10.0.22621,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-21h2-iot-lts,10 21H2 IoT,2021-11-16,2027-01-12,2032-01-13,,10.0.19044,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-21h2-e-lts,10 21H2 (E),2021-11-16,2027-01-12,2027-01-12,2030-01-12,10.0.19044,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-21h2-e,10 21H2 (E),2021-11-16,2024-06-11,2024-06-11,,10.0.19044,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-21h2-w,10 21H2 (W),2021-11-16,2023-06-13,2023-06-13,,10.0.19044,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-21h2-e,11 21H2 (E),2021-10-04,2024-10-08,2024-10-08,,10.0.22000,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),11-21h2-w,11 21H2 (W),2021-10-04,2023-10-10,2023-10-10,,10.0.22000,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-21h1,10 21H1,2021-05-18,2022-12-13,2022-12-13,,10.0.19043,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-20h2-e,10 20H2 (E),2020-10-20,2023-05-09,2023-05-09,,10.0.19042,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-20h2-w,10 20H2 (W),2020-10-20,2022-05-10,2022-05-10,,10.0.19042,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-2004,10 2004,2020-05-27,2021-12-14,2021-12-14,,10.0.19041,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1909-e,10 1909 (E),2019-11-12,2022-05-10,2022-05-10,,10.0.18363,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1909-w,10 1909 (W),2019-11-12,2021-05-11,2021-05-11,,10.0.18363,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1903,10 1903,2019-05-21,2020-12-08,2020-12-08,,10.0.18362,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1809-e-lts,10 1809 (E),2018-11-13,2024-01-09,2029-01-09,,10.0.17763,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1809-e,10 1809 (E),2018-11-13,2021-05-11,2021-05-11,,10.0.17763,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1809-w,10 1809 (W),2018-11-13,2020-11-10,2020-11-10,,10.0.17763,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1803-e,10 1803 (E),2018-04-30,2020-05-11,2021-05-11,,10.0.17134,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1803-w,10 1803 (W),2018-04-30,2019-11-12,2019-11-12,,10.0.17134,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1709-e,10 1709 (E),2017-10-17,2020-10-13,2020-10-13,,10.0.16299,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1709-w,10 1709 (W),2017-10-17,2019-04-09,2019-04-09,,10.0.16299,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1703-e,10 1703 (E),2017-04-11,2019-10-08,2019-10-08,,10.0.15063,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1703-w,10 1703 (W),2017-04-11,2018-10-09,2018-10-09,,10.0.15063,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1607-e-lts,10 1607 (E),2016-08-02,2021-10-12,2026-10-13,2029-10-13,10.0.14393,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1607-e,10 1607 (E),2016-08-02,2019-04-09,2019-04-09,,10.0.14393,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1607-w,10 1607 (W),2016-08-02,2018-04-10,2018-04-10,,10.0.14393,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1511,10 1511,2015-11-10,2017-10-10,2017-10-10,,10.0.10586,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1507-e-lts,10 1507 (E),2015-07-29,2020-10-13,2025-10-14,,10.0.10240,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1507,10 1507,2015-07-29,2017-05-09,2017-05-09,,10.0.10240,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),10-1507-iot,10 1507 IOT,2015-04-29,2020-11-10,2020-11-10,,10.0.10240,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),8.1,8.1,2013-11-13,2018-01-09,2023-01-10,,6.3.9600,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),8,8,2012-10-30,2016-01-12,2016-01-12,,6.2.9200,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),7-sp1,7 SP1,2011-02-22,2015-01-13,2020-01-14,,6.1.7601,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),6-sp2,Vista SP2,2009-04-29,2012-04-10,2017-04-11,,6.0.6002,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows,Microsoft Windows (client),5-sp3,XP SP3,2008-04-21,2009-04-14,2014-04-08,,5.1.2600,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows.md,2026-11-04
+windows-server,Microsoft Windows Server,2025,2025,2024-11-01,2029-11-13,2034-11-14,,10.0.26100,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,23h2-ac,Windows Server 23H2 AC,2023-10-24,2026-05-12,2026-05-12,,10.0.25398,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,2022,2022,2021-08-18,2026-10-13,2031-10-14,,10.0.20348,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,20h2-sac,Windows Server 20H2 SAC,2020-10-20,2022-08-09,2022-08-09,,10.0.19042,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,2004-sac,Windows Server 2004 SAC,2020-05-27,2021-12-14,2021-12-14,,10.0.19041,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,1909-sac,Windows Server 1909 SAC,2019-11-12,2021-05-11,2021-05-11,,10.0.18363,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,1903-sac,Windows Server 1903 SAC,2019-05-21,2020-12-08,2020-12-08,,10.0.18362,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,1809-sac,Windows Server 1809 SAC,2018-11-13,2020-11-10,2020-11-10,,10.0.17763,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,2019,2019,2018-11-13,2024-01-09,2029-01-09,,10.0.17763,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,1803-sac,Windows Server 1803 SAC,2018-04-30,2019-11-12,2019-11-12,,10.0.17134,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,1709-sac,Windows Server 1709 SAC,2017-10-17,2019-04-09,2019-04-09,,10.0.16299,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,2016,2016,2016-10-15,2022-01-11,2027-01-12,2030-01-12,10.0.14393,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,2012-r2,Windows Server 2012 R2,2013-11-25,2018-10-09,2023-10-10,2026-10-13,6.3.9600,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,2012,2012,2012-10-30,2018-10-09,2023-10-10,2026-10-13,6.2.9200,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,2008-r2-sp1,Windows Server 2008 R2 SP1,2011-02-22,2015-01-13,2020-01-14,2023-01-10,6.1.7601,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,2008-sp2,Windows Server 2008 SP2,2009-04-29,2015-01-13,2020-01-14,2023-01-10,6.0.6003,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,2003-sp2,Windows Server 2003 SP2,2007-03-13,2010-07-13,2015-07-14,,5.2.3790,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,2003-sp1,Windows Server 2003 SP1,2005-03-30,2009-04-14,2009-04-14,,5.2.3790,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,2003,2003,2003-04-24,2007-04-10,2007-04-10,,5.2.3790,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+windows-server,Microsoft Windows Server,2000,2000,2000-02-17,2005-06-30,2010-07-13,,5.0.2195,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/windows-server.md,2026-11-04
+macos,Apple macOS,27,27,2026-09-14,,,,27.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,26,26,2025-09-15,,,,26.7.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,15,15,2024-09-16,,,,15.8.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,14,14,2023-09-26,,2026-09-14,,14.8.9,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,13,13,2022-10-24,,2025-09-15,,13.7.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,12,12,2021-10-25,,2024-09-16,,12.7.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,11,11,2020-11-12,,2026-02-02,,11.7.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.15,10.15,2019-10-07,,2026-02-02,,10.15.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.14,10.14,2018-09-24,,2021-10-25,,10.14.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.13,10.13,2017-09-25,,2020-12-01,,10.13.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.12,10.12,2016-09-20,,2019-10-01,,10.12.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.11,OS X 10.11 (__CODENAME__),2015-09-30,,2018-12-01,,10.11.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.10,OS X 10.10 (__CODENAME__),2014-10-16,,2017-08-01,,10.10.5,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.9,OS X 10.9 (__CODENAME__),2013-10-22,,2016-12-01,,10.9.5,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.8,OS X 10.8 (__CODENAME__),2012-07-25,,2015-08-13,,10.8.5,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.7,Mac OS X 10.7 (__CODENAME__),2011-07-20,,2012-10-04,,10.7.5,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.6,Mac OS X 10.6 (__CODENAME__),2009-08-28,,2011-07-25,,10.6.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.5,Mac OS X 10.5 (__CODENAME__),2007-10-26,,2009-08-13,,10.5.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.4,Mac OS X 10.4 (__CODENAME__),2005-04-29,,2007-11-14,,10.4.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.3,Mac OS X 10.3 (__CODENAME__),2003-10-24,,2005-04-15,,10.3.9,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.2,Mac OS X 10.2 (__CODENAME__),2002-08-24,,2003-10-03,,10.2.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.1,Mac OS X 10.1 (__CODENAME__),2001-09-25,,2002-06-06,,10.1.5,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+macos,Apple macOS,10.0,Mac OS X 10.0 (__CODENAME__),2001-03-24,,2001-06-22,,10.0.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/macos.md,2026-11-04
+ios,Apple iOS,27,27,2026-09-14,,,,27.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,26,26,2025-09-15,2026-09-14,,,26.7.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,18,18,2024-09-16,2025-09-15,,,18.7.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,17,17,2023-09-18,2024-09-16,2025-05-13,,17.7.7,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,16,16,2022-09-12,2023-09-18,,,16.7.16,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,15,15,2021-09-20,2022-09-12,,,15.8.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,14,14,2020-09-16,2021-09-20,2021-10-26,,14.8.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,13,13,2019-09-19,2020-09-16,2020-09-16,,13.7,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,12,12,2018-09-17,2019-09-19,2026-01-26,,12.5.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,11,11,2017-09-19,2018-09-17,2018-10-08,,11.4.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,10,10,2016-09-13,2017-09-19,2019-07-22,,10.3.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,9,9,2015-09-16,2016-09-13,2019-07-22,,9.3.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,8,8,2014-09-17,2015-09-16,2015-09-30,,8.4.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,7,7,2013-09-18,2014-09-17,2014-10-20,,7.1.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,6,6,2012-09-19,2013-09-18,2013-09-26,,6.1.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ios,Apple iOS,5,5,2011-10-12,2012-09-19,2012-11-01,,5.1.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ios.md,2026-11-04
+ipados,Apple iPadOS,27,27,2026-09-14,,,,27.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ipados.md,2026-11-04
+ipados,Apple iPadOS,26,26,2025-09-15,2026-09-14,,,26.7.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ipados.md,2026-11-04
+ipados,Apple iPadOS,18,18,2024-09-16,2025-09-15,,,18.7.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ipados.md,2026-11-04
+ipados,Apple iPadOS,17,17,2023-09-18,2024-08-19,,,17.7.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ipados.md,2026-11-04
+ipados,Apple iPadOS,16,16,2022-10-24,2023-09-18,,,16.7.16,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ipados.md,2026-11-04
+ipados,Apple iPadOS,15,15,2021-09-20,2022-10-24,,,15.8.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ipados.md,2026-11-04
+ipados,Apple iPadOS,14,14,2020-09-16,2021-09-20,2021-10-01,,14.8.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ipados.md,2026-11-04
+ipados,Apple iPadOS,13,13,2019-09-24,2020-09-16,2020-09-16,,13.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ipados.md,2026-11-04
+ipados,Apple iPadOS,12,12,2018-09-17,2019-09-24,2019-09-24,,12.5.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ipados.md,2026-11-04
+android,Google Android,17,17,2026-06-16,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,16,16,2025-06-10,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,15,15,2024-09-03,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,14,14,2023-10-04,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,13,13,2022-08-15,,2026-03-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,12.1,12.1 'Snow Cone v2' (aka 12L),2022-03-07,,2025-03-03,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,12,12,2021-10-04,,2025-03-03,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,11,11,2020-09-08,,2024-02-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,10,10,2019-09-03,,2023-03-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,9,9,2018-08-06,,2022-01-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,8.1,8.1,2017-12-05,,2021-01-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,8.0,8.0,2017-08-21,,2021-01-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,7.1,7.1,2016-12-01,,2019-10-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,7.0,7.0,2016-08-22,,2019-10-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,6.0,6.0,2015-10-05,,2018-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,5.1,5.1,2015-03-01,,2018-03-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,5.0,5.0,2014-11-12,,2018-03-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,4.4w,4.4W,2014-03-31,,2017-10-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,4.4,4.4,2013-10-31,,2017-10-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,4.3,4.3,2013-07-24,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,4.2,4.2,2012-11-13,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,4.1,4.1,2012-07-09,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,4.0,4.0,2011-10-18,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,3.2,3.2,2011-07-15,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,3.1,3.1,2011-05-10,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,3.0,3.0,2011-02-22,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,2.3,2.3,2010-12-06,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,2.2,2.2,2010-05-20,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,2.1,2.1,2010-01-11,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,2.0,2.0,2009-10-26,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,1.6,1.6,2009-09-15,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,1.5,1.5,2009-04-27,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,1.1,1.1,2009-02-09,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+android,Google Android,1.0,1.0,2008-09-23,,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/android.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s26-fe,Galaxy S26 FE,2026-09-04,2033-09-04,2033-09-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-flip8,Galaxy Z Flip8,2026-08-07,2033-08-07,2033-08-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-fold8,Galaxy Z Fold8,2026-08-07,2033-08-07,2033-08-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-fold8-ultra,Galaxy Z Fold8 Ultra,2026-08-07,2033-08-07,2033-08-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f70-pro-5g,Galaxy F70 Pro 5G,2026-08-03,2032-07-31,2032-07-31,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a27-5g,Galaxy A27 5G,2026-07-14,2032-07-14,2032-07-14,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m47-5g,Galaxy M47 5G,2026-07-04,2032-07-04,2032-07-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a57-5g,Galaxy A57 5G,2026-04-10,2032-04-10,2032-04-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a37-5g,Galaxy A37 5G,2026-04-10,2032-04-10,2032-04-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m17e-5g,Galaxy M17e 5G,2026-03-20,2032-03-20,2032-03-20,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s26-ultra,Galaxy S26 Ultra,2026-03-06,2033-03-06,2033-03-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s26+,Galaxy S26+,2026-03-06,2033-03-06,2033-03-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s26,Galaxy S26,2026-03-06,2033-03-06,2033-03-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f70e-5g,Galaxy F70e 5G,2026-02-17,2032-02-17,2032-02-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a07-5g,Galaxy A07 5G,2026-01-30,2032-01-30,2032-01-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-trifold,Galaxy Z TriFold,2025-12-01,2032-12-01,2032-12-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m17-5g,Galaxy M17 5G,2025-10-13,2031-10-13,2031-10-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,w26,W26,2025-10-11,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f07,Galaxy F07,2025-10-04,2031-10-04,2031-10-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m07,Galaxy M07,2025-10-01,2031-10-01,2031-10-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f17-5g,Galaxy F17 5G,2025-09-11,2031-09-11,2031-09-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s25-fe,Galaxy S25 FE,2025-09-04,2032-09-04,2032-09-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a07,Galaxy A07,2025-09-01,2031-09-01,2031-09-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a17-5g,Galaxy A17 5G,2025-08-27,2031-08-27,2031-08-27,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a17,Galaxy A17,2025-08-27,2031-08-27,2031-08-27,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-fold7,Galaxy Z Fold7,2025-07-25,2032-07-25,2032-07-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-flip7-fe,Galaxy Z Flip7 FE,2025-07-25,2032-07-25,2032-07-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-flip7,Galaxy Z Flip7,2025-07-25,2032-07-25,2032-07-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f36-5g,Galaxy F36 5G,2025-07-22,2031-07-22,2031-07-22,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m36-5g,Galaxy M36 5G,2025-07-12,2031-07-12,2031-07-12,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s25-edge,Galaxy S25 Edge,2025-05-29,2032-05-29,2032-05-29,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f56-5g,Galaxy F56 5G,2025-05-14,2031-05-14,2031-05-14,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-xcover7-pro,Galaxy XCover7 Pro,2025-05-07,2029-05-07,2030-05-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m56-5g,Galaxy M56 5G,2025-04-17,2031-04-17,2031-04-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a56-5g,Galaxy A56 5G,2025-03-28,2031-03-28,2031-03-28,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a36-5g,Galaxy A36 5G,2025-03-28,2031-03-28,2031-03-28,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a26-5g,Galaxy A26 5G,2025-03-28,2031-03-28,2031-03-28,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f16-5g,Galaxy F16 5G,2025-03-13,2031-03-13,2031-03-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m16-5g,Galaxy M16 5G,2025-02-27,2031-02-27,2031-02-27,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m06-5g,Galaxy M06 5G,2025-02-27,2029-02-27,2029-02-27,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a06-5g,Galaxy A06 5G,2025-02-19,2031-02-19,2031-02-19,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f06-5g,Galaxy F06 5G,2025-02-12,2029-02-12,2029-02-12,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s25-ultra,Galaxy S25 Ultra,2025-02-03,2032-02-03,2032-02-03,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s25+,Galaxy S25+,2025-02-03,2032-02-03,2032-02-03,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s25,Galaxy S25,2025-02-03,2032-02-03,2032-02-03,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a16,Galaxy A16,2024-11-20,2030-11-20,2030-11-20,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,w25-flip,W25 Flip,2024-11-06,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,w25,W25,2024-11-06,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a16-5g,Galaxy A16 5G,2024-10-25,2030-10-25,2030-10-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-fold-special-edition,Galaxy Z Fold Special Edition,2024-10-24,2031-10-24,2031-10-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s24-fe,Galaxy S24 FE,2024-09-26,2031-09-26,2031-09-26,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m55s-5g,Galaxy M55s 5G,2024-09-24,2028-09-24,2029-09-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f05,Galaxy F05,2024-09-17,2026-09-17,2028-09-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m05,Galaxy M05,2024-09-12,2026-09-12,2028-09-12,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f14,Galaxy F14,2024-09-05,2026-09-05,2028-09-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a06,Galaxy A06,2024-08-22,2026-08-22,2028-08-22,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-fold6,Galaxy Z Fold6,2024-07-24,2031-07-24,2031-07-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-flip6,Galaxy Z Flip6,2024-07-24,2031-07-24,2031-07-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m35-5g,Galaxy M35 5G,2024-07-17,2028-07-17,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f55-5g,Galaxy F55 5G,2024-05-27,2028-05-27,2029-05-27,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-c55-5g,Galaxy C55 5G,2024-04-22,2028-04-22,2029-04-22,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m55-5g,Galaxy M55 5G,2024-04-08,2028-04-08,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m15-5g,Galaxy M15 5G,2024-04-08,2028-04-08,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f15-5g,Galaxy F15 5G,2024-04-03,2028-04-03,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a55-5g,Galaxy A55 5G,2024-03-11,2028-03-11,2029-03-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a35-5g,Galaxy A35 5G,2024-03-11,2028-03-11,2029-03-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m14,Galaxy M14,2024-03-07,2026-03-07,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s24-ultra,Galaxy S24 Ultra,2024-01-24,2031-01-24,2031-01-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s24+,Galaxy S24+,2024-01-24,2031-01-24,2031-01-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s24,Galaxy S24,2024-01-24,2031-01-24,2031-01-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-xcover7,Galaxy XCover7,2024-01-10,2030-01-10,2030-01-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a25-5g,Galaxy A25 5G,2023-12-11,2027-12-11,2028-12-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a15-5g,Galaxy A15 5G,2023-12-11,2027-12-11,2028-12-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a15,Galaxy A15,2023-12-11,2027-12-11,2028-12-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m44-5g,Galaxy M44 5G,2023-11-10,2025-10-15,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a05s,Galaxy A05s,2023-10-18,2025-10-18,2027-10-18,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a05,Galaxy A05,2023-10-15,2025-10-15,2027-10-15,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s23-fe,Galaxy S23 FE,2023-10-05,,2028-10-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,w24-flip,W24 Flip,2023-09-15,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,w24,W24,2023-09-15,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-fold5,Galaxy Z Fold5,2023-08-11,2027-08-11,2028-08-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-flip5,Galaxy Z Flip5,2023-08-11,2027-08-11,2028-08-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f34-5g,Galaxy F34 5G,2023-08-07,2027-08-07,2028-08-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m34-5g,Galaxy M34 5G,2023-07-07,2027-07-07,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f54-5g,Galaxy F54 5G,2023-06-06,2027-06-06,2028-06-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a14,Galaxy A14,2023-05-22,2025-05-22,2027-05-22,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a24,Galaxy A24,2023-05-05,2027-05-05,2028-05-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m14-5g,Galaxy M14 5G,2023-04-17,2025-04-17,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m54-5g,Galaxy M54 5G,2023-04-04,2027-04-04,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f14-5g,Galaxy F14 5G,2023-03-24,2025-03-24,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a54-5g,Galaxy A54 5G,2023-03-24,2027-03-24,2028-03-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a34-5g,Galaxy A34 5G,2023-03-24,2027-03-24,2028-03-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s23-ultra,Galaxy S23 Ultra,2023-02-17,2027-02-17,2028-02-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s23+,Galaxy S23+,2023-02-17,,2028-02-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s23,Galaxy S23,2023-02-17,2027-02-17,2028-02-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f04,Galaxy F04,2023-01-12,2025-01-12,2027-01-12,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a14-5g,Galaxy A14 5G,2023-01-05,2025-01-05,2027-01-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m04,Galaxy M04,2022-12-16,2024-12-16,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a04e,Galaxy A04e,2022-11-07,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,w23-flip,W23 Flip,2022-10-21,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,w23,W23,2022-10-21,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a04,Galaxy A04,2022-10-10,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a04s,Galaxy A04s,2022-09-22,,2026-10-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a23-5g,Galaxy A23 5G,2022-09-02,2025-09-02,2026-10-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-fold4,Galaxy Z Fold4,2022-08-25,2026-08-25,2027-08-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-flip4,Galaxy Z Flip4,2022-08-25,2026-08-25,2027-08-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m13-5g,Galaxy M13 5G,2022-07-23,,2026-08-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m13-india,Galaxy M13 (India),2022-07-23,2024-07-23,2025-07-23,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-xcover6-pro,Galaxy XCover6 Pro,2022-07-13,2026-07-13,2027-07-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a13-sm-a137,Galaxy A13 (SM-A137),2022-07-01,2025-07-01,2026-07-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m13,Galaxy M13,2022-07-01,2025-07-01,2026-07-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f13,Galaxy F13,2022-06-29,2024-06-29,2026-08-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m53-5g,Galaxy M53 5G,2022-04-22,2024-04-22,2026-06-03,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a73-5g,Galaxy A73 5G,2022-04-22,2026-04-22,2027-04-22,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m33-5g,Galaxy M33 5G,2022-04-08,2025-04-08,2026-05-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m23-5g,Galaxy M23 5G,2022-04-08,,2026-04-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s20-fe,Galaxy S20 FE,2022-04-01,2025-03-31,2025-11-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a53-5g,Galaxy A53 5G,2022-04-01,2026-04-01,2027-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a33-5g,Galaxy A33 5G,2022-04-01,2026-04-01,2027-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a23,Galaxy A23,2022-03-25,2025-03-25,2026-05-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a13,Galaxy A13,2022-03-23,2025-03-23,2026-05-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f23,Galaxy F23,2022-03-16,2024-03-16,2025-03-16,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s22-ultra,Galaxy S22 Ultra,2022-02-25,2026-02-25,2027-02-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s22+,Galaxy S22+,2022-02-25,2026-02-25,2027-02-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s22,Galaxy S22,2022-02-25,2026-02-25,2027-02-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a03,Galaxy A03,2022-01-21,,2026-02-21,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s21-fe-5g,Galaxy S21 FE 5G,2022-01-07,2026-01-07,2027-01-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a03-core,Galaxy A03 core,2021-12-06,,2026-01-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a13-5g,Galaxy A13 5G,2021-12-03,2024-12-03,2026-01-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,w22-5g,W22 5G,2021-10-13,,2025-11-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m22,Galaxy M22,2021-10-13,2023-10-13,2025-11-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f42-5g,Galaxy F42 5G,2021-10-03,,2025-10-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m52-5g,Galaxy M52 5G,2021-10-03,2023-10-03,2025-11-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m32-5g,Galaxy M32 5G,2021-09-02,,2025-10-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a52s-5g,Galaxy A52s 5G,2021-09-01,2024-09-01,2025-10-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-fold3-5g,Galaxy Z Fold3 5G,2021-08-27,2025-08-27,2026-09-08,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-flip3-5g,Galaxy Z Flip3 5G,2021-08-27,2025-08-27,2026-09-08,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a03s,Galaxy A03s,2021-08-18,,2025-10-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a12-india,Galaxy A12 (India),2021-08-12,2023-08-12,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a12-nacho,Galaxy A12 Nacho,2021-08-09,2023-08-12,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m21-2021,Galaxy M21 2021,2021-07-26,,2025-09-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f22,Galaxy F22,2021-07-13,2023-07-13,2025-08-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m32,Galaxy M32,2021-06-28,,2025-08-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a22-5g,Galaxy A22 5G,2021-06-24,2023-06-24,2025-07-08,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a22,Galaxy A22,2021-06-03,2023-06-03,2025-08-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f52-5g,Galaxy F52 5G,2021-06-01,,2025-07-08,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a82-5g,Galaxy A82 5G,2021-05-05,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m42-5g,Galaxy M42 5G,2021-04-30,,2025-06-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a-quantum2,Galaxy A Quantum2,2021-04-23,,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f12,Galaxy F12,2021-04-12,true,2024-11-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f02s,Galaxy F02s,2021-04-09,2023-04-09,2024-04-09,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a52,Galaxy A52,2021-03-26,2024-03-26,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a72,Galaxy A72,2021-03-26,2024-03-26,2025-03-26,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m12-india,Galaxy M12 (India),2021-03-18,2023-03-18,2024-03-18,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a52-5g,Galaxy A52 5G,2021-03-17,2024-03-17,2025-03-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-xcover5,Galaxy XCover5,2021-03-12,2024-03-12,,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m62,Galaxy M62,2021-03-03,2023-03-03,2024-03-03,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a32,Galaxy A32,2021-02-25,2023-02-13,2025-02-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f62,Galaxy F62,2021-02-22,2024-02-22,2024-02-22,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m02,Galaxy M02,2021-02-09,2023-02-09,2024-02-09,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m31s,Galaxy M31s,2021-02-09,2023-02-09,2024-02-09,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s21-ultra-5g,Galaxy S21 Ultra 5G,2021-01-29,2025-10-06,2026-02-21,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s21+-5g,Galaxy S21+ 5G,2021-01-29,2025-10-06,2026-02-21,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s21-5g,Galaxy S21 5G,2021-01-29,2025-10-06,2026-02-21,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a02,Galaxy A02,2021-01-27,true,2024-03-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a32-5g,Galaxy A32 5G,2021-01-13,true,2025-02-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m02s,Galaxy M02s,2021-01-07,2023-01-07,2024-01-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a02s,Galaxy A02s,2021-01-04,true,2025-01-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a12,Galaxy A12,2020-11-24,2022-11-24,2024-11-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m12,Galaxy M12,2020-11-24,true,2024-11-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a42-5g,Galaxy A42 5G,2020-11-11,true,2024-06-20,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m21s,Galaxy M21s,2020-11-06,2022-11-06,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-fold2-5g,Galaxy Z Fold2 5G,2020-11-04,2023-11-04,2024-11-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m31-prime,Galaxy M31 Prime,2020-10-17,2022-10-17,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-f41,Galaxy F41,2020-10-16,2022-10-16,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s20-fe-5g,Galaxy S20 FE 5G,2020-10-02,true,2025-11-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s20-fe-2020,Galaxy S20 FE (2020),2020-10-02,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-fold-2,Galaxy Z Fold 2,2020-09-18,2023-09-18,2024-09-18,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note20-ultra-5g,Galaxy Note20 Ultra 5G,2020-08-21,true,2025-09-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note20-5g,Galaxy Note20 5G,2020-08-21,2023-08-21,2025-09-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note20-ultra,Galaxy Note20 Ultra,2020-08-21,2023-08-21,2025-09-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note20,Galaxy Note20,2020-08-21,2023-08-21,2025-09-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a51-5g-uw,Galaxy A51 5G UW,2020-08-14,true,2024-06-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-flip-5g,Galaxy Z Flip 5G,2020-08-07,true,2024-08-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a51-5g,Galaxy A51 5G,2020-08-07,true,2024-06-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m51,Galaxy M51,2020-08-06,2022-08-06,2023-08-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a01-core,Galaxy A01 Core,2020-08-06,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m01-core,Galaxy M01 Core,2020-07-29,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m01s,Galaxy M01s,2020-07-16,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a71-5g-uw,Galaxy A71 5G UW,2020-07-16,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a21,Galaxy A21,2020-06-26,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a71-5g,Galaxy A71 5G,2020-06-15,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s20-5g-uw,Galaxy S20 5G UW,2020-06-04,true,2024-06-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a21s,Galaxy A21s,2020-06-02,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m01,Galaxy M01,2020-06-02,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a-quantum,Galaxy A Quantum,2020-05-22,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a11,Galaxy A11,2020-05-15,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m11,Galaxy M11,2020-05-04,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a31,Galaxy A31,2020-04-27,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j2-core-2020,Galaxy J2 Core (2020),2020-04-27,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-xcover-fieldpro,Galaxy Xcover FieldPro,2020-04-06,2022-10-01,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m21,Galaxy M21,2020-03-23,2022-03-23,2024-03-23,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a41,Galaxy A41,2020-03-18,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s20-ultra,Galaxy S20 Ultra,2020-03-15,true,2025-03-14,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s20-ultra-5g,Galaxy S20 Ultra 5G,2020-03-06,true,2025-03-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s20+-5g,Galaxy S20+ 5G,2020-03-06,true,2025-03-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s20+,Galaxy S20+,2020-03-06,true,2025-03-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s20-5g,Galaxy S20 5G,2020-03-06,true,2025-03-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s20,Galaxy S20,2020-03-06,true,2025-03-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m31,Galaxy M31,2020-03-05,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-z-flip,Galaxy Z Flip,2020-02-14,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a71,Galaxy A71,2020-01-17,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s10-lite,Galaxy S10 Lite,2020-01-03,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note10-lite,Galaxy Note10 Lite,2020-01-03,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-xcover-pro,Galaxy XCover Pro,2020-01-01,2023-01-01,2024-01-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a51,Galaxy A51,2019-12-27,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a01,Galaxy A01,2019-12-18,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-fold-5g,Galaxy Fold 5G,2019-11-20,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m30s,Galaxy M30s,2019-10-30,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a20s,Galaxy A20s,2019-10-05,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a30s,Galaxy A30s,2019-09-11,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-fold,Galaxy Fold,2019-09-06,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a90-5g,Galaxy A90 5G,2019-09-03,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a70s,Galaxy A70s,2019-09-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a50s,Galaxy A50s,2019-09-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m10s,Galaxy M10s,2019-09-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a10s,Galaxy A10s,2019-08-27,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a10e,Galaxy A10e,2019-08-27,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note10+,Galaxy Note10+,2019-08-23,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note10,Galaxy Note10,2019-08-23,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note10+-5g,Galaxy Note10+ 5G,2019-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note10-5g,Galaxy Note10 5G,2019-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-xcover-4s,Galaxy Xcover 4s,2019-07-01,2022-10-01,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a60,Galaxy A60,2019-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m40,Galaxy M40,2019-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a80,Galaxy A80,2019-05-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a70,Galaxy A70,2019-05-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a20e,Galaxy A20e,2019-05-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a20,Galaxy A20,2019-04-05,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a40,Galaxy A40,2019-04-01,2022-10-01,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-view2,Galaxy View2,2019-04-01,true,2021-12-31,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a2-core,Galaxy A2 Core,2019-04-01,true,2021-10-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a10,Galaxy A10,2019-03-19,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a50,Galaxy A50,2019-03-18,2022-10-01,2023-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a30,Galaxy A30,2019-03-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m30,Galaxy M30,2019-03-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s10-5g,Galaxy S10 5G,2019-02-20,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s10,Galaxy S10,2019-02-20,true,2023-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s10+,Galaxy S10+,2019-02-20,true,2023-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s10e,Galaxy S10e,2019-02-20,true,2023-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m20,Galaxy M20,2019-02-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-m10,Galaxy M10,2019-02-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a8s,Galaxy A8s,2018-12-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j4-core,Galaxy J4 Core,2018-11-01,true,2020-12-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a6s,Galaxy A6s,2018-11-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a9-2018,Galaxy A9 (2018),2018-11-01,true,2022-06-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j6+,Galaxy J6+,2018-10-01,true,2022-06-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j4+,Galaxy J4+,2018-10-01,true,2020-12-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a7-2018,Galaxy A7 (2018),2018-10-01,true,2022-07-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-9,Galaxy Note 9,2018-08-24,true,2022-07-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j2-core,Galaxy J2 Core,2018-08-01,true,2021-12-31,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j8,Galaxy J8,2018-07-01,true,2021-09-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-on6,Galaxy On6,2018-07-01,true,2022-02-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j7-2018,Galaxy J7 (2018),2018-07-01,true,2021-12-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j7-top,Galaxy J7 Top,2018-07-01,true,2021-12-31,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j3-2018,Galaxy J3 (2018),2018-06-01,true,2021-11-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a8-star,Galaxy A8 Star,2018-06-01,true,2022-06-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j6,Galaxy J6,2018-05-01,true,2022-02-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j4,Galaxy J4,2018-05-01,true,2022-02-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s-light-luxury,Galaxy S Light Luxury,2018-05-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a6+-2018,Galaxy A6+ (2018),2018-05-01,true,2021-12-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a6-2018,Galaxy A6 (2018),2018-05-01,true,2022-03-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j7-prime-2,Galaxy J7 Prime 2,2018-04-01,true,2021-12-31,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j7-duo,Galaxy J7 Duo,2018-04-01,true,2021-12-31,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s9+,Galaxy S9+,2018-03-09,true,2022-04-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s9,Galaxy S9,2018-03-09,true,2022-04-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a8-2018-enterprise,Galaxy A8 (2018) Enterprise,2018-01-01,true,2021-12-31,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a8+-2018,Galaxy A8+ (2018),2018-01-01,true,2021-09-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a8-2018,Galaxy A8 (2018),2018-01-01,true,2022-01-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j2-pro-2018,Galaxy J2 Pro (2018),2018-01-01,true,2019-10-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j2-2017,Galaxy J2 (2017),2017-10-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-c7-2017,Galaxy C7 (2017),2017-10-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-sport,Gear Sport,2017-10-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note8,Galaxy Note8,2017-09-01,true,2021-11-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s8-active,Galaxy S8 Active,2017-08-01,true,2021-11-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-fe,Galaxy Note FE,2017-07-01,true,2019-03-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j7-2017,Galaxy J7 (2017),2017-07-01,true,2019-05-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j7-pro,Galaxy J7 Pro,2017-07-01,true,2019-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j3-2017,Galaxy J3 (2017),2017-07-01,true,2019-07-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-folder2,Galaxy Folder2,2017-07-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j7-neo,Galaxy J7 Neo,2017-07-01,true,2019-05-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j7-max,Galaxy J7 Max,2017-06-01,true,2019-03-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j5-2017,Galaxy J5 (2017),2017-06-01,true,2019-03-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,z4,Z4,2017-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-s3-classic-lte,Gear S3 classic LTE,2017-05-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s8,Galaxy S8,2017-04-24,true,2021-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s8+,Galaxy S8+,2017-04-01,true,2021-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-xcover-4,Galaxy Xcover 4,2017-04-01,true,2019-06-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j7-v,Galaxy J7 V,2017-03-01,true,2019-03-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-c5-pro,Galaxy C5 Pro,2017-03-01,true,2018-10-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-c7-pro,Galaxy C7 Pro,2017-02-01,true,2019-05-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j3-emerge,Galaxy J3 Emerge,2017-01-01,true,2019-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a7-2017,Galaxy A7 (2017),2017-01-01,true,2020-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a5-2017,Galaxy A5 (2017),2017-01-01,true,2019-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a3-2017,Galaxy A3 (2017),2017-01-01,true,2020-11-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j1-mini-prime,Galaxy J1 mini prime,2016-12-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j7-prime,Galaxy J7 Prime,2016-11-30,true,2020-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-grand-prime-plus,Galaxy Grand Prime Plus,2016-11-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j2-prime,Galaxy J2 Prime,2016-11-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-c9-pro,Galaxy C9 Pro,2016-11-01,true,2019-07-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-s3-classic,Gear S3 classic,2016-11-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-s3-frontier,Gear S3 frontier,2016-11-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-s3-frontier-lte,Gear S3 frontier LTE,2016-11-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a8-2016,Galaxy A8 (2016),2016-10-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-on8,Galaxy On8,2016-10-01,true,2019-01-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-on7-2016,Galaxy On7 (2016),2016-10-01,true,2020-07-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j5-prime,Galaxy J5 Prime,2016-10-01,true,2020-10-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note7,Galaxy Note7,2016-09-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,z2,Z2,2016-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-7-usa,Galaxy Note 7 (USA),2016-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j-max,Galaxy J Max,2016-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-on7-pro,Galaxy On7 Pro,2016-07-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-on5-pro,Galaxy On5 Pro,2016-07-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j2-pro-2016,Galaxy J2 Pro (2016),2016-07-01,true,2019-10-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j2-2016,Galaxy J2 (2016),2016-07-01,true,2018-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,z3-corporate,Z3 Corporate,2016-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s7-active,Galaxy S7 active,2016-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j3-pro,Galaxy J3 Pro,2016-06-01,true,2021-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-c7,Galaxy C7,2016-06-01,true,2018-10-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-c5,Galaxy C5,2016-06-01,true,2019-01-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j3-2016,Galaxy J3 (2016),2016-05-06,true,2019-04-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a9-pro-2016,Galaxy A9 Pro (2016),2016-05-01,true,2019-02-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-xcover3-g389f,Galaxy Xcover3 G389F,2016-04-01,true,2018-06-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j7-2016,Galaxy J7 (2016),2016-04-01,true,2019-11-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j5-2016,Galaxy J5 (2016),2016-04-01,true,2019-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-s2-classic-3g,Gear S2 classic 3G,2016-04-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-express-prime,Galaxy Express Prime,2016-04-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s7-edge,Galaxy S7 edge,2016-03-11,true,2019-03-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s7,Galaxy S7,2016-03-11,true,2019-06-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j1-nxt,Galaxy J1 Nxt,2016-02-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j1-2016,Galaxy J1 (2016),2016-01-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a9-2016,Galaxy A9 (2016),2016-01-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a7-2016,Galaxy A7 (2016),2015-12-01,true,2018-11-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a5-2016,Galaxy A5 (2016),2015-12-01,true,2019-06-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a3-2016,Galaxy A3 (2016),2015-12-01,true,2018-06-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-view,Galaxy View,2015-11-01,true,2018-01-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-on7,Galaxy On7,2015-11-01,true,2018-01-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-on5,Galaxy On5,2015-11-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,z3,Z3,2015-10-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j1-ace,Galaxy J1 Ace,2015-10-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-s2-classic,Gear S2 classic,2015-10-01,true,2018-03-26,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-s2,Gear S2,2015-10-01,true,2018-03-26,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-s2-3g,Gear S2 3G,2015-10-01,true,2018-03-26,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j2,Galaxy J2,2015-09-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-5-usa,Galaxy Note 5 (USA),2015-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-5,Galaxy Note 5,2015-08-01,true,2018-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-5-duos,Galaxy Note 5 Duos,2015-08-01,true,2018-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s6-edge+-usa,Galaxy S6 edge+ (USA),2015-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s6-edge+,Galaxy S6 edge+,2015-08-01,true,2018-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s6-edge+-duos,Galaxy S6 edge+ Duos,2015-08-01,true,2018-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s5-neo,Galaxy S5 Neo,2015-08-01,true,2018-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a8-duos,Galaxy A8 Duos,2015-08-01,true,2017-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a8,Galaxy A8,2015-08-01,true,2017-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j5,Galaxy J5,2015-07-28,true,2019-12-03,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j7,Galaxy J7,2015-07-16,true,2018-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-folder,Galaxy Folder,2015-07-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-v-plus,Galaxy V Plus,2015-07-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s4-mini-i9195i,Galaxy S4 mini I9195I,2015-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s6-active,Galaxy S6 active,2015-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s6-duos,Galaxy S6 Duos,2015-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-xcover-3,Galaxy Xcover 3,2015-04-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s6-edge-usa,Galaxy S6 edge (USA),2015-04-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s6-usa,Galaxy S6 (USA),2015-04-01,true,2018-03-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s6-edge,Galaxy S6 edge,2015-04-01,true,2018-06-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s6,Galaxy S6,2015-04-01,true,2018-06-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j1-4g,Galaxy J1 4G,2015-03-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-j1,Galaxy J1,2015-02-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a7-duos,Galaxy A7 Duos,2015-02-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-e7,Galaxy E7,2015-02-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-e5,Galaxy E5,2015-02-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,z1,Z1,2015-01-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-grand-max,Galaxy Grand Max,2015-01-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a5,Galaxy A5,2014-12-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a3-duos,Galaxy A3 Duos,2014-12-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a3,Galaxy A3,2014-12-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-core-prime,Galaxy Core Prime,2014-11-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-a5-duos,Galaxy A5 Duos,2014-11-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s5-plus,Galaxy S5 Plus,2014-11-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-edge,Galaxy Note Edge,2014-11-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-core-lte-g386w,Galaxy Core LTE G386W,2014-11-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-grand-prime-duos-tv,Galaxy Grand Prime Duos TV,2014-10-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-grand-prime,Galaxy Grand Prime,2014-10-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-4-duos,Galaxy Note 4 Duos,2014-10-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note4,Galaxy Note4,2014-10-01,true,2017-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-s,Gear S,2014-10-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-young-2,Galaxy Young 2,2014-10-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-pocket-2,Galaxy Pocket 2,2014-09-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-v,Galaxy V,2014-09-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-ace-style-lte-g357,Galaxy Ace Style LTE G357,2014-09-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-mega-2,Galaxy Mega 2,2014-09-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-alpha-s801,Galaxy Alpha (S801),2014-09-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-alpha,Galaxy Alpha,2014-09-01,true,2017-01-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-w,Galaxy W,2014-09-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s5-lte-a-g901f,Galaxy S5 LTE-A G901F,2014-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s5-mini-duos,Galaxy S5 mini Duos,2014-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s-duos-3,Galaxy S Duos 3,2014-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-ace-nxt,Galaxy Ace NXT,2014-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-star-2-plus,Galaxy Star 2 Plus,2014-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-ace-4-lte-g313,Galaxy Ace 4 LTE G313,2014-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-ace-4,Galaxy Ace 4,2014-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-star-2,Galaxy Star 2,2014-08-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-live,Gear Live,2014-07-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-avant,Galaxy Avant,2014-07-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s5-mini,Galaxy S5 mini,2014-07-01,true,2017-08-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-core-ii,Galaxy Core II,2014-07-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s5-lte-a-g906s,Galaxy S5 LTE-A G906S,2014-07-01,true,2017-01-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-beam2,Galaxy Beam2,2014-07-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s5-sport,Galaxy S5 Sport,2014-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-core-lite-lte,Galaxy Core Lite LTE,2014-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,i9301i-galaxy-s3-neo,I9301I Galaxy S3 Neo,2014-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-k-zoom,Galaxy K zoom,2014-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s5-duos,Galaxy S5 Duos,2014-06-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-2-neo,Gear 2 Neo,2014-05-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s5-active,Galaxy S5 Active,2014-05-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-ace-style,Galaxy Ace Style,2014-05-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-core-lte,Galaxy Core LTE,2014-05-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-star-trios-s5283,Galaxy Star Trios S5283,2014-05-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,gear-2,Gear 2,2014-04-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,i9300i-galaxy-s3-neo,I9300I Galaxy S3 Neo,2014-04-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,ativ-se,ATIV SE,2014-04-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s5-octa-core,Galaxy S5 (octa-core),2014-04-01,true,2017-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-s5,Galaxy S5,2014-04-01,true,2017-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,g3812b-galaxy-s3-slim,G3812B Galaxy S3 Slim,2014-03-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,i8200-galaxy-s-iii-mini-ve,I8200 Galaxy S III mini VE,2014-03-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-pro-12.2-lte,Galaxy Note Pro 12.2 LTE,2014-03-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-pro-12.2-3g,Galaxy Note Pro 12.2 3G,2014-03-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-3-neo-duos,Galaxy Note 3 Neo Duos,2014-02-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-3-neo,Galaxy Note 3 Neo,2014-02-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-grand-neo,Galaxy Grand Neo,2014-02-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-note-pro-12.2,Galaxy Note Pro 12.2,2014-02-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+samsung-mobile,Samsung mobile devices,galaxy-gear,Galaxy Gear,2013-09-01,true,true,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/samsung-mobile.md,2026-11-04
+chrome,Google Chrome,156,156,2026-10-20,,2026-11-03,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,155,155,2026-10-06,,2026-10-20,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,154,154,2026-09-22,,2026-10-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,153,153,2026-09-08,,2026-09-22,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,152,152,2026-08-25,,2026-09-08,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,151,151,2026-07-28,,2026-08-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,150,150,2026-06-30,,2026-07-28,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,149,149,2026-06-02,,2026-06-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,148,148,2026-05-05,,2026-06-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,147,147,2026-04-07,,2026-05-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,146,146,2026-03-10,,2026-04-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,145,145,2026-02-10,,2026-03-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,144,144,2026-01-13,,2026-02-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,143,143,2025-12-02,,2026-01-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,142,142,2025-10-28,,2025-12-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,141,141,2025-09-30,,2025-10-28,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,140,140,2025-09-02,,2025-09-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,139,139,2025-08-05,,2025-09-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,138,138,2025-06-24,,2025-08-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,137,137,2025-05-27,,2025-06-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,136,136,2025-04-29,,2025-05-27,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,135,135,2025-04-01,,2025-04-29,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,134,134,2025-03-04,,2025-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,133,133,2025-02-04,,2025-03-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,132,132,2025-01-14,,2025-02-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,131,131,2024-11-12,,2025-01-14,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,130,130,2024-10-15,,2024-11-12,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,129,129,2024-09-17,,2024-10-15,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,128,128,2024-08-20,,2024-09-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,127,127,2024-07-23,,2024-08-20,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,126,126,2024-06-11,,2024-07-23,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,125,125,2024-05-14,,2024-06-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,124,124,2024-04-16,,2024-05-14,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,123,123,2024-03-19,,2024-04-16,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,122,122,2024-02-20,,2024-03-19,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,121,121,2024-01-23,,2024-02-20,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,120,120,2023-12-05,,2024-01-23,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,119,119,2023-10-31,,2023-12-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,118,118,2023-10-10,,2023-10-31,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,117,117,2023-09-12,,2023-10-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,116,116,2023-08-15,,2023-09-12,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,115,115,2023-07-18,,2023-08-15,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,114,114,2023-05-30,,2023-07-18,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,113,113,2023-05-02,,2023-05-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,112,112,2023-04-04,,2023-05-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,111,111,2023-03-07,,2023-04-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,110,110,2023-02-07,,2023-03-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,109,109,2023-01-10,,2023-02-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,108,108,2022-11-29,,2023-01-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,107,107,2022-10-25,,2022-11-29,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,106,106,2022-09-27,,2022-10-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,105,105,2022-08-30,,2022-09-27,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,104,104,2022-08-02,,2022-08-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,103,103,2022-06-21,,2022-08-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,102,102,2022-05-24,,2022-06-21,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,101,101,2022-04-26,,2022-05-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,100,100,2022-03-29,,2022-04-26,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,99,99,2022-03-01,,2022-03-29,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,98,98,2022-02-01,,2022-03-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,97,97,2022-01-04,,2022-02-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,96,96,2021-11-16,,2022-01-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,95,95,2021-10-19,,2021-11-16,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,94,94,2021-09-21,,2021-10-19,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,93,93,2021-08-31,,2021-09-21,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,92,92,2021-07-20,,2021-08-31,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,91,91,2021-05-25,,2021-07-20,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,90,90,2021-04-13,,2021-05-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,89,89,2021-03-02,,2021-04-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,88,88,2021-01-19,,2021-03-02,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,87,87,2020-11-17,,2021-01-19,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,86,86,2020-10-06,,2020-11-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,85,85,2020-08-25,,2020-10-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,84,84,2020-07-14,,2020-08-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,83,83,2020-05-19,,2020-07-14,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,81,81,2020-04-07,,2020-05-19,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,80,80,2020-02-04,,2020-04-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,79,79,2019-12-10,,2020-02-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,78,78,2019-10-22,,2019-12-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,77,77,2019-09-10,,2019-10-22,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,76,76,2019-07-30,,2019-09-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,75,75,2019-06-04,,2019-07-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,74,74,2019-04-23,,2019-06-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,73,73,2019-03-12,,2019-04-23,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,72,72,2019-01-29,,2019-03-12,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,71,71,2018-12-04,,2019-01-29,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,70,70,2018-10-16,,2018-12-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,69,69,2018-09-04,,2018-10-16,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,68,68,2018-07-24,,2018-09-04,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,67,67,2018-05-29,,2018-07-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,66,66,2018-04-17,,2018-05-29,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,65,65,2018-03-06,,2018-04-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,64,64,2018-01-23,,2018-03-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,63,63,2017-12-05,,2018-01-23,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,62,62,2017-10-17,,2017-12-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,61,61,2017-09-05,,2017-10-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,60,60,2017-07-25,,2017-09-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,59,59,2017-05-30,,2017-07-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,58,58,2017-04-18,,2017-05-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,57,57,2017-03-07,,2017-04-18,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,56,56,2017-01-24,,2017-03-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,55,55,2016-11-29,,2017-01-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,54,54,2016-10-11,,2016-11-29,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,53,53,2016-08-30,,2016-10-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,52,52,2016-07-19,,2016-08-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,51,51,2016-05-24,,2016-07-19,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,50,50,2016-04-12,,2016-05-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,49,49,2016-03-01,,2016-04-12,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,48,48,2016-01-19,,2016-03-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,47,47,2015-11-17,,2016-01-19,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,46,46,2015-10-06,,2015-11-17,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,45,45,2015-08-25,,2015-10-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,44,44,2015-07-14,,2015-08-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,43,43,2015-05-19,,2015-07-14,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,42,42,2015-04-07,,2015-05-19,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,41,41,2015-02-24,,2015-04-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,40,40,2015-01-13,,2015-02-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,39,39,2014-11-11,,2015-01-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,38,38,2014-09-30,,2014-11-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,37,37,2014-08-19,,2014-09-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,36,36,2014-06-24,,2014-08-19,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,35,35,2014-05-13,,2014-06-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,34,34,2014-04-01,,2014-05-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,33,33,2014-02-18,,2014-04-01,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,32,32,2014-01-07,,2014-02-18,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,31,31,2013-11-05,,2014-01-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,30,30,2013-09-24,,2013-11-05,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,29,29,2013-08-13,,2013-09-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,28,28,2013-06-25,,2013-08-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,27,27,2013-05-07,,2013-06-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,26,26,2013-03-26,,2013-05-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,25,25,2013-02-12,,2013-03-26,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,24,24,2012-12-18,,2013-02-12,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,23,23,2012-10-30,,2012-12-18,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,22,22,2012-09-18,,2012-10-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,21,21,2012-08-07,,2012-09-18,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,20,20,2012-06-19,,2012-08-07,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,19,19,2012-04-24,,2012-06-19,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,18,18,2012-03-13,,2012-04-24,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,17,17,2012-01-31,,2012-03-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,16,16,2011-12-06,,2012-01-31,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,15,15,2011-10-18,,2011-12-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,14,14,2011-09-06,,2011-10-18,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,13,13,2011-07-26,,2011-09-06,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,12,12,2011-05-31,,2011-07-26,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,11,11,2011-04-19,,2011-05-31,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,10,10,2011-03-08,,2011-04-19,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,9,9,2011-01-25,,2011-03-08,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,8,8,2010-11-30,,2011-01-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+chrome,Google Chrome,7,7,2010-10-12,,2010-11-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/chrome.md,2026-11-04
+firefox,Mozilla Firefox,159,159,2026-10-27,,2026-11-10,,159.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,158,158,2026-10-13,,2026-10-27,,158.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,157,157,2026-09-29,,2026-10-13,,157.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,156,156,2026-09-15,,2026-09-29,,156.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,155,155,2026-09-01,,2026-09-15,,155.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,154,154,2026-08-18,,2026-09-01,,154.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,153,153,2026-07-21,,,,153.6.0,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,152,152,2026-06-16,,2026-07-21,,152.0.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,151,151,2026-05-18,,2026-06-16,,151.0.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,150,150,2026-04-21,,2026-05-18,,150.0.3,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,149,149,2026-03-24,,2026-04-21,,149.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,148,148,2026-02-24,,2026-03-24,,148.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,147,147,2026-01-13,,2026-02-24,,147.0.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,146,146,2025-12-09,,2026-01-13,,146.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,145,145,2025-11-11,,2025-12-09,,145.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,144,144,2025-10-14,,2025-11-11,,144.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,143,143,2025-09-16,,2025-10-14,,143.0.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,142,142,2025-08-19,,2025-09-16,,142.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,141,141,2025-07-22,,2025-08-19,,141.0.3,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,140,140,2025-06-24,,2026-09-29,,140.17.0,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,139,139,2025-05-27,,2025-06-24,,139.0.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,138,138,2025-04-29,,2025-05-27,,138.0.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,137,137,2025-04-01,,2025-04-29,,137.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,136,136,2025-03-04,,2025-04-01,,136.0.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,135,135,2025-02-04,,2025-03-04,,135.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,134,134,2025-01-07,,2025-02-04,,134.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,133,133,2024-11-26,,2025-01-07,,133.0.3,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,132,132,2024-10-29,,2024-11-26,,132.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,131,131,2024-10-01,,2024-10-29,,131.0.3,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,130,130,2024-09-03,,2024-10-01,,130.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,129,129,2024-08-06,,2024-09-03,,129.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,128,128,2024-07-09,,2025-09-16,,128.14.0,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,127,127,2024-06-11,,2024-07-09,,127.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,126,126,2024-05-14,,2024-06-11,,126.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,125,125,2024-04-16,,2024-05-14,,125.0.3,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,124,124,2024-03-19,,2024-04-16,,124.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,123,123,2024-02-20,,2024-03-19,,123.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,122,122,2024-01-23,,2024-02-20,,122.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,121,121,2023-12-19,,2024-01-23,,121.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,120,120,2023-11-21,,2023-12-19,,120.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,119,119,2023-10-24,,2023-11-21,,119.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,118,118,2023-09-26,,2023-10-24,,118.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,117,117,2023-08-29,,2023-09-26,,117.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,116,116,2023-08-01,,2023-08-29,,116.0.3,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,115,115,2023-07-04,,2027-03-31,,115.44.0,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,114,114,2023-06-06,,2023-07-04,,114.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,113,113,2023-05-09,,2023-06-06,,113.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,112,112,2023-04-11,,2023-05-09,,112.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,111,111,2023-03-14,,2023-04-11,,111.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,110,110,2023-02-14,,2023-03-14,,110.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,109,109,2023-01-17,,2023-02-14,,109.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,108,108,2022-12-13,,2023-01-17,,108.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,107,107,2022-11-15,,2022-12-13,,107.0.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,106,106,2022-10-18,,2022-11-15,,106.0.5,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,105,105,2022-09-20,,2022-10-18,,105.0.3,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,104,104,2022-08-23,,2022-09-20,,104.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,103,103,2022-07-26,,2022-08-23,,103.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,102,102,2022-06-28,,2023-09-26,,102.15.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,91,91,2021-08-10,,2022-09-20,,91.13.0,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+firefox,Mozilla Firefox,78,78,2020-06-30,,2021-11-02,,78.15.0,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/firefox.md,2026-11-04
+office,Microsoft Office,2024,2024,2024-10-01,2029-10-09,2029-10-09,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/office.md,2026-11-04
+office,Microsoft Office,2024-ltsc,2024 LTSC,2024-09-18,2029-10-09,2029-10-09,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/office.md,2026-11-04
+office,Microsoft Office,2021,2021,2021-10-05,2026-10-13,2026-10-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/office.md,2026-11-04
+office,Microsoft Office,2019,2019,2018-09-24,2023-10-10,2025-10-14,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/office.md,2026-11-04
+office,Microsoft Office,2016,2016,2015-09-22,2020-10-13,2025-10-14,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/office.md,2026-11-04
+office,Microsoft Office,2013,2013 SP1,2013-01-09,2018-04-10,2023-04-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/office.md,2026-11-04
+office,Microsoft Office,2011-for-mac,2011 for Mac SP3,2010-12-09,2017-10-10,2017-10-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/office.md,2026-11-04
+office,Microsoft Office,2010,2010 SP2,2010-07-15,2015-10-13,2020-10-13,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/office.md,2026-11-04
+office,Microsoft Office,2008-for-mac,2008 for Mac SP2,2008-01-15,2013-04-09,2013-04-09,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/office.md,2026-11-04
+office,Microsoft Office,2007,2007 SP3,2007-01-27,2012-10-09,2017-10-10,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/office.md,2026-11-04
+ubuntu,Ubuntu Linux,26.10,26.10,2026-10-15,2027-07-01,2027-07-01,,26.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,26.04,26.04,2026-04-23,2031-05-29,2031-05-29,2036-04-23,26.04.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,25.10,25.10,2025-10-09,2026-07-01,2026-07-01,,25.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,25.04,25.04,2025-04-17,2026-01-17,2026-01-17,,25.04,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,24.10,24.10,2024-10-10,2025-07-10,2025-07-10,,24.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,24.04,24.04,2024-04-25,2029-05-31,2029-05-31,2034-04-25,24.04.5,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,23.10,23.10,2023-10-12,2024-07-12,2024-07-12,,23.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,23.04,23.04,2023-04-20,2024-01-20,2024-01-20,,23.04,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,22.10,22.10,2022-10-20,2023-07-20,2023-07-20,,22.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,22.04,22.04,2022-04-21,2024-09-30,2027-06-01,2032-04-21,22.04.5,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,21.10,21.10,2021-10-14,2022-07-14,2022-07-14,,21.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,21.04,21.04,2021-04-22,2022-01-20,2022-01-20,,21.04,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,20.10,20.10,2020-10-22,2021-07-22,2021-07-22,,20.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,20.04,20.04,2020-04-23,2022-10-01,2025-05-31,2030-04-23,20.04.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,19.10,19.10,2019-10-17,2020-07-06,2020-07-06,,19.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,19.04,19.04,2019-04-18,2020-01-23,2020-01-23,,19.04,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,18.10,18.10,2018-10-18,2019-07-18,2019-07-18,,18.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,18.04,18.04,2018-04-26,2023-05-31,2023-05-31,2028-04-26,18.04.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,17.10,17.10,2017-10-19,2018-07-19,2018-07-19,,17.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,17.04,17.04,2017-04-13,2018-01-13,2018-01-13,,17.04,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,16.10,16.10,2016-10-13,2017-07-20,2017-07-20,,16.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,16.04,16.04,2016-04-21,2021-04-02,2021-04-02,2026-04-02,16.04.7,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,15.10,15.10,2015-10-22,2016-07-28,2016-07-28,,15.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,15.04,15.04,2015-04-23,2016-02-04,2016-02-04,,15.04,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,14.10,14.10,2014-10-23,2015-07-23,2015-07-23,,14.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,14.04,14.04,2014-04-17,2019-04-02,2019-04-02,2024-04-02,14.04.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,13.10,13.10,2013-10-17,2014-07-17,2014-07-17,,13.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,13.04,13.04,2013-04-25,2014-01-27,2014-01-27,,13.04,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,12.10,12.10,2012-10-18,2014-05-16,2014-05-16,,12.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,12.04,12.04,2012-04-26,2017-04-28,2017-04-28,2019-04-26,12.04.5,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,11.10,11.10,2011-10-13,2013-05-09,2013-05-09,,11.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,11.04,11.04,2011-04-28,2012-10-28,2012-10-28,,11.04,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,10.10,10.10,2010-10-10,2012-04-10,2012-04-10,,10.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,10.04,10.04,2010-04-29,2013-05-09,2013-05-09,,10.04.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,9.10,9.10,2009-10-29,2011-04-30,2011-04-30,,9.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,9.04,9.04,2009-04-23,2010-10-23,2010-10-23,,9.04,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,8.10,8.10,2008-10-30,2010-04-30,2010-04-30,,8.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,8.04,8.04,2008-04-24,2013-05-09,2013-05-09,,8.04.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,7.10,7.10,2007-10-18,2009-04-18,2009-04-18,,7.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,7.04,7.04,2007-04-19,2008-10-19,2008-10-19,,7.04,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,6.10,6.10,2006-10-26,2006-10-26,2008-04-26,,6.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,6.06,6.06,2006-06-01,2011-06-01,2011-06-01,,6.06.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,5.10,5.10,2005-10-12,2007-04-13,2007-04-13,,5.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,5.04,5.04,2005-04-08,2006-10-31,2006-10-31,,5.04,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+ubuntu,Ubuntu Linux,4.10,4.10,2004-10-26,2004-10-26,2006-04-30,,4.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/ubuntu.md,2026-11-04
+fortios,Fortinet FortiOS (firewalls),8.0,8.0,2026-04-21,2029-04-21,2030-10-21,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/fortios.md,2026-11-04
+fortios,Fortinet FortiOS (firewalls),7.6,7.6,2024-07-25,2028-07-25,2030-01-25,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/fortios.md,2026-11-04
+fortios,Fortinet FortiOS (firewalls),7.4,7.4,2023-05-11,2027-05-11,2028-11-11,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/fortios.md,2026-11-04
+fortios,Fortinet FortiOS (firewalls),7.2,7.2,2022-03-31,2025-03-31,2026-09-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/fortios.md,2026-11-04
+fortios,Fortinet FortiOS (firewalls),7.0,7.0,2021-03-30,2024-03-30,2025-09-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/fortios.md,2026-11-04
+fortios,Fortinet FortiOS (firewalls),6.4,6.4,2020-03-31,2023-03-31,2024-09-30,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/fortios.md,2026-11-04
+fortios,Fortinet FortiOS (firewalls),6.2,6.2,2019-03-28,2022-03-28,2023-09-28,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/fortios.md,2026-11-04
+fortios,Fortinet FortiOS (firewalls),6.0,6.0,2018-03-29,2021-03-29,2022-09-29,,,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/fortios.md,2026-11-04
+opnsense,OPNsense (firewall),26.7,26.7,2026-07-15,,,,26.7.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),26.1,26.1,2026-01-28,,2026-07-15,,26.1.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),25.7,25.7,2025-07-22,,2026-01-28,,25.7.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),25.1,25.1,2025-01-28,,2025-07-23,,25.1.12,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),24.7,24.7,2024-07-23,,2025-01-28,,24.7.12,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),24.1,24.1,2024-01-26,,2024-07-25,,24.1.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),23.7,23.7,2023-07-28,,2024-01-26,,23.7.12,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),23.1,23.1,2023-01-25,,2023-07-28,,23.1.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),22.7,22.7,2022-07-25,,2023-01-25,,22.7.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),22.1,22.1,2022-01-25,,2022-07-25,,22.1.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),21.7,21.7,2021-07-23,,2022-01-25,,21.7.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),21.1,21.1,2021-01-26,,2021-07-23,,21.1.9,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),20.7,20.7,2020-07-28,,2021-01-26,,20.7.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),20.1,20.1,2020-01-29,,2020-07-28,,20.1.9,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),19.7,19.7,2019-07-15,,2020-01-29,,19.7.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),19.1,19.1,2019-01-28,,2019-07-15,,19.1.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),18.7,18.7,2018-07-29,,2019-01-28,,18.7.10,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),18.1,18.1,2018-01-26,,2018-07-29,,18.1.13,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),17.7,17.7,2017-07-26,,2018-01-26,,17.7.12,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),17.1,17.1,2017-01-27,,2017-07-26,,17.1.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),16.7,16.7,2016-07-26,,2017-01-27,,16.7.14,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),16.1,16.1,2016-01-28,,2016-07-26,,16.1.20,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),15.7,15.7,2015-07-02,,2016-01-28,,15.7.25,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+opnsense,OPNsense (firewall),15.1,15.1,2015-01-02,,2015-07-02,,15.1.12,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/opnsense.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,13,13,2025-09-03,2028-11-30,2028-11-30,,13.1.2.57,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,12,12,2023-01-30,2025-09-03,2027-02-28,,12.3.2.4934,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,11,11,2021-02-11,2023-02-01,2024-02-01,,11.0.1.1261-P20240304,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,10,10,2020-02-04,2021-02-01,2023-02-01,,10.0.1.4854-P20220304,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,9.5,9.5,2016-11-16,2020-02-01,2022-01-01,,9.5.4.2866,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,9.0,9.0,2016-01-12,true,true,,9.0.0.1715,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,8.0,8.0,2014-11-06,true,true,,8.0.0.2084,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,7.0,7.0,2013-08-20,true,true,,7.0.0.871,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,6.5,6.5,2012-10-09,true,true,,6.5.0.144,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,6.1,6.1,2012-06-04,true,true,,6.1.0.205,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,6.0,6.0,2011-08-22,true,true,,6.0.0.181,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,5.0,5.0,2010-08-30,true,true,,5.0.2.230,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,4.0,4.0,2009-10-29,true,true,,4.1.2.125,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,3.0,3.0,2009-10-21,true,true,,3.0.1.251,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,2.0,2.0,2008-07-30,true,true,,2.0.0.152,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+veeam-backup-and-replication,Veeam Backup & Replication,1.0,1.0,2008-02-26,true,true,,1.0.1.76,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/veeam-backup-and-replication.md,2026-11-04
+msexchange,Microsoft Exchange Server,subscription,Subscription Edition SU11,2025-07-01,,,,15.2.2562.56,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/msexchange.md,2026-11-04
+msexchange,Microsoft Exchange Server,2019,2019 CU15 SU5,2018-10-22,2024-01-09,2025-10-14,2026-11-01,15.2.1544.36,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/msexchange.md,2026-11-04
+msexchange,Microsoft Exchange Server,2016,2016 CU23 SU19,2015-10-01,2020-10-13,2025-10-14,2026-11-01,15.1.2507.61,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/msexchange.md,2026-11-04
+msexchange,Microsoft Exchange Server,2013,2013 CU23 SU21,2013-01-09,2018-04-10,2023-04-11,,15.0.1497.48,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/msexchange.md,2026-11-04
+msexchange,Microsoft Exchange Server,2010,2010 SP3 UR32,2009-11-09,2015-01-13,2020-10-13,,14.3.513.0,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/msexchange.md,2026-11-04
+msexchange,Microsoft Exchange Server,2007,2007 SP3 UR23,2007-03-08,2012-04-10,2017-04-11,,8.3.517.0,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/msexchange.md,2026-11-04
+msexchange,Microsoft Exchange Server,2003,2003 SP2,2003-09-28,2009-04-14,2014-04-08,,6.5.7654.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/msexchange.md,2026-11-04
+msexchange,Microsoft Exchange Server,2000,2000 SP3,2000-11-29,2005-12-31,2011-01-11,,6.0.6620.7,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/msexchange.md,2026-11-04
+msexchange,Microsoft Exchange Server,5.5,5.5 SP4,1998-02-03,2003-12-31,2006-01-10,,5.5.2653,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/msexchange.md,2026-11-04
+msexchange,Microsoft Exchange Server,5.0,5.0 SP2,1997-05-23,2003-12-31,2006-01-10,,5.0.1460,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/msexchange.md,2026-11-04
+msexchange,Microsoft Exchange Server,4.0,4.0 SP5,1996-06-11,true,true,,4.0.996,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/msexchange.md,2026-11-04
+wordpress,WordPress (websites),7.1,7.1,2026-08-19,,,,7.1.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),7.0,7.0,2026-05-20,2026-08-19,,,7.0.8,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),6.9,6.9,2025-12-02,2026-05-20,,,6.9.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),6.8,6.8,2025-04-15,2025-12-02,,,6.8.12,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),6.7,6.7,2024-11-12,2025-04-15,,,6.7.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),6.6,6.6,2024-07-16,2024-11-12,,,6.6.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),6.5,6.5,2024-04-02,2024-07-16,,,6.5.14,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),6.4,6.4,2023-11-07,2024-04-02,,,6.4.14,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),6.3,6.3,2023-08-08,2023-11-07,,,6.3.14,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),6.2,6.2,2023-03-29,2023-08-08,,,6.2.15,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),6.1,6.1,2022-11-02,2023-03-29,,,6.1.16,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),6.0,6.0,2022-05-24,2022-11-01,,,6.0.18,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),5.9,5.9,2022-01-25,2022-05-24,,,5.9.20,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),5.8,5.8,2021-07-20,2022-01-25,,,5.8.19,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),5.7,5.7,2021-03-09,2021-07-20,,,5.7.21,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),5.6,5.6,2020-12-08,2021-03-09,,,5.6.23,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),5.5,5.5,2020-08-11,2020-12-08,,,5.5.24,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),5.4,5.4,2020-03-31,2020-08-11,,,5.4.25,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),5.3,5.3,2019-11-12,2020-03-31,,,5.3.27,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),5.2,5.2,2019-05-07,2019-11-12,,,5.2.30,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),5.1,5.1,2019-02-21,2019-05-07,,,5.1.28,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),5.0,5.0,2018-12-06,2019-02-21,,,5.0.31,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),4.9,4.9,2017-11-16,2018-12-06,,,4.9.35,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),4.8,4.8,2017-06-08,2017-11-16,,,4.8.34,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),4.7,4.7,2016-12-06,2017-06-08,,,4.7.39,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),4.6,4.6,2016-08-16,2016-12-06,2025-07-31,,4.6.30,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),4.5,4.5,2016-04-12,2016-08-16,2025-07-31,,4.5.33,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),4.4,4.4,2015-12-09,2016-04-12,2025-07-31,,4.4.34,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),4.3,4.3,2015-08-18,2015-12-09,2025-07-31,,4.3.35,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),4.2,4.2,2015-04-23,2015-08-18,2025-07-31,,4.2.39,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),4.1,4.1,2014-12-18,2015-04-23,2025-07-31,,4.1.42,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),4.0,4.0,2014-09-04,2014-12-18,2022-12-01,,4.0.38,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),3.9,3.9,2014-04-16,2014-09-04,2022-12-01,,3.9.40,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),3.8,3.8,2013-12-12,2014-04-16,2022-12-01,,3.8.41,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),3.7,3.7,2013-10-24,2013-12-12,2022-12-01,,3.7.41,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),3.6,3.6,2013-08-01,2013-10-24,2013-10-24,,3.6.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),3.5,3.5,2012-12-11,2013-08-01,2013-08-01,,3.5.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),3.4,3.4,2012-06-13,2012-12-11,2012-12-11,,3.4.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),3.3,3.3,2011-12-12,2012-06-13,2012-06-13,,3.3.3,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),3.2,3.2,2011-07-04,2011-12-12,2011-12-12,,3.2.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),3.1,3.1,2011-02-23,2011-07-04,2011-07-04,,3.1.4,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),3.0,3.0,2010-06-17,2011-02-23,2011-02-23,,3.0.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),2.9,2.9,2009-12-18,2010-06-17,2010-06-17,,2.9.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),2.8,2.8,2009-09-10,2009-12-18,2009-12-18,,2.8.6,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),2.7,2.7,2008-12-10,2009-09-10,2009-09-10,,2.7.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),2.6,2.6,2008-07-14,2008-12-10,2008-12-10,,2.6.5,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),2.5,2.5,2008-03-29,2008-07-14,2008-07-14,,2.5.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),2.3,2.3,2007-09-24,2008-03-29,2008-03-29,,2.3.3,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),2.2,2.2,2007-05-15,2007-09-24,2007-09-24,,2.2.3,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),2.1,2.1,2007-01-22,2007-09-24,2007-09-24,,2.1.3,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),2.0,2.0,2005-12-26,2007-08-05,2007-08-05,,2.0.11,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),1.5,1.5,2005-02-17,2005-12-26,2005-12-26,,1.5.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),1.2,1.2,2004-05-22,2005-02-17,2005-02-17,,1.2.1,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),1.0,1.0,2004-01-03,2004-05-22,2004-05-22,,1.0.2,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),0.72,0.72,2003-10-11,2004-01-03,2004-01-03,,0.72,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04
+wordpress,WordPress (websites),0.71,0.71,2003-06-09,2003-10-11,2003-10-11,,0.711,https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/products/wordpress.md,2026-11-04

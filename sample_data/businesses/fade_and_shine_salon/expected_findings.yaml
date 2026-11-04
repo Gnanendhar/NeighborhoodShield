@@ -1,0 +1,49 @@
+as_of: '2026-11-04'
+labelled_by: Hand-labelled from the Week 1 rule specs (rules/*.yaml), independent
+  of engine output
+expected_rule_ids:
+- BKP-002
+- BKP-003
+- BKP-004
+- BKP-005
+- BKP-006
+- BKP-007
+- BKP-008
+- BKP-009
+- BKP-010
+- END-001
+- END-002
+- END-003
+- END-004
+- END-006
+- END-009
+- END-011
+- IAM-001
+- IAM-002
+- IAM-005
+- IAM-007
+- IAM-009
+- IAM-010
+- IAM-011
+- IAM-012
+- IAM-014
+- IAM-016
+- NET-005
+- NET-006
+- NET-007
+- NET-008
+- NET-009
+- NET-010
+- NET-011
+- PAT-001
+- PAT-002
+- PAT-004
+- PAT-005
+- PAT-006
+- PAT-007
+- PAT-008
+- PAT-009
+- PAT-010
+expected_legal_flags:
+- LEG-001
+- LEG-003

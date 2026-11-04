@@ -1,0 +1,3 @@
+device_id,device_type,os_name,os_version,auto_update_enabled,last_patch_date,pending_critical_updates,key_software_name,key_software_version,vendor_supported
+office-laptop-1,laptop,Windows,11 25H2 (W),Y,2026-10-14,0,Microsoft 365 Apps,Current Channel,Y
+office-laptop-2,laptop,macOS,15,Y,2026-10-20,0,Microsoft 365 Apps,Current Channel,Y

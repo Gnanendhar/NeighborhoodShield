@@ -1,0 +1,8 @@
+user_id,account_type,is_admin,mfa_enabled,status,created_date,last_login_date,role_or_department
+owner,admin,Y,Y,active,2021-03-01,2026-11-02,Owner
+manager-1,staff,Y,N,active,2022-06-15,2026-11-01,Front of house
+cashier-1,staff,N,unknown,active,2024-01-10,2026-10-30,Register
+cashier-2,staff,N,N,active,2023-04-02,2026-05-20,Register
+register-shared,shared,N,N,active,2021-03-01,2026-11-03,Register
+former-cook,staff,N,N,active,2022-09-01,2026-02-14,
+bookkeeper,staff,N,Y,disabled,2021-05-01,2025-12-31,Accounting

@@ -1,0 +1,4 @@
+device_id,device_type,os_name,os_version,auto_update_enabled,last_patch_date,pending_critical_updates,key_software_name,key_software_version,vendor_supported
+office-pc,desktop,Windows,11 24H2 (W),Y,2026-10-15,0,ConnectWise ScreenConnect Client,23.9.8,unknown
+counter-ipad,tablet,iPadOS,18,Y,2026-10-23,0,Square Point of Sale,6.x,Y
+orders-tablet,tablet,Android,14,Y,2026-10-10,0,Online ordering app,,Y

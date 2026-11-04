@@ -1,0 +1,2 @@
+domain,mx_provider,spf_present,spf_all_qualifier,dmarc_present,dmarc_policy,dmarc_rua_present,dkim_found,checked_on
+lunaazul-taqueria.example,google,Y,~all,Y,none,N,Y,2026-11-04

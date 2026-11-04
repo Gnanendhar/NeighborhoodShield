@@ -1,0 +1,3 @@
+user_id,account_type,is_admin,mfa_enabled,status,created_date,last_login_date,role_or_department
+owner,admin,Y,unknown,active,2018-02-20,2026-10-29,Owner
+front-desk,shared,Y,unknown,active,2018-02-20,2026-11-04,Front desk (all stylists)

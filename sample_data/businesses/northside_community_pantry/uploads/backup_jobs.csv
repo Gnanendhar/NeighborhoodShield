@@ -1,0 +1,3 @@
+job_id,source_system,destination_type,schedule,last_success_date,last_restore_test_date,encrypted,retention_days
+1,sharepoint and onedrive,cloud,daily,2026-11-04,2026-09-25,Y,90
+2,donor database export,offline,weekly,2026-11-01,2026-09-25,Y,365
