@@ -1,0 +1,3 @@
+# Sample CSVs are generated with CRLF line endings (Python csv default).
+# Store them byte-for-byte so CI's reproducibility check matches.
+sample_data/businesses/**/*.csv -text
