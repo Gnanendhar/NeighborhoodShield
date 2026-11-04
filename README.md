@@ -111,4 +111,8 @@ See [`docs/data_sources.md`](docs/data_sources.md) for provenance and refresh po
 
 ## Ownership
 
-ChiEAC owns the NeighborhoodShield AI product, name, and repository. Builder credit: Gyanendhar Reddy Reddymalla. License to be confirmed by ChiEAC before the repository is made public.
+ChiEAC owns the NeighborhoodShield AI product, name, and repository. Builder credit: Gyanendhar Reddy Reddymalla.
+
+## License
+
+Released under the [MIT License](LICENSE).
