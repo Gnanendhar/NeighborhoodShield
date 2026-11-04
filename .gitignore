@@ -24,3 +24,6 @@ KEEP_PRIVATE_*
 *_real.csv
 *_real.xlsx
 pilot_data/
+
+# Personal drafts (kept locally, not published)
+docs/linkedin/
