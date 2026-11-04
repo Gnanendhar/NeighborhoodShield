@@ -97,18 +97,6 @@ See [`docs/data_sources.md`](docs/data_sources.md) for provenance and refresh po
 * The repository contains only public reference data and fictional sample businesses.
 * Assess only systems you own or are authorized to assess.
 
-## Roadmap
-
-| Week | Dates (2026) | Gate |
-|---|---|---|
-| 1 | Nov 2 – 6 | **Gate 1: design review** ← you are here |
-| 2 | Nov 9 – 13 | Intake, parsers with redaction, rules engine core, Module 1 |
-| 3 | Nov 16 – 20 | Modules 2 and 3 — Gate 2 |
-| 4 | Nov 23 – 27 | Modules 4 and 5, scoring, dashboard |
-| 5 | Nov 30 – Dec 4 | Business Survival Security Planner — Gate 3 |
-| 6 | Dec 7 – 11 | PDF, JSON, baseline comparison, deployment |
-| 7 | Dec 14 – 18 | Pilots, guides, demo video — Gate 4 |
-
 ## Ownership
 
 ChiEAC owns the NeighborhoodShield AI product, name, and repository. Builder credit: Gyanendhar Reddy Reddymalla.
