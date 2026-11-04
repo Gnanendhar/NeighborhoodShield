@@ -4,8 +4,6 @@
 
 A ChiEAC CommunityWealth AI project. Built by **Gyanendhar Reddy Reddymalla** (M.S. Cybersecurity, University of Houston; CompTIA Security+, CySA+; Associate of ISC2) for the [Chicago Education Advocacy Cooperative](https://chieac.org). Revenue from the product funds STEM-OPT opportunities for international graduates.
 
-> **Status: Week 1 of 7 — design and foundations (Gate 1, Fri Nov 6, 2026).** The rule catalog, questionnaire, upload templates, reference data, and sample businesses are complete and tested. The rules engine runs from Week 2.
-
 ![Architecture](docs/architecture/architecture.png)
 
 ---
