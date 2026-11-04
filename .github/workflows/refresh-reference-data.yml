@@ -1,0 +1,44 @@
+name: Refresh reference data
+
+# Monthly: re-download endoflife.date, CISA KEV, and Chicago license snapshots,
+# run the tests, and open a pull request for a human to review. Nothing merges by itself.
+on:
+  schedule:
+    - cron: "17 14 3 * *"   # 3rd of each month, 14:17 UTC (08:17 Chicago)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+      - name: Refresh snapshots
+        run: python tools/refresh_reference_data.py all
+      - name: Check links in reference data
+        run: python tools/check_links.py || true
+      - name: Tests still pass
+        run: pytest
+      - name: Rebuild mapping sheet
+        run: python tools/build_mapping_sheet.py
+      - name: Open pull request if anything changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then echo "No changes"; exit 0; fi
+          branch="data-refresh-$(date +%Y-%m-%d)"
+          git config user.name "neighborhoodshield-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add data/reference docs/mapping
+          git commit -m "Monthly reference data refresh $(date +%Y-%m-%d)"
+          git push origin "$branch"
+          gh pr create --title "Reference data refresh $(date +%Y-%m-%d)" \
+            --body "Automated monthly snapshot of endoflife.date, CISA KEV and Chicago licenses. Review diffs (new end-of-life dates, new KEV entries) before merging."

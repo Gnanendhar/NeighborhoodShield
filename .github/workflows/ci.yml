@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - name: Install
+        run: pip install -r requirements-dev.txt
+      - name: Lint
+        run: ruff check .
+      - name: Rule catalog, strings, templates, sample data, reference data
+        run: pytest
+      - name: Sample data is reproducible
+        run: |
+          python sample_data/generate.py
+          git diff --exit-code -- sample_data/businesses
+      - name: Mapping sheet builds from the catalog
+        run: python tools/build_mapping_sheet.py
