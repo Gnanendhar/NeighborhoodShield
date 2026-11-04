@@ -1,0 +1,20 @@
+as_of: '2026-11-04'
+seed: 20261102
+name: Taqueria Luna Azul (fictional)
+segment: restaurant_food
+chicago_license_category: Retail Food Establishment
+owner_persona: Danielle (fictional)
+story: Family-run taqueria, 8 staff, open 7 days. Square on an iPad at the counter,
+  a Windows back-office PC for payroll and online-order tablets. A nephew 'does the
+  computers'. The register reseller installed a remote-support tool years ago, and
+  the owner opened Remote Desktop on the router so they could do payroll from home.
+designed_weaknesses:
+- Shared register login and everyone is an administrator
+- Remote Desktop (3389) forwarded from the internet to the office PC; no MFA
+- ConnectWise ScreenConnect client left installed (product is in CISA KEV)
+- Back-office PC on Windows 11 24H2 Home, which reached end of servicing on 2026-10-13
+  (owner thinks it is current)
+- Customer Wi-Fi on the same network as the register
+- Cloud sales data never test-restored
+disclaimer: Fictional business created for testing. Any resemblance to a real business
+  is coincidental.

@@ -1,0 +1,2 @@
+safeguard_id,safeguard_title,implementation_group,why_used,verified_on,verification_note
+9.5,Implement DMARC,IG2,"Email-domain spoofing is a root cause of business email compromise (over $3 billion in reported losses in FBI IC3 2025)",2026-11-04,Confirm title and IG against the official CIS v8.1 workbook

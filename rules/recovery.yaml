@@ -1,0 +1,199 @@
+# Module 5: Backup and Recovery Readiness (+ incident response basics, CIS Control 17, and service providers, 15.1)
+module: recovery
+version: "0.1.0"
+rules:
+  - id: BKP-001
+    module: recovery
+    title: "No backups"
+    evidence: questionnaire
+    trigger:
+      any_of:
+        - {kind: answer, q: bkp_backed_up, in: ["no", "dont_know"]}
+        - {kind: answer, q: bkp_locations, contains_any: [dont_know]}
+    severity: critical
+    cis_safeguards: ["11.2", "11.1"]
+    nist_csf: [PR.DS-11]
+    attack: [T1485, T1486]
+    scenario: permanent_data_loss
+    finding_plain: "Your important files and records are not backed up, or you are not sure. If the computer dies or is locked by ransomware, they are gone."
+    finding_technical: "No automated backups confirmed (IG1 11.2: automate backups at least weekly, more often for sensitive data)."
+    fixes:
+      - {action: "Turn on automatic cloud backup for the main computer (for example OneDrive or Google Drive for files, or a backup service).", cost_tier: low, effort: "1 hour", effort_minutes: 60, who: owner}
+    sources: [cis_ig1, cisa_ransomware_guide]
+
+  - id: BKP-002
+    module: recovery
+    title: "Backups only on the same computer or in the same building"
+    evidence: both
+    trigger:
+      any_of:
+        - all_of:
+            - {kind: answer, q: bkp_backed_up, in: ["yes"]}
+            - {kind: answer, q: bkp_locations, lacks_all: [cloud, offsite]}
+        - kind: rows
+          table: backup_jobs
+          where:
+            - {col: destination_type, op: in, value: [cloud, offline]}
+          match: none
+    severity: high
+    cis_safeguards: ["11.4", "11.3"]
+    nist_csf: [PR.DS-11]
+    attack: [T1486, T1490]
+    scenario: permanent_data_loss
+    finding_plain: "Your backups live on the same computer or in the same building. A fire, a break-in, or ransomware can take the backup along with the original."
+    finding_technical: "No isolated recovery copy (IG1 11.4: offline, cloud, or off-site). Ransomware routinely deletes/encrypts reachable backups (ATT&CK T1490)."
+    fixes:
+      - {action: "Add a cloud backup, or rotate an external drive that is unplugged and taken home every week.", cost_tier: low, effort: "1 hour", effort_minutes: 60, who: owner}
+    sources: [cis_ig1, cisa_ransomware_guide]
+
+  - id: BKP-003
+    module: recovery
+    title: "Backup never tested"
+    evidence: both
+    trigger:
+      any_of:
+        - {kind: answer, q: bkp_restore_tested, in: ["no", "dont_know"]}
+        - kind: rows
+          table: backup_jobs
+          where:
+            - {col: last_restore_test_date, op: is_empty}
+        - kind: rows
+          table: backup_jobs
+          where:
+            - {col: last_restore_test_date, op: older_than_days, value: 180}
+    severity: high
+    cis_safeguards: ["11.1"]
+    nist_csf: [PR.DS-11, RC.RP-03]
+    attack: [T1490]
+    scenario: permanent_data_loss
+    finding_plain: "You have a backup but have never checked that it can actually bring your files back. Backups that were never tested fail at exactly the moment they are needed."
+    finding_technical: "No restore test within 180 days (or never). Perform and document a test restore quarterly."
+    fixes:
+      - {action: "Pick one important file, restore it from the backup to a new folder, and open it. Put a reminder on the calendar to do this every three months.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner}
+    sources: [cis_ig1]
+
+  - id: BKP-004
+    module: recovery
+    title: "Recovery would take days, or nobody knows"
+    evidence: questionnaire
+    trigger: {kind: answer, q: bkp_recovery_time, in: ["days", "dont_know"]}
+    severity: medium
+    cis_safeguards: ["11.1"]
+    nist_csf: [RC.RP-01]
+    attack: []
+    scenario: permanent_data_loss
+    finding_plain: "If the main computer died, it would take days to take payments and see records again, or nobody knows how long."
+    finding_technical: "No defined recovery time objective. Document the restore procedure, prioritize critical systems, and identify a spare device/paper fallback."
+    fixes:
+      - {action: "Write a half-page 'if the computer dies' plan: where the backup is, who restores it, and how to take payments meanwhile (for example a phone card reader).", cost_tier: free, effort: "45 minutes", effort_minutes: 45, who: owner}
+    sources: [nist_sp1300, cis_ig1]
+
+  - id: BKP-005
+    module: recovery
+    title: "No list of who to call"
+    evidence: questionnaire
+    trigger: {kind: answer, q: bkp_contact_list, in: ["no", "dont_know"]}
+    severity: medium
+    cis_safeguards: ["17.2"]
+    nist_csf: [RS.MA-01, RS.CO-02]
+    attack: []
+    scenario: no_incident_plan
+    finding_plain: "There is no written list of who to call when something goes wrong. Every hour spent looking for a phone number is an hour you are closed."
+    finding_technical: "No incident contact list (IG1 17.2): ISP, POS vendor, bank fraud line, IT support, insurer, local FBI field office / IC3."
+    fixes:
+      - {action: "Fill in our one-page contact list (internet company, register company, bank fraud line, IT help, insurance) and tape it inside a cabinet.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner}
+    sources: [cis_ig1, ic3]
+
+  - id: BKP-006
+    module: recovery
+    title: "Nobody is named to take charge"
+    evidence: questionnaire
+    trigger: {kind: answer, q: bkp_incident_owner, in: ["no", "dont_know"]}
+    severity: medium
+    cis_safeguards: ["17.1", "17.3"]
+    nist_csf: [GV.RR-02, RS.MA-01]
+    attack: []
+    scenario: no_incident_plan
+    finding_plain: "Nobody has been named to take charge during a computer or fraud problem, or to receive reports from staff."
+    finding_technical: "No designated incident handler or reporting process (IG1 17.1, 17.3)."
+    fixes:
+      - {action: "Name one person (and a backup) who staff tell about anything strange, and who makes the calls.", cost_tier: free, effort: "10 minutes", effort_minutes: 10, who: owner}
+    sources: [cis_ig1, nist_sp1300]
+
+  - id: BKP-007
+    module: recovery
+    title: "Backup job has not succeeded recently"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: backup_jobs
+      where:
+        - {col: schedule, op: in, value: [daily, weekly]}
+        - {col: last_success_date, op: older_than_days, value: 8}
+    severity: high
+    cis_safeguards: ["11.2"]
+    nist_csf: [PR.DS-11]
+    attack: []
+    scenario: permanent_data_loss
+    finding_plain: "A backup that should run every day or week has not finished successfully in over a week."
+    finding_technical: "Daily/weekly job with last_success_date > 8 days. Investigate failure; enable failure alerts."
+    fixes:
+      - {action: "Open the backup program, fix the error, and turn on email alerts for failed backups.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner_or_contractor}
+    sources: [cis_ig1]
+
+  - id: BKP-008
+    module: recovery
+    title: "Backups not encrypted"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: backup_jobs
+      where:
+        - {col: encrypted, op: in, value: ["N", "unknown"]}
+        - {col: destination_type, op: in, value: [local_external, offline, cloud, network_share]}
+    severity: medium
+    cis_safeguards: ["11.3"]
+    nist_csf: [PR.DS-11, PR.DS-01]
+    attack: [T1005]
+    scenario: stolen_or_lost_device
+    finding_plain: "A backup copy is not encrypted. Anyone who takes the drive or gets into the account can read everything in it."
+    finding_technical: "Recovery data not protected (IG1 11.3). Enable backup encryption with a key stored separately."
+    fixes:
+      - {action: "Turn on encryption in the backup settings and store the password in your password manager.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner_or_contractor}
+    sources: [cis_ig1]
+
+  - id: BKP-009
+    module: recovery
+    title: "Backups kept for too short a time"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: backup_jobs
+      where:
+        - {col: retention_days, op: lt, value: 30}
+    severity: medium
+    cis_safeguards: ["11.1"]
+    nist_csf: [PR.DS-11]
+    attack: [T1486]
+    scenario: permanent_data_loss
+    finding_plain: "Backups are only kept for a short time. If a problem goes unnoticed for a few weeks, the clean copies may already be gone."
+    finding_technical: "retention_days < 30. Attackers often dwell for weeks before encrypting; keep at least 30 days of versions (ideally 90)."
+    fixes:
+      - {action: "Change the backup settings to keep at least 30 days of copies.", cost_tier: free, effort: "10 minutes", effort_minutes: 10, who: owner_or_contractor}
+    sources: [cisa_ransomware_guide]
+
+  - id: BKP-010
+    module: recovery
+    title: "Outside companies with access are not tracked"
+    evidence: questionnaire
+    trigger: {kind: answer, q: bkp_vendor_list, in: ["no", "dont_know"]}
+    severity: low
+    cis_safeguards: ["15.1"]
+    nist_csf: [GV.SC-04]
+    attack: [T1199]
+    scenario: no_incident_plan
+    finding_plain: "You do not have a list of outside companies that can get into your systems. When one of them is hacked, you need to know quickly."
+    finding_technical: "No service-provider inventory (IG1 15.1). List provider, service, data/access held, contact, and contract owner."
+    fixes:
+      - {action: "List every outside company with access (register, IT helper, website, payroll) and their support number.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner}
+    sources: [cis_ig1, nist_sp1300]

@@ -1,0 +1,6 @@
+device_id,device_type,os_name,os_version,auto_update_enabled,last_patch_date,pending_critical_updates,key_software_name,key_software_version,vendor_supported
+office-pc,desktop,Windows,10 22H2,N,2025-09-09,6,QuickBooks Desktop,2021,N
+owner-laptop,laptop,Windows,11 25H2,Y,2026-10-14,0,Microsoft 365 Apps,Current Channel,Y
+front-tablet,tablet,iPadOS,18,Y,2026-10-20,0,Square Point of Sale,6.x,Y
+kitchen-pc,desktop,Windows,11 24H2,Y,2026-09-10,2,ScreenConnect Client,23.9,unknown
+router,router,TP-Link firmware,TL-WR841N v14,N,2022-04-01,0,TP-Link TL-WR841N,v14,N

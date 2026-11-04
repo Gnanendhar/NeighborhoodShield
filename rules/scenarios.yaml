@@ -1,0 +1,117 @@
+# Disruption scenarios used by the Business Survival Security Planner.
+# Week 1 status: starting values from Appendix D of the project brief.
+# Week 5 task: calibrate each value against the sources in docs/calibration_notes.md
+# and flip calibration_status to "calibrated" with a dated note.
+#
+# Formula (Appendix D):
+#   exposure_low/high = downtime_days_low/high x midpoint(daily_sales_band)
+#                       x dependency_factor (1.0 if a system in systems_affected
+#                       is one the owner cannot operate without, else 0.5)
+#                       + recovery_cost_usd
+#   no_incident_plan is a multiplier: it adds extra_days to any other scenario.
+version: "0.1.0"
+scenarios:
+  - key: ransomware_primary_system
+    name: "Ransomware on the main computer"
+    description_plain: "Criminals lock your files and demand money. The register, records, and schedule stop working until the computer is rebuilt."
+    downtime_days_low: 3
+    downtime_days_high: 10
+    recovery_cost_usd: 2500
+    systems_affected: [pos_payments, records, booking, email, payroll]
+    attack: [T1133, T1021.001, T1486, T1490]
+    text_flags: [notification_if_sensitive_data]
+    calibration_status: placeholder
+    source_notes:
+      - "Brief Appendix D starting value."
+      - "Verizon DBIR 2026 (via Cyber Readiness Institute summary): small organizations were 96% of ransomware victims; 69% of SMBs did not pay, citing reliable backups."
+      - "FBI IC3 2025: 3,611 ransomware complaints, >$32M reported losses (complaint data understates downtime cost)."
+      - "Nationwide 2024 (press release): average small-business cyber claim $18,000-21,000; recovery can take up to 75 days; 81% of owners believe an attack would cost them under $5,000."
+  - key: account_takeover_fraud
+    name: "Email or bank account taken over"
+    description_plain: "Someone logs in as you, reads your email, and tricks customers, suppliers, or your bank into sending money to them."
+    downtime_days_low: 0
+    downtime_days_high: 2
+    recovery_cost_usd: 500
+    systems_affected: [email, payroll]
+    attack: [T1078, T1566, T1114, T1534, T1657]
+    text_flags: [direct_fraud_loss_possible]
+    calibration_status: placeholder
+    source_notes:
+      - "Brief Appendix D starting value."
+      - "FBI IC3 2025: business email compromise losses reported at over $3 billion (via The Record summary of the IC3 report)."
+  - key: permanent_data_loss
+    name: "Records lost for good"
+    description_plain: "A computer dies or is wiped and there is no working copy. Records have to be rebuilt by hand."
+    downtime_days_low: 5
+    downtime_days_high: 20
+    recovery_cost_usd: 1000
+    systems_affected: [records, payroll, booking]
+    attack: [T1485, T1490]
+    text_flags: [notification_if_sensitive_data]
+    calibration_status: placeholder
+    source_notes:
+      - "Brief Appendix D starting value."
+  - key: pos_tampering_or_outage
+    name: "Register tampered with or down"
+    description_plain: "Someone gets into the register or card system, or it stops working, and you cannot take cards."
+    downtime_days_low: 1
+    downtime_days_high: 5
+    recovery_cost_usd: 1000
+    systems_affected: [pos_payments, online_orders]
+    attack: [T1078.001, T1056, T1565]
+    text_flags: [card_data_notification]
+    calibration_status: placeholder
+    source_notes:
+      - "Brief Appendix D starting value."
+  - key: router_compromise
+    name: "Router taken over"
+    description_plain: "Someone takes control of the box that connects you to the internet and can watch or block everything on your network."
+    downtime_days_low: 1
+    downtime_days_high: 3
+    recovery_cost_usd: 300
+    systems_affected: [pos_payments, booking, email, online_orders, door_camera, records]
+    attack: [T1078.001, T1190, T1557]
+    text_flags: []
+    calibration_status: placeholder
+    source_notes:
+      - "Brief Appendix D starting value."
+      - "Verizon DBIR 2026 (via CRI summary): unpatched vulnerabilities in edge devices cited in 29% of cases discussed."
+  - key: stolen_or_lost_device
+    name: "Laptop or phone lost or stolen"
+    description_plain: "A device with business information goes missing and whoever has it can read the files."
+    downtime_days_low: 1
+    downtime_days_high: 3
+    recovery_cost_usd: 800
+    systems_affected: [records, email]
+    attack: [T1005, T1052]
+    text_flags: [notification_if_sensitive_data]
+    calibration_status: placeholder
+    source_notes:
+      - "Brief Appendix D starting value."
+  - key: malware_outbreak
+    name: "Virus spreads across computers"
+    description_plain: "Harmful software spreads from one computer to the others and they all need cleaning."
+    downtime_days_low: 2
+    downtime_days_high: 5
+    recovery_cost_usd: 1000
+    systems_affected: [pos_payments, records, email, booking, payroll]
+    attack: [T1204, T1091]
+    text_flags: []
+    calibration_status: placeholder
+    source_notes:
+      - "Brief Appendix D starting value."
+  - key: no_incident_plan
+    name: "No plan for a bad day"
+    description_plain: "Nobody knows who to call, so every problem takes longer to fix."
+    downtime_days_low: 0
+    downtime_days_high: 0
+    recovery_cost_usd: 0
+    is_multiplier: true
+    extra_days_low: 1
+    extra_days_high: 2
+    systems_affected: [pos_payments, booking, email, payroll, records, door_camera, online_orders]
+    attack: []
+    text_flags: []
+    calibration_status: placeholder
+    source_notes:
+      - "Brief Appendix D starting value (adds 1 to 2 days to any other scenario)."

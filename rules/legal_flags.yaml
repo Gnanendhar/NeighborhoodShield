@@ -1,0 +1,96 @@
+# Text-only legal and compliance notices (Week 1 extension).
+# Rules for this file:
+#  * Never a dollar estimate in notice_plain (brief: compliance exposure is text only).
+#  * Every flag shows the not_legal_advice statement from content/strings.yaml.
+#  * Each citation is checked against the primary source; verified_on records when.
+version: "0.1.0"
+flags:
+  - id: LEG-001
+    title: "Illinois biometric privacy law (BIPA)"
+    jurisdiction: Illinois
+    trigger: {kind: answer, q: bp_biometrics, in: ["yes", "dont_know"]}
+    notice_plain: "Illinois has a strict law about fingerprints and face scans, including time clocks. Before you scan anyone, you need a written policy and their written permission. Businesses that skipped this step have been sued by their own staff."
+    what_to_do:
+      - "Find out if any time clock, door lock, or register uses fingerprints or face scans."
+      - "If it does, ask the vendor for their Illinois BIPA consent form and retention policy, and have every person sign before their next scan."
+      - "Or switch the device to a PIN or badge instead."
+      - "Talk to a lawyer about consent you did not collect in the past."
+    citation: "Biometric Information Privacy Act, 740 ILCS 14 (sections 15(a) written retention policy, 15(b) written release; 20 private right of action: up to $1,000 per negligent and $5,000 per intentional or reckless violation). Amended by SB 2979, signed Aug 2, 2024: collecting the same identifier from the same person by the same method counts as one violation; electronic signatures count as written release. Cothron v. White Castle (Ill. 2023) had held each scan a separate violation."
+    source_urls:
+      - "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=3004&ChapterID=57"
+      - "https://dwt.com/blogs/privacy--security-law-blog/2024/08/illinois-bipa-biometrics-law-amended-for-damages"
+    verified_on: 2026-11-04
+
+  - id: LEG-002
+    title: "Illinois data breach notice law (PIPA)"
+    jurisdiction: Illinois
+    trigger: {kind: answer, q: bp_sensitive_data, contains_any: [card_numbers, childrens_records, health_info, ssn_tax_ids, dont_know]}
+    notice_plain: "You keep personal information that Illinois law protects. If it is stolen, you must tell the people affected quickly, and tell the Illinois Attorney General if more than 500 Illinois residents are affected."
+    what_to_do:
+      - "Know where this information lives (which computer, which app, which paper files)."
+      - "Keep only what you need, and shred or delete the rest."
+      - "Keep the 'who to call' list from your plan, including the Attorney General, handy."
+    citation: "Personal Information Protection Act, 815 ILCS 530/10: notice to residents 'in the most expedient time possible and without unreasonable delay'; notice to the Attorney General when a single breach requires notifying more than 500 Illinois residents, no later than notice to consumers (530/10(e))."
+    source_urls:
+      - "https://ilga.gov/legislation/ilcs/documents/081505300K10.htm"
+    verified_on: 2026-11-04
+
+  - id: LEG-003
+    title: "Card payment security rules (PCI DSS)"
+    jurisdiction: "Card brands (PCI SSC)"
+    trigger:
+      any_of:
+        - {kind: answer, q: bp_sensitive_data, contains_any: [card_numbers]}
+        - {kind: answer, q: bp_critical_systems, contains_any: [pos_payments]}
+    notice_plain: "If you accept cards, your contract with your payment company requires you to follow the card industry's security rules. Most small shops prove this once a year with a short questionnaire from their payment company."
+    what_to_do:
+      - "Ask your payment company which yearly questionnaire (SAQ) applies to you and when it is due."
+      - "Never write down or save full card numbers."
+      - "Keep the card reader on its own network, away from customer Wi-Fi."
+    citation: "Payment Card Industry Data Security Standard v4.0.1 (PCI Security Standards Council, June 2024); merchants validate compliance as required by their acquirer, typically via a Self-Assessment Questionnaire."
+    source_urls:
+      - "https://www.pcisecuritystandards.org/merchants/"
+    verified_on: 2026-11-04
+
+  - id: LEG-004
+    title: "Childcare records"
+    jurisdiction: Illinois
+    trigger:
+      any_of:
+        - {kind: answer, q: bp_business_type, in: [childcare]}
+        - {kind: answer, q: bp_sensitive_data, contains_any: [childrens_records]}
+    notice_plain: "Childcare licensing rules require you to keep records about each child, and those records include health and family details. Losing them can affect your license as well as the families."
+    what_to_do:
+      - "Keep enrollment and health records on an encrypted device, with a backup outside the building."
+      - "Limit who can open them, and turn off logins when staff leave."
+    citation: "Illinois DCFS licensing standards for day care homes and centers (89 Ill. Adm. Code Parts 406 and 407) require child records; breach notice duties under 815 ILCS 530 may also apply. Part numbers to be confirmed against the current DCFS rules."
+    source_urls:
+      - "https://dcfs.illinois.gov/"
+    verified_on: 2026-11-04
+
+  - id: LEG-005
+    title: "Health information"
+    jurisdiction: United States
+    trigger: {kind: answer, q: bp_sensitive_data, contains_any: [health_info]}
+    notice_plain: "You keep health or medical information. Federal health privacy rules (HIPAA) apply only to certain health providers and plans, but Illinois breach law covers medical information for everyone."
+    what_to_do:
+      - "Ask yourself if you bill health insurance electronically. If yes, ask a lawyer whether HIPAA applies to you."
+      - "Either way, encrypt devices that hold this information and back it up."
+    citation: "HIPAA applies to covered entities and business associates (45 CFR 160.103); Illinois PIPA (815 ILCS 530/5) includes medical and health insurance information in 'personal information'."
+    source_urls:
+      - "https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html"
+      - "https://ilga.gov/legislation/ilcs/documents/081505300K10.htm"
+    verified_on: 2026-11-04
+
+  - id: LEG-006
+    title: "FTC Safeguards Rule (tax preparers and similar offices)"
+    jurisdiction: United States
+    trigger: {kind: answer, q: bp_business_type, in: [professional_services]}
+    notice_plain: "If you prepare taxes, arrange loans, or handle customers' money, a federal rule may require a written security program and a report to the FTC after certain breaches."
+    what_to_do:
+      - "Check the FTC's plain-language guide to see whether the rule covers your office."
+      - "If it does, your 30-day plan from this tool is a good start on the written program."
+    citation: "FTC Standards for Safeguarding Customer Information, 16 CFR Part 314 (amended; breach notification to the FTC for events involving 500 or more consumers, effective May 13, 2024). Coverage depends on activities; confirm with the FTC guide."
+    source_urls:
+      - "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know"
+    verified_on: 2026-11-04

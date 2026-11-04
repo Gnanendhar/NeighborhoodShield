@@ -1,0 +1,4 @@
+rule_id,enabled,action,direction,source,destination,service_or_port,comment
+1,Y,allow,outbound,lan,any,any,Default outbound
+2,Y,allow,outbound,guest,wan,"80,443,53",Guest internet only
+3,Y,deny,inbound,any,any,any,Default deny

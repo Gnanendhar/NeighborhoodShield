@@ -1,0 +1,3 @@
+device_id,device_type,protection_product,protection_enabled,definitions_date,disk_encryption,screen_lock,last_seen_date
+front-pc,desktop,,N,,N,N,2026-11-04
+stylist-tablet,tablet,,N,,Y,Y,2026-11-03

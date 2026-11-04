@@ -1,0 +1,25 @@
+# "How you compare" view (Week 1 extension).
+# Peer comparison WITHOUT storing anyone's data: owners are compared with published,
+# dated surveys in data/reference/smb_benchmarks.csv, and with their own previous
+# baseline file. When surveys disagree, both are shown with their populations.
+version: "0.1.0"
+principle: "Compare with published surveys and your own last check-up. Never with other customers' stored answers."
+links:
+  - question: iam_mfa_email
+    metric_ids: [mfa_used, mfa_required_staff]
+    owner_sentence: "In a {fieldwork} survey by {publisher}, {value_pct}% of small businesses said: {metric}."
+  - question: iam_security_training
+    metric_ids: [training_annual, phishing_tests]
+    owner_sentence: "In a {fieldwork} survey by {publisher}, {value_pct}% of small businesses said: {metric}."
+  - question: bp_cyber_insurance
+    metric_ids: [cyber_insurance]
+    owner_sentence: "In a {fieldwork} survey by {publisher}, {value_pct}% of small businesses said: {metric}."
+  - question: bkp_contact_list
+    metric_ids: [ir_plan_nationwide, ir_plan_guardz]
+    owner_sentence: "{publisher} ({fieldwork}): {value_pct}% — {metric}. Surveys disagree, so we show both."
+  - question: bp_email_domain
+    metric_ids: [dmarc_valid_top_domains, dmarc_enforced_top_domains]
+    owner_sentence: "{publisher} ({fieldwork}): {value_pct}% of the busiest websites' domains — {metric}."
+  - question: bkp_restore_tested
+    metric_ids: [smb_no_ransom_backups]
+    owner_sentence: "{publisher}: {value_pct}% — {metric}."

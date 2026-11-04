@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Streamlit secrets (never commit)
+.streamlit/secrets.toml
+
+# Privacy guardrails: real exports must never be committed.
+neighborhoodshield_export/
+KEEP_PRIVATE_*
+*_real.csv
+*_real.xlsx
+pilot_data/

@@ -1,0 +1,8 @@
+rule_id,enabled,action,direction,source,destination,service_or_port,comment
+1,Y,allow,outbound,lan,any,any,Default outbound
+2,Y,allow,inbound,wan,192.168.1.20,3389,Remote desktop for owner
+3,Y,allow,inbound,wan,192.168.1.1,8080,
+4,Y,allow,outbound,guest,any,"80,443",Guest internet
+5,Y,allow,inbound,guest,lan,any,
+6,N,allow,inbound,wan,192.168.1.30,445,Old file share (disabled)
+7,Y,deny,inbound,any,any,any,Default deny

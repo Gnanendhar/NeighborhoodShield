@@ -1,0 +1,10 @@
+[theme]
+base = "light"
+primaryColor = "#1F3A5F"
+
+[server]
+# Uploads are processed in memory; keep them small.
+maxUploadSize = 5
+
+[browser]
+gatherUsageStats = false

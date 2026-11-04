@@ -1,0 +1,2 @@
+domain,mx_provider,spf_present,spf_all_qualifier,dmarc_present,dmarc_policy,dmarc_rua_present,dkim_found,checked_on
+littlesprouts-daycare.example,google,N,none,N,missing,N,unknown,2026-11-04

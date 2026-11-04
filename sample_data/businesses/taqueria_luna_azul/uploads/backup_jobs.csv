@@ -1,0 +1,2 @@
+job_id,source_system,destination_type,schedule,last_success_date,last_restore_test_date,encrypted,retention_days
+1,square sales data,cloud,daily,2026-11-04,,Y,365

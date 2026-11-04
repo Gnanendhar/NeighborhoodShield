@@ -1,0 +1,209 @@
+# Module 4: Endpoint Protection
+module: endpoint
+version: "0.1.0"
+rules:
+  - id: END-001
+    module: endpoint
+    title: "Not every computer has antivirus turned on"
+    evidence: both
+    trigger:
+      any_of:
+        - {kind: answer, q: end_antivirus, in: ["no", "dont_know"]}
+        - kind: rows
+          table: endpoint_protection
+          where:
+            - {col: protection_product, op: is_empty}
+            - {col: device_type, op: in, value: [desktop, laptop, server]}
+    severity: critical
+    cis_safeguards: ["10.1"]
+    nist_csf: [DE.CM-09]
+    attack: [T1204, T1486]
+    scenario: ransomware_primary_system
+    finding_plain: "At least one computer may have no antivirus. On Windows, the free built-in Microsoft Defender is good protection if it is turned on."
+    finding_technical: "Anti-malware absent or unverified on desktop/laptop/server. Confirm Microsoft Defender (Get-MpComputerStatus: AntivirusEnabled, RealTimeProtectionEnabled) or an equivalent EDR."
+    fixes:
+      - {action: "Open Windows Security on each computer and make sure 'Virus & threat protection' shows a green check.", cost_tier: free, effort: "10 minutes per computer", effort_minutes: 30, who: owner}
+    sources: [cis_ig1, cisa_cyber_essentials]
+
+  - id: END-002
+    module: endpoint
+    title: "Laptops are not encrypted"
+    evidence: questionnaire
+    trigger: {kind: answer, q: end_encryption, in: ["no", "dont_know"]}
+    severity: high
+    cis_safeguards: ["3.6"]
+    nist_csf: [PR.DS-01]
+    attack: [T1005, T1052]
+    scenario: stolen_or_lost_device
+    finding_plain: "If a laptop is stolen, the thief can read every file on it. With encryption turned on, the files are useless to them."
+    finding_technical: "Full-disk encryption not confirmed (BitLocker/Device Encryption, FileVault). Enable and escrow recovery keys somewhere other than the device."
+    fixes:
+      - {action: "Turn on BitLocker or Device Encryption (Windows) or FileVault (Mac) and save the recovery key somewhere safe, not on the laptop.", cost_tier: free, effort: "20 minutes per laptop", effort_minutes: 40, who: owner_or_contractor}
+    sources: [cis_ig1, ftc_small_business]
+
+  - id: END-003
+    module: endpoint
+    title: "Computers do not lock themselves"
+    evidence: questionnaire
+    trigger: {kind: answer, q: end_screen_lock, in: ["no", "dont_know"]}
+    severity: medium
+    cis_safeguards: ["4.3"]
+    nist_csf: [PR.PS-01]
+    attack: [T1005]
+    scenario: stolen_or_lost_device
+    finding_plain: "An unattended computer stays open. Anyone walking by the counter could read records or send email as you."
+    finding_technical: "Automatic session lock not configured. IG1 4.3: lock after no more than 15 minutes (general-purpose OS) or 2 minutes (mobile)."
+    fixes:
+      - {action: "Set every computer to lock after 5 to 15 minutes and every phone after 2 minutes.", cost_tier: free, effort: "5 minutes per device", effort_minutes: 20, who: owner}
+    sources: [cis_ig1]
+
+  - id: END-004
+    module: endpoint
+    title: "Business email on personal phones"
+    evidence: questionnaire
+    trigger: {kind: answer, q: end_personal_phones_email, in: ["yes", "dont_know"]}
+    severity: medium
+    cis_safeguards: ["4.1", "4.3"]
+    nist_csf: [PR.PS-01]
+    attack: [T1005]
+    scenario: account_takeover_fraud
+    finding_plain: "Staff read business email on their own phones. If a phone is lost, unlocked, or shared, business email goes with it."
+    finding_technical: "Unmanaged BYOD mail access. At minimum require screen lock + device PIN; consider M365 app protection or Google Workspace basic mobile management (both included in business plans)."
+    fixes:
+      - {action: "Ask staff to set a phone passcode and use the official email app. Turn on the free basic mobile management in your email admin settings.", cost_tier: free, effort: "1 hour", effort_minutes: 60, who: owner_or_contractor}
+    sources: [cis_ig1, cisa_secure_our_world]
+
+  - id: END-005
+    module: endpoint
+    title: "Old devices with business data not wiped"
+    evidence: questionnaire
+    trigger: {kind: answer, q: end_old_devices, in: ["yes", "dont_know"]}
+    severity: medium
+    cis_safeguards: ["3.5", "1.2"]
+    nist_csf: [ID.AM-08]
+    attack: [T1005]
+    scenario: stolen_or_lost_device
+    finding_plain: "Old computers or phones in a drawer still hold business information. If they are thrown out or taken, so is that information."
+    finding_technical: "Retired assets not sanitized (IG1 3.5 secure disposal; 1.2 address unmanaged assets). Factory-reset with encryption or physically destroy storage; record disposal."
+    fixes:
+      - {action: "Factory-reset old phones and computers (or remove and destroy the drives) and write down what you did.", cost_tier: free, effort: "1 hour", effort_minutes: 60, who: owner_or_contractor}
+    sources: [cis_ig1, ftc_small_business]
+
+  - id: END-006
+    module: endpoint
+    title: "Protection turned off on a device"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: endpoint_protection
+      where:
+        - {col: protection_enabled, op: eq, value: "N"}
+        - {col: device_type, op: in, value: [desktop, laptop, server]}
+    severity: critical
+    cis_safeguards: ["10.1"]
+    nist_csf: [DE.CM-09]
+    attack: [T1204, T1486]
+    scenario: ransomware_primary_system
+    finding_plain: "Your device report shows antivirus switched off on at least one device."
+    finding_technical: "protection_enabled=N (e.g., Defender RealTimeProtectionEnabled=False). Re-enable and investigate why it was disabled."
+    fixes:
+      - {action: "Turn protection back on and find out why it was off.", cost_tier: free, effort: "15 minutes", effort_minutes: 15, who: owner_or_contractor}
+    sources: [cis_ig1]
+
+  - id: END-007
+    module: endpoint
+    title: "Antivirus definitions out of date"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: endpoint_protection
+      where:
+        - {col: protection_enabled, op: eq, value: "Y"}
+        - {col: definitions_date, op: older_than_days, value: 7}
+    severity: high
+    cis_safeguards: ["10.2"]
+    nist_csf: [DE.CM-09]
+    attack: [T1204]
+    scenario: malware_outbreak
+    finding_plain: "At least one device's antivirus has not updated in over a week, so it will miss newer threats."
+    finding_technical: "definitions_date > 7 days. Confirm automatic signature updates (IG1 10.2) and that the device is reaching the update service."
+    fixes:
+      - {action: "Run 'Check for updates' in Windows Security on the listed devices and make sure they connect to the internet regularly.", cost_tier: free, effort: "10 minutes", effort_minutes: 10, who: owner}
+    sources: [cis_ig1]
+
+  - id: END-008
+    module: endpoint
+    title: "Portable device not encrypted"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: endpoint_protection
+      where:
+        - {col: device_type, op: in, value: [laptop, tablet, phone]}
+        - {col: disk_encryption, op: in, value: ["N", "unknown"]}
+    severity: high
+    cis_safeguards: ["3.6"]
+    nist_csf: [PR.DS-01]
+    attack: [T1005]
+    scenario: stolen_or_lost_device
+    finding_plain: "A laptop, tablet, or phone on your list is not encrypted, or we cannot tell."
+    finding_technical: "Portable device with disk_encryption N/unknown."
+    fixes:
+      - {action: "Turn on encryption on the listed device and save the recovery key off the device.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner_or_contractor}
+    sources: [cis_ig1]
+
+  - id: END-009
+    module: endpoint
+    title: "Device without screen lock"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: endpoint_protection
+      where:
+        - {col: screen_lock, op: in, value: ["N", "unknown"]}
+    severity: medium
+    cis_safeguards: ["4.3"]
+    nist_csf: [PR.PS-01]
+    attack: [T1005]
+    scenario: stolen_or_lost_device
+    finding_plain: "At least one device on your list does not lock itself."
+    finding_technical: "screen_lock N/unknown."
+    fixes:
+      - {action: "Set automatic lock on the listed devices.", cost_tier: free, effort: "5 minutes", effort_minutes: 5, who: owner}
+    sources: [cis_ig1]
+
+  - id: END-010
+    module: endpoint
+    title: "Device not seen in over 30 days"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: endpoint_protection
+      where:
+        - {col: last_seen_date, op: older_than_days, value: 30}
+    severity: low
+    cis_safeguards: ["1.1", "1.2"]
+    nist_csf: [ID.AM-01]
+    attack: []
+    scenario: stolen_or_lost_device
+    finding_plain: "A device has not checked in for over a month. It may be lost, retired, or no longer protected."
+    finding_technical: "last_seen_date > 30 days. Reconcile against the asset inventory; locate, retire, or wipe."
+    fixes:
+      - {action: "Find the device. If it is retired, wipe it and remove it from the list.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner}
+    sources: [cis_ig1]
+
+  - id: END-011
+    module: endpoint
+    title: "No list of devices"
+    evidence: questionnaire
+    trigger: {kind: answer, q: end_device_list, in: ["no", "dont_know"]}
+    severity: low
+    cis_safeguards: ["1.1"]
+    nist_csf: [ID.AM-01]
+    attack: []
+    scenario: stolen_or_lost_device
+    finding_plain: "There is no list of the computers, tablets, and phones the business uses, so a missing or unprotected one can go unnoticed."
+    finding_technical: "No enterprise asset inventory (IG1 1.1). Record device, user, location, OS, encryption, and protection status; review every 6 months."
+    fixes:
+      - {action: "Write down every business device and who uses it. Our device template is a ready-made list.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner}
+    sources: [cis_ig1]

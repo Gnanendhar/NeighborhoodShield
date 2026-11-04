@@ -1,0 +1,6 @@
+device_id,device_type,protection_product,protection_enabled,definitions_date,disk_encryption,screen_lock,last_seen_date
+office-pc,desktop,Microsoft Defender Antivirus,N,2026-08-01,N,N,2026-11-03
+owner-laptop,laptop,Microsoft Defender Antivirus,Y,2026-11-03,Y,Y,2026-11-03
+front-tablet,tablet,,Y,,Y,Y,2026-11-03
+kitchen-pc,desktop,,N,,unknown,unknown,2026-09-15
+spare-laptop,laptop,Microsoft Defender Antivirus,Y,2026-06-30,N,unknown,2026-07-01

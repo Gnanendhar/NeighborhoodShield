@@ -1,0 +1,25 @@
+technique_id,name,tactics,url,technique_version,source,snapshot_date
+T1005,Data from Local System,collection,https://attack.mitre.org/techniques/T1005,1.8,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1021.001,Remote Desktop Protocol,lateral-movement,https://attack.mitre.org/techniques/T1021/001,1.4,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1052,Exfiltration Over Physical Medium,exfiltration,https://attack.mitre.org/techniques/T1052,1.4,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1056,Input Capture,collection;credential-access,https://attack.mitre.org/techniques/T1056,1.4,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1078,Valid Accounts,stealth;persistence;privilege-escalation;initial-access,https://attack.mitre.org/techniques/T1078,3.0,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1078.001,Default Accounts,stealth;persistence;privilege-escalation;initial-access,https://attack.mitre.org/techniques/T1078/001,2.0,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1091,Replication Through Removable Media,lateral-movement;initial-access,https://attack.mitre.org/techniques/T1091,1.3,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1110,Brute Force,credential-access,https://attack.mitre.org/techniques/T1110,2.8,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1110.003,Password Spraying,credential-access,https://attack.mitre.org/techniques/T1110/003,1.8,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1114,Email Collection,collection,https://attack.mitre.org/techniques/T1114,2.6,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1133,External Remote Services,persistence;initial-access,https://attack.mitre.org/techniques/T1133,2.5,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1190,Exploit Public-Facing Application,initial-access,https://attack.mitre.org/techniques/T1190,2.8,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1199,Trusted Relationship,initial-access,https://attack.mitre.org/techniques/T1199,2.4,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1204,User Execution,execution,https://attack.mitre.org/techniques/T1204,1.8,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1219,Remote Access Tools,command-and-control,https://attack.mitre.org/techniques/T1219,3.0,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1485,Data Destruction,impact,https://attack.mitre.org/techniques/T1485,1.4,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1486,Data Encrypted for Impact,impact,https://attack.mitre.org/techniques/T1486,1.5,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1490,Inhibit System Recovery,impact,https://attack.mitre.org/techniques/T1490,1.6,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1534,Internal Spearphishing,lateral-movement,https://attack.mitre.org/techniques/T1534,1.4,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1557,Adversary-in-the-Middle,credential-access;collection,https://attack.mitre.org/techniques/T1557,2.5,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1565,Data Manipulation,impact,https://attack.mitre.org/techniques/T1565,1.1,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1566,Phishing,initial-access,https://attack.mitre.org/techniques/T1566,2.8,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1566.002,Spearphishing Link,initial-access,https://attack.mitre.org/techniques/T1566/002,2.8,github.com/mitre/cti enterprise-attack.json,2026-11-04
+T1657,Financial Theft,impact,https://attack.mitre.org/techniques/T1657,1.2,github.com/mitre/cti enterprise-attack.json,2026-11-04

@@ -1,0 +1,8 @@
+user_id,account_type,is_admin,mfa_enabled,status,created_date,last_login_date,role_or_department
+it-admin,admin,Y,Y,active,2022-01-10,2026-10-23,Board treasurer (admin account)
+volunteer-1,staff,N,Y,active,2025-05-21,2026-10-27,Volunteer coordinator
+volunteer-2,staff,N,Y,active,2026-04-15,2026-11-02,Volunteer coordinator
+volunteer-3,staff,N,Y,active,2025-10-31,2026-10-23,Volunteer coordinator
+volunteer-4,staff,N,Y,active,2026-02-02,2026-10-30,Volunteer coordinator
+volunteer-5,staff,N,Y,active,2025-05-04,2026-10-27,Volunteer coordinator
+former-volunteer,staff,N,Y,disabled,2023-03-01,2026-01-08,Volunteer

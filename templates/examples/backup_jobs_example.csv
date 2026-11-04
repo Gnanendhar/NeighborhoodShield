@@ -1,0 +1,4 @@
+job_id,source_system,destination_type,schedule,last_success_date,last_restore_test_date,encrypted,retention_days
+1,office-pc documents,local_external,weekly,2026-10-01,,N,14
+2,owner-laptop documents,cloud,daily,2026-11-03,2026-08-15,Y,90
+3,square sales data,cloud,daily,2026-11-03,,Y,365

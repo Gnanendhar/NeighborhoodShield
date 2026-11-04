@@ -1,0 +1,4 @@
+rule_id,enabled,action,direction,source,destination,service_or_port,comment
+1,Y,allow,outbound,lan,any,any,Default outbound
+2,Y,allow,inbound,wan,192.168.0.25,3389,Owner payroll from home
+3,Y,deny,inbound,any,any,any,Default deny

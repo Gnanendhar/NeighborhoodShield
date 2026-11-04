@@ -1,0 +1,315 @@
+# Module 1: Identity and Privileged Access (+ security awareness, CIS Control 14)
+# status: spec = specified in Week 1, executable from Week 2.
+module: identity
+version: "0.1.0"
+rules:
+  - id: IAM-001
+    module: identity
+    title: "Shared logins"
+    evidence: both
+    trigger:
+      any_of:
+        - {kind: answer, q: iam_shared_logins, in: ["yes"]}
+        - kind: rows
+          table: users_permissions
+          where:
+            - {col: account_type, op: eq, value: shared}
+            - {col: status, op: eq, value: active}
+    severity: high
+    cis_safeguards: ["5.2", "5.1"]
+    nist_csf: [PR.AA-01]
+    attack: [T1078]
+    scenario: account_takeover_fraud
+    finding_plain: "More than one person uses the same login. If something goes wrong you cannot tell who did it, and the password ends up known by people who have left."
+    finding_technical: "Shared credential in use (questionnaire iam_shared_logins=yes or active account_type=shared). Issue named accounts per person; where the POS requires a shared terminal login, enable per-user PINs/clerk IDs and rotate the shared secret."
+    fixes:
+      - {action: "Give each person their own login (most registers and email services allow this at no cost).", cost_tier: free, effort: "1 hour", effort_minutes: 60, who: owner}
+      - {action: "Turn on per-employee PINs or clerk codes on the register.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner}
+    sources: [cis_ig1, cisa_secure_our_world]
+
+  - id: IAM-002
+    module: identity
+    title: "No multi-factor authentication on business email"
+    evidence: questionnaire
+    trigger: {kind: answer, q: iam_mfa_email, in: ["no", "dont_know"]}
+    severity: critical
+    cis_safeguards: ["6.3"]
+    nist_csf: [PR.AA-03]
+    attack: [T1078, T1566, T1114]
+    scenario: account_takeover_fraud
+    finding_plain: "Your business email only needs a password. Stolen passwords are the most common way criminals get in, and your email can reset every other account you have."
+    finding_technical: "Mailbox does not enforce MFA. Enable security defaults (Microsoft 365) or 2-Step Verification enforcement (Google Workspace); prefer an authenticator app or passkey over SMS."
+    fixes:
+      - {action: "Turn on the sign-in code (two-step verification) in your email settings and use an authenticator app.", cost_tier: free, effort: "15 minutes", effort_minutes: 15, who: owner}
+    sources: [cisa_mfa, cis_ig1, ftc_small_business]
+
+  - id: IAM-003
+    module: identity
+    title: "Former staff may still have access"
+    evidence: questionnaire
+    trigger: {kind: answer, q: iam_former_staff_access, in: ["yes", "dont_know"]}
+    severity: high
+    cis_safeguards: ["6.2"]
+    nist_csf: [PR.AA-05]
+    attack: [T1078]
+    scenario: account_takeover_fraud
+    finding_plain: "Someone who no longer works here may still be able to log in. Old logins are an easy way in, whether the person means harm or their password is stolen."
+    finding_technical: "No reliable access-revocation process. Review all SaaS, POS, banking, and email user lists; disable leavers; change any shared secrets they knew."
+    fixes:
+      - {action: "Go through email, register, bank, and booking accounts today and turn off anyone who has left. Change any shared passwords they knew.", cost_tier: free, effort: "45 minutes", effort_minutes: 45, who: owner}
+      - {action: "Write a one-line rule: the day someone leaves, their logins are turned off.", cost_tier: free, effort: "10 minutes", effort_minutes: 10, who: owner}
+    sources: [cis_ig1, nist_ir7621]
+
+  - id: IAM-004
+    module: identity
+    title: "Dormant account still active"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: users_permissions
+      where:
+        - {col: status, op: eq, value: active}
+        - {col: last_login_date, op: older_than_days, value: 90}
+    severity: high
+    cis_safeguards: ["5.3"]
+    nist_csf: [PR.AA-01]
+    attack: [T1078]
+    scenario: account_takeover_fraud
+    finding_plain: "At least one login that nobody has used in three months is still turned on. Old logins are the easiest way into a business, especially when they belong to someone who has left."
+    finding_technical: "Active account(s) with last_login_date > 90 days (IG1 5.3 threshold: 45 days of inactivity is the CIS recommendation; 90 used here to reduce false positives for seasonal staff)."
+    fixes:
+      - {action: "Disable every account not used in 90 days today and delete it after 30 more days.", cost_tier: free, effort: "15 minutes", effort_minutes: 15, who: owner}
+      - {action: "Write a one-line rule: the day someone leaves, their logins are turned off.", cost_tier: free, effort: "10 minutes", effort_minutes: 10, who: owner}
+    sources: [cis_ig1]
+
+  - id: IAM-005
+    module: identity
+    title: "No multi-factor authentication on online banking"
+    evidence: questionnaire
+    trigger: {kind: answer, q: iam_mfa_banking, in: ["no", "dont_know"]}
+    severity: critical
+    cis_safeguards: ["6.3"]
+    nist_csf: [PR.AA-03]
+    attack: [T1078, T1657]
+    scenario: account_takeover_fraud
+    finding_plain: "Your bank account can be opened with just a password. If that password is stolen, money can be moved before you notice."
+    finding_technical: "Online banking login lacks MFA. Enable the bank's strongest second factor (app/token), add payee/transfer alerts, and request dual approval for wires/ACH where offered."
+    fixes:
+      - {action: "Turn on the bank's sign-in code and text/email alerts for every transfer.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner}
+      - {action: "Ask the bank about requiring a second approval for new payees and wires.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner}
+    sources: [cisa_mfa, fbi_bec]
+
+  - id: IAM-006
+    module: identity
+    title: "No multi-factor authentication on register or booking admin"
+    evidence: questionnaire
+    trigger: {kind: answer, q: iam_mfa_pos_admin, in: ["no", "dont_know"]}
+    severity: high
+    cis_safeguards: ["6.5", "6.3"]
+    nist_csf: [PR.AA-03]
+    attack: [T1078]
+    scenario: pos_tampering_or_outage
+    finding_plain: "The manager login for your register or booking system only needs a password. Whoever has it can change prices, issue refunds, or see customer details."
+    finding_technical: "POS/booking back-office admin lacks MFA. Most cloud POS (Square, Clover, Toast) and booking platforms support 2-step verification on the owner/admin account."
+    fixes:
+      - {action: "Turn on two-step verification in the register or booking system's account settings.", cost_tier: free, effort: "15 minutes", effort_minutes: 15, who: owner}
+    sources: [cisa_mfa, pci_ssc_small_merchant]
+
+  - id: IAM-007
+    module: identity
+    title: "Too many people are administrators"
+    evidence: both
+    trigger:
+      any_of:
+        - {kind: answer, q: iam_admin_count, in: ["everyone", "dont_know"]}
+        - kind: rows
+          table: users_permissions
+          where:
+            - {col: is_admin, op: eq, value: "Y"}
+            - {col: status, op: eq, value: active}
+          match: ratio
+          min_ratio: 0.5
+    severity: high
+    cis_safeguards: ["5.4"]
+    nist_csf: [PR.AA-05]
+    attack: [T1078, T1204]
+    scenario: ransomware_primary_system
+    finding_plain: "Everyone can install programs and change settings. One bad click by anyone can then infect the whole computer."
+    finding_technical: "Administrator rights are broadly assigned (questionnaire everyone/unknown, or >= 50% of active accounts are admins). Convert daily-use accounts to standard users; keep 1 to 2 dedicated admin accounts."
+    fixes:
+      - {action: "Change staff accounts to 'Standard user' and keep one separate admin login for the owner.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner_or_contractor}
+    sources: [cis_ig1, cisa_cyber_essentials]
+
+  - id: IAM-008
+    module: identity
+    title: "Administrator rights on everyday accounts"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: users_permissions
+      where:
+        - {col: is_admin, op: eq, value: "Y"}
+        - {col: account_type, op: eq, value: staff}
+        - {col: status, op: eq, value: active}
+    severity: medium
+    cis_safeguards: ["5.4"]
+    nist_csf: [PR.AA-05]
+    attack: [T1078]
+    scenario: ransomware_primary_system
+    finding_plain: "Some people use an administrator login for everyday work like email and browsing. If they open a bad attachment, it gets full control of the computer."
+    finding_technical: "account_type=staff with is_admin=Y. IG1 5.4 requires admin privileges only on dedicated admin accounts used for admin tasks."
+    fixes:
+      - {action: "Create a separate admin login for setup tasks and remove admin rights from the everyday login.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner_or_contractor}
+    sources: [cis_ig1]
+
+  - id: IAM-009
+    module: identity
+    title: "Administrator accounts without multi-factor authentication"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: users_permissions
+      where:
+        - {col: is_admin, op: eq, value: "Y"}
+        - {col: status, op: eq, value: active}
+        - {col: mfa_enabled, op: in, value: ["N", "unknown"]}
+    severity: critical
+    cis_safeguards: ["6.5"]
+    nist_csf: [PR.AA-03]
+    attack: [T1078, T1110]
+    scenario: account_takeover_fraud
+    finding_plain: "An administrator login, the one with the most power, only needs a password."
+    finding_technical: "Active is_admin=Y account with mfa_enabled N/unknown. Enforce MFA for all administrative access (IG1 6.5), ideally phishing-resistant (FIDO2/passkey)."
+    fixes:
+      - {action: "Turn on two-step verification for every administrator login today.", cost_tier: free, effort: "15 minutes", effort_minutes: 15, who: owner_or_contractor}
+    sources: [cisa_mfa, cis_ig1]
+
+  - id: IAM-010
+    module: identity
+    title: "Staff accounts without multi-factor authentication"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: users_permissions
+      where:
+        - {col: status, op: eq, value: active}
+        - {col: account_type, op: in, value: [staff, shared]}
+        - {col: mfa_enabled, op: in, value: ["N", "unknown"]}
+    severity: high
+    cis_safeguards: ["6.3"]
+    nist_csf: [PR.AA-03]
+    attack: [T1078, T1110.003]
+    scenario: account_takeover_fraud
+    finding_plain: "Some staff logins only need a password. Criminals try common passwords against many accounts at once, and one success is enough."
+    finding_technical: "Active staff/shared accounts with mfa_enabled N/unknown on an externally exposed service (M365/Workspace export). Enforce MFA tenant-wide."
+    fixes:
+      - {action: "Turn on 'require two-step verification for everyone' in the email admin settings and give staff a week to enroll.", cost_tier: free, effort: "1 hour", effort_minutes: 60, who: owner_or_contractor}
+    sources: [cisa_mfa, cis_ig1]
+
+  - id: IAM-011
+    module: identity
+    title: "Passwords reused or kept in your head"
+    evidence: questionnaire
+    trigger:
+      any_of:
+        - {kind: answer, q: iam_password_manager, in: ["no", "dont_know"]}
+        - {kind: answer, q: iam_unique_passwords, in: ["no", "dont_know"]}
+    severity: medium
+    cis_safeguards: ["5.2"]
+    nist_csf: [PR.AA-01]
+    attack: [T1110]
+    scenario: account_takeover_fraud
+    finding_plain: "Without a password manager, people reuse passwords. When one website is breached, criminals try that same password on your email and bank."
+    finding_technical: "No password manager and/or credential reuse. IG1 5.2 requires unique passwords (MFA accounts: 8+ chars; non-MFA: 14+ chars)."
+    fixes:
+      - {action: "Start using a password manager (free options exist; business plans are under $100 a year) and change the email and bank passwords first.", cost_tier: low, effort: "1 hour", effort_minutes: 60, who: owner}
+    sources: [cisa_secure_our_world, cis_ig1]
+
+  - id: IAM-012
+    module: identity
+    title: "Staff have not been shown how to spot scams"
+    evidence: questionnaire
+    trigger:
+      any_of:
+        - {kind: answer, q: iam_phished_before, in: ["yes"]}
+        - {kind: answer, q: iam_security_training, in: ["no", "dont_know"]}
+    severity: medium
+    cis_safeguards: ["14.1", "14.2", "14.6"]
+    nist_csf: [PR.AT-01]
+    attack: [T1566]
+    scenario: account_takeover_fraud
+    finding_plain: "Someone here has been fooled before, or staff have not been shown what scam emails and texts look like. Most break-ins start with a message like that."
+    finding_technical: "Prior social-engineering success and/or no awareness training in 12 months. Run a short session using CISA Secure Our World materials; define how staff report a suspicious message."
+    fixes:
+      - {action: "Hold a 20-minute staff huddle using CISA's free 'Recognize and report phishing' sheet. Agree on one person to forward suspicious messages to.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner}
+    sources: [cisa_secure_our_world, ftc_small_business]
+
+  - id: IAM-013
+    module: identity
+    title: "Payment changes are not double-checked"
+    evidence: questionnaire
+    trigger: {kind: answer, q: iam_payment_verification, in: ["no", "dont_know"]}
+    severity: high
+    cis_safeguards: ["14.2"]
+    nist_csf: [PR.AT-01]
+    attack: [T1566, T1534, T1657]
+    scenario: account_takeover_fraud
+    finding_plain: "If a fake email from a 'supplier' asks you to pay a new bank account, nothing stops the money going out. This scam costs U.S. businesses billions every year."
+    finding_technical: "No out-of-band verification for payment instruction changes (core business email compromise control per FBI guidance)."
+    fixes:
+      - {action: "Make a rule: any change to bank details is confirmed by phone, at a number you already had, before paying.", cost_tier: free, effort: "10 minutes", effort_minutes: 10, who: owner}
+    sources: [fbi_bec, ic3]
+
+  - id: IAM-014
+    module: identity
+    title: "No list of accounts"
+    evidence: questionnaire
+    trigger: {kind: answer, q: iam_account_list, in: ["no", "dont_know"]}
+    severity: low
+    cis_safeguards: ["5.1", "6.1"]
+    nist_csf: [PR.AA-01]
+    attack: []
+    scenario: account_takeover_fraud
+    finding_plain: "There is no written list of business accounts and who can log in. You cannot turn off what you do not know exists."
+    finding_technical: "No account inventory (IG1 5.1) and no documented access-granting process (6.1). Start a simple sheet: system, user, role, MFA, date granted."
+    fixes:
+      - {action: "Make a one-page list: each system, who has a login, and whether it has a sign-in code. Review it every three months.", cost_tier: free, effort: "45 minutes", effort_minutes: 45, who: owner}
+    sources: [cis_ig1, nist_sp1300]
+
+  - id: IAM-015
+    module: identity
+    title: "Accounts with no known owner"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: users_permissions
+      where:
+        - {col: status, op: eq, value: active}
+        - {col: role_or_department, op: is_empty}
+    severity: low
+    cis_safeguards: ["5.1"]
+    nist_csf: [PR.AA-01]
+    attack: [T1078]
+    scenario: account_takeover_fraud
+    finding_plain: "Some active logins have no role or owner written down, so nobody notices if they are misused."
+    finding_technical: "Active accounts with empty role_or_department. Assign an owner to every account, including service accounts, or disable it."
+    fixes:
+      - {action: "Write down who each login belongs to and why it exists; turn off any nobody claims.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner}
+    sources: [cis_ig1]
+
+  - id: IAM-016
+    module: identity
+    title: "Nobody checks for leaked passwords"
+    evidence: questionnaire
+    trigger: {kind: answer, q: iam_breach_check, in: ["no", "dont_know"]}
+    severity: medium
+    cis_safeguards: ["14.3", "5.2"]
+    nist_csf: [PR.AT-01, PR.AA-01]
+    attack: [T1078, T1110]
+    scenario: account_takeover_fraud
+    finding_plain: "Nobody has checked whether business email addresses or passwords leaked in someone else's data breach. Criminals try leaked passwords on email and bank logins first."
+    finding_technical: "No credential-exposure monitoring. Recommend Have I Been Pwned notifications for each business address, password-manager breach reports (Bitwarden, Google Password Checkup, Edge Password Monitor, Apple Passwords), and rotation of any exposed credential. The app never collects passwords; an optional in-browser k-anonymity check (only the first 5 characters of a SHA-1 hash leave the browser) is specified in docs/extensions.md."
+    fixes:
+      - {action: "Run Google Password Checkup or your password manager's breach report, and change any password it flags, starting with email and bank.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner}
+      - {action: "Sign up each business email address for free breach alerts at Have I Been Pwned.", cost_tier: free, effort: "10 minutes", effort_minutes: 10, who: owner}
+    sources: [hibp, cisa_secure_our_world]

@@ -1,0 +1,6 @@
+user_id,account_type,is_admin,mfa_enabled,status,created_date,last_login_date,role_or_department
+director,staff,Y,N,active,2020-08-17,2026-11-04,Director
+assistant-1,staff,N,N,active,2026-02-06,2026-11-01,Assistant teacher
+assistant-2,staff,N,N,active,2025-02-23,2026-11-01,Assistant teacher
+former-assistant,staff,N,N,active,2023-01-09,2026-04-04,Assistant teacher
+classroom,shared,N,N,active,2021-09-01,2026-11-03,Classroom tablet

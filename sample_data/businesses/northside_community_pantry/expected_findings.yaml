@@ -1,0 +1,6 @@
+as_of: '2026-11-04'
+labelled_by: Hand-labelled from the Week 1 rule specs (rules/*.yaml), independent
+  of engine output
+expected_rule_ids:
+- END-004
+expected_legal_flags: []

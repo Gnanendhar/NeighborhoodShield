@@ -1,0 +1,523 @@
+# NeighborhoodShield AI — every owner-facing string lives in this file.
+#
+# Rules for editing:
+#  * Answer codes are always quoted ("yes", "no", "dont_know"). YAML 1.1 would
+#    otherwise turn bare yes/no into true/false. tests/test_strings.py enforces it.
+#  * Keep sentences short. Put the plain meaning of any technical term in parentheses.
+#  * A Spanish version is added by copying this file to strings.es.yaml and
+#    translating values only. Never translate keys or codes.
+#  * tier: core      -> shown in the 10-minute Quick Check
+#    tier: extended  -> shown only in the Full Assessment
+#  * show_if hides a follow-up question unless an earlier answer matches.
+
+meta:
+  locale: en
+  version: "1.0.0"
+  last_reviewed: "2026-11-04"
+  reading_level_target: "Grade 8 or below (Flesch-Kincaid, checked in tests/test_strings.py)"
+
+app:
+  name: "NeighborhoodShield AI"
+  tagline: "A plain-language security check-up for neighborhood businesses"
+  builder_credit: "Built by Gyanendhar Reddy Reddymalla for the Chicago Education Advocacy Cooperative (ChiEAC)"
+  start_quick: "Start the 10-minute Quick Check"
+  start_full: "Start the Full Assessment (with optional file uploads)"
+  progress: "Question {current} of {total}"
+  next: "Next"
+  back: "Back"
+  finish: "See my results"
+  dont_know_note: "\"Don't know\" is a fine answer. Your plan will show you how to find out."
+
+statements:
+  self_assessment: >-
+    This is a self-assessment based on your answers. It is not a security test,
+    an audit, or a certification, and it cannot guarantee that your business is safe.
+  privacy: >-
+    Your answers and files stay in this browser session only. Nothing is saved on
+    our server. Names, usernames, and addresses in uploaded files are replaced with
+    labels as soon as the file is read. When you close this page, the data is gone
+    unless you download your own copy.
+  acceptable_use: >-
+    Only assess a business you own or are authorized to assess. Do not upload files
+    that belong to someone else without their permission.
+  estimates: >-
+    Dollar and downtime figures are rough estimates to help you choose what to fix
+    first. They are not predictions. You can change every assumption.
+
+answers:
+  ynd:
+    "yes": "Yes"
+    "no": "No"
+    "dont_know": "Don't know"
+
+sections:
+  - id: profile
+    title: "About your business"
+    intro: "These answers help us explain risks in terms of your business, not in tech terms."
+  - id: identity
+    title: "Logins and passwords"
+    intro: "Who can get into your accounts, and how well those doors are locked."
+  - id: network
+    title: "Wi-Fi, internet, and remote access"
+    intro: "How your internet connection and Wi-Fi are set up."
+  - id: patching
+    title: "Updates"
+    intro: "Whether your computers and apps get the fixes their makers release."
+  - id: endpoint
+    title: "Computers, tablets, and phones"
+    intro: "How the devices that hold business information are protected."
+  - id: recovery
+    title: "Backups and bad days"
+    intro: "Whether you could get back up and running after something goes wrong."
+
+questions:
+  # ------------------------------------------------------------------ profile
+  - id: bp_business_type
+    section: profile
+    tier: core
+    type: single
+    text: "What kind of business is this?"
+    options:
+      restaurant_food: "Restaurant, café, bakery, or food truck"
+      childcare: "Childcare or daycare"
+      salon_barber: "Salon, barbershop, or spa"
+      retail: "Shop or store"
+      nonprofit_faith: "Nonprofit, church, or community group"
+      professional_services: "Office or professional services (tax, insurance, legal, real estate)"
+      auto_services: "Auto repair or car services"
+      other: "Something else"
+
+  - id: bp_staff_count
+    section: profile
+    tier: core
+    type: single
+    text: "How many people work here, including you?"
+    options:
+      "1": "Just me"
+      "2_5": "2 to 5"
+      "6_10": "6 to 10"
+      "11_25": "11 to 25"
+      "26_plus": "More than 25"
+
+  - id: bp_days_open
+    section: profile
+    tier: core
+    type: single
+    text: "How many days a week are you open?"
+    options:
+      "1": "1"
+      "2": "2"
+      "3": "3"
+      "4": "4"
+      "5": "5"
+      "6": "6"
+      "7": "7"
+
+  - id: bp_daily_sales_band
+    section: profile
+    tier: core
+    type: single
+    optional: true
+    text: "Roughly how much does the business take in on a typical day?"
+    help: "Pick a range. We never ask for an exact number. You can skip this."
+    options:
+      under_500: "Under $500"
+      "500_1500": "$500 to $1,500"
+      "1500_3000": "$1,500 to $3,000"
+      "3000_6000": "$3,000 to $6,000"
+      "6000_12000": "$6,000 to $12,000"
+      over_12000: "More than $12,000"
+      prefer_not: "I'd rather not say"
+
+  - id: bp_critical_systems
+    section: profile
+    tier: core
+    type: multi
+    text: "Which of these could you NOT run the business without for a day?"
+    help: "Choose all that apply."
+    options:
+      pos_payments: "Card payments or the register"
+      booking: "Online booking or scheduling"
+      email: "Email"
+      payroll: "Payroll"
+      records: "Customer, client, or enrollment records"
+      door_camera: "Door locks or cameras"
+      online_orders: "Website or online ordering"
+
+  - id: bp_paper_fallback
+    section: profile
+    tier: core
+    type: ynd
+    text: "Could you run on paper for a day if every computer stopped working?"
+
+  - id: bp_sensitive_data
+    section: profile
+    tier: core
+    type: multi
+    text: "Do you keep any of these?"
+    help: "Choose all that apply. This changes who you might have to notify after a problem."
+    options:
+      card_numbers: "Customer card numbers (written down or saved in a system)"
+      childrens_records: "Children's records"
+      health_info: "Health or medical information"
+      ssn_tax_ids: "Social Security or tax ID numbers (staff or customers)"
+      none: "None of these"
+      dont_know: "Don't know"
+
+  - id: bp_it_owner
+    section: profile
+    tier: core
+    type: single
+    text: "Who takes care of computers and internet here?"
+    options:
+      me: "Me"
+      staff: "A staff member"
+      contractor: "A paid contractor or IT company"
+      family: "A family member or friend"
+      nobody: "Nobody, really"
+
+  - id: bp_device_count
+    section: profile
+    tier: extended
+    type: single
+    text: "How many computers, tablets, and phones are used for the business?"
+    options:
+      "1_2": "1 or 2"
+      "3_5": "3 to 5"
+      "6_10": "6 to 10"
+      "11_plus": "11 or more"
+
+  - id: bp_cyber_insurance
+    section: profile
+    tier: extended
+    type: ynd
+    text: "Does the business have cyber insurance (insurance that covers hacking or online fraud)?"
+
+  - id: bp_biometrics
+    section: profile
+    tier: extended
+    type: ynd
+    text: "Do you use fingerprint or face scanning for anything (for example a time clock, a door lock, or the register)?"
+    help: "Illinois has a special law about fingerprints and face scans. We will tell you what it means for you."
+
+  - id: bp_email_domain
+    section: profile
+    tier: extended
+    type: text
+    optional: true
+    text: "What comes after the @ in your business email address?"
+    help: "For example yourbusiness.com. Leave this empty if you use a free address like Gmail or Yahoo. We only read public settings that every email server can see."
+
+  # ----------------------------------------------------------------- identity
+  - id: iam_shared_logins
+    section: identity
+    tier: core
+    type: ynd
+    text: "Does more than one person use the same login for the register or the main computer?"
+
+  - id: iam_former_staff_access
+    section: identity
+    tier: core
+    type: ynd
+    text: "Could anyone who left in the last year still log in to email, the register, or any business account?"
+
+  - id: iam_mfa_email
+    section: identity
+    tier: core
+    type: ynd
+    text: "Does your business email ask for a code or an app approval in addition to the password?"
+    help: "This is called multi-factor authentication, or MFA."
+
+  - id: iam_mfa_banking
+    section: identity
+    tier: core
+    type: ynd
+    text: "Does your online banking ask for a code or an app approval in addition to the password?"
+
+  - id: iam_mfa_pos_admin
+    section: identity
+    tier: core
+    type: ynd
+    text: "Does the owner or manager login for your register or booking system ask for a code too?"
+
+  - id: iam_admin_count
+    section: identity
+    tier: core
+    type: single
+    text: "How many people can install programs or change settings on the main computer?"
+    options:
+      one: "One"
+      two_three: "Two or three"
+      everyone: "Everyone"
+      dont_know: "Don't know"
+
+  - id: iam_password_manager
+    section: identity
+    tier: core
+    type: ynd
+    text: "Do you and your staff use a password manager (an app that remembers passwords for you)?"
+
+  - id: iam_phished_before
+    section: identity
+    tier: core
+    type: ynd
+    text: "Has anyone here ever been tricked by a fake email, text, or call asking for a payment or a password?"
+
+  - id: iam_payment_verification
+    section: identity
+    tier: core
+    type: ynd
+    text: "If a supplier or landlord emails new bank details, do you call them at a number you already have before paying?"
+
+  - id: iam_unique_passwords
+    section: identity
+    tier: extended
+    type: ynd
+    text: "Does every important account (email, bank, register) have its own password that is not used anywhere else?"
+
+  - id: iam_account_list
+    section: identity
+    tier: extended
+    type: ynd
+    text: "Do you have a written list of every business account and who has a login to each one?"
+
+  - id: iam_security_training
+    section: identity
+    tier: extended
+    type: ynd
+    text: "In the last year, has anyone shown your staff how to spot fake emails and texts?"
+
+  - id: iam_breach_check
+    section: identity
+    tier: extended
+    type: ynd
+    text: "In the last year, have you checked whether your business email addresses or passwords showed up in a data breach?"
+    help: "Free tools such as Google Password Checkup or Have I Been Pwned can do this. Never type a password into a website you do not trust."
+
+  # ------------------------------------------------------------------ network
+  - id: net_guest_wifi_separate
+    section: network
+    tier: core
+    type: ynd
+    text: "Is the Wi-Fi customers use separate from the Wi-Fi the register and office computers use?"
+
+  - id: net_router_default_password
+    section: network
+    tier: core
+    type: ynd
+    text: "Is the password to change your Wi-Fi router's settings still the one printed on the sticker or in the box?"
+    help: "This is the admin password, not the Wi-Fi password you give out."
+
+  - id: net_router_admin_logged_in
+    section: network
+    tier: extended
+    type: ynd
+    text: "Has anyone ever logged in to the router's settings page (for example, to change a password)?"
+
+  - id: net_router_updated
+    section: network
+    tier: core
+    type: single
+    text: "When was the Wi-Fi router last updated or replaced?"
+    options:
+      last_year: "In the last year"
+      longer: "Longer ago"
+      dont_know: "Don't know"
+
+  - id: net_remote_access_used
+    section: network
+    tier: core
+    type: ynd
+    text: "Does anyone connect to a business computer from home or somewhere else?"
+    help: "For example TeamViewer, AnyDesk, Remote Desktop, or a VPN."
+
+  - id: net_remote_access_mfa
+    section: network
+    tier: core
+    type: ynd
+    show_if: {q: net_remote_access_used, in: ["yes", "dont_know"]}
+    text: "Does that remote connection ask for a code or an app approval in addition to a password?"
+
+  - id: net_remote_tool_always_on
+    section: network
+    tier: core
+    type: ynd
+    show_if: {q: net_remote_access_used, in: ["yes", "dont_know"]}
+    text: "Is a remote-control program left running all the time, even when nobody is using it?"
+
+  - id: net_dns_filtering
+    section: network
+    tier: extended
+    type: ynd
+    text: "Does your internet connection block known dangerous websites (for example with Quad9, Cloudflare for Families, or a security setting on your router)?"
+
+  # ----------------------------------------------------------------- patching
+  - id: pat_auto_updates
+    section: patching
+    tier: core
+    type: ynd
+    text: "Are your computers set to install updates automatically?"
+
+  - id: pat_old_os
+    section: patching
+    tier: core
+    type: ynd
+    text: "Does any computer still run Windows 7, 8, or 10, or a Mac that is more than seven years old?"
+    help: "Windows 10 stopped getting free security fixes in October 2025."
+
+  - id: pat_pos_supported
+    section: patching
+    tier: core
+    type: ynd
+    text: "Is your register or booking software still supported by the company that makes it?"
+
+  - id: pat_update_reminder_month
+    section: patching
+    tier: extended
+    type: ynd
+    text: "Has any computer shown an \"update available\" reminder for more than a month?"
+
+  - id: pat_browser_updates
+    section: patching
+    tier: extended
+    type: ynd
+    text: "Are web browsers (Chrome, Edge, Safari, Firefox) set to update themselves?"
+
+  - id: pat_software_list
+    section: patching
+    tier: extended
+    type: ynd
+    text: "Do you have a list of the programs and apps the business uses or pays for?"
+
+  # ----------------------------------------------------------------- endpoint
+  - id: end_antivirus
+    section: endpoint
+    tier: core
+    type: ynd
+    text: "Does every computer have antivirus turned on (for example Microsoft Defender)?"
+
+  - id: end_encryption
+    section: endpoint
+    tier: core
+    type: ynd
+    text: "Are laptops encrypted so a thief could not read the files?"
+    help: "On Windows this is BitLocker or Device Encryption. On a Mac it is FileVault."
+
+  - id: end_screen_lock
+    section: endpoint
+    tier: core
+    type: ynd
+    text: "Do computers lock themselves after a few minutes of no use?"
+
+  - id: end_personal_phones_email
+    section: endpoint
+    tier: core
+    type: ynd
+    text: "Do staff read business email on their personal phones?"
+
+  - id: end_old_devices
+    section: endpoint
+    tier: core
+    type: ynd
+    text: "Are any old computers, phones, or hard drives with business information sitting in a drawer or closet?"
+
+  - id: end_device_list
+    section: endpoint
+    tier: extended
+    type: ynd
+    text: "Do you have a list of every computer, tablet, and phone used for the business?"
+
+  # ----------------------------------------------------------------- recovery
+  - id: bkp_backed_up
+    section: recovery
+    tier: core
+    type: ynd
+    text: "Are your important files and records backed up (copied somewhere else)?"
+
+  - id: bkp_locations
+    section: recovery
+    tier: core
+    type: multi
+    show_if: {q: bkp_backed_up, in: ["yes"]}
+    text: "Where are the backups kept?"
+    help: "Choose all that apply."
+    options:
+      same_computer: "On the same computer"
+      external_drive_onsite: "On an external drive in the building"
+      cloud: "In a cloud service (for example OneDrive, Google Drive, Backblaze)"
+      offsite: "Somewhere off-site (for example a drive taken home)"
+      dont_know: "Don't know"
+
+  - id: bkp_restore_tested
+    section: recovery
+    tier: core
+    type: ynd
+    show_if: {q: bkp_backed_up, in: ["yes", "dont_know"]}
+    text: "Have you ever brought a file back from the backup to check that it works?"
+
+  - id: bkp_recovery_time
+    section: recovery
+    tier: core
+    type: single
+    text: "If the main computer died today, how long until you could take payments and see your records again?"
+    options:
+      hours: "A few hours"
+      a_day: "About a day"
+      days: "Several days"
+      dont_know: "Don't know"
+
+  - id: bkp_contact_list
+    section: recovery
+    tier: core
+    type: ynd
+    text: "Is there a written list of who to call if something goes wrong (internet provider, register company, bank, IT help)?"
+
+  - id: bkp_incident_owner
+    section: recovery
+    tier: extended
+    type: ynd
+    text: "Has one person been named to take charge if there is a computer or fraud problem?"
+
+  - id: bkp_vendor_list
+    section: recovery
+    tier: extended
+    type: ynd
+    text: "Do you know every outside company that can get into your systems (register company, IT helper, website company)?"
+
+extensions:
+  not_legal_advice: "This is general information, not legal advice. Talk to a lawyer about your situation."
+  benchmark_intro: "How you compare with published surveys of small businesses (no one else's answers are stored or used)."
+  insurance_intro: "How you might answer common cyber-insurance application questions today. Every insurer's form is different."
+  email_check_consent: "Check my email domain's public settings (SPF and DMARC). This reads public records only."
+  password_check_never: "We never ask for your passwords. Use the free checker built into your browser or password manager."
+  calendar_download: "Add check-up reminders to my calendar"
+  bad_day_card: "Download my one-page 'bad day' card"
+  workshop_qr: "Scan to start the Quick Check on your phone"
+
+# Labels used in results, the Planner, and the PDF. Filled in from Week 4 on;
+# declared now so code never hard-codes owner-facing text.
+results:
+  posture_tiers:
+    exposed: "Exposed"
+    fragile: "Fragile"
+    developing: "Developing"
+    resilient: "Resilient"
+  posture_tier_help:
+    exposed: "Someone could get in or you could lose important records today. Start with the 'This week' list."
+    fragile: "Some important protections are missing. A few free changes will make a big difference."
+    developing: "The basics are mostly in place. Close the remaining gaps this month."
+    resilient: "Strong basics. Keep checking every three months."
+  cost_tiers:
+    free: "Free"
+    low: "Under $100 a year"
+    moderate: "$100 to $500"
+    contractor: "A few hours of IT help"
+  plan_lists:
+    this_week: "Do this week"
+    this_month: "Do this month"
+    with_contractor: "Do with a contractor"
+  severity:
+    critical: "Fix now"
+    high: "Fix soon"
+    medium: "Plan to fix"
+    low: "Good to fix"

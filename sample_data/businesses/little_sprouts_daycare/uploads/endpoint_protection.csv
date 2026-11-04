@@ -1,0 +1,4 @@
+device_id,device_type,protection_product,protection_enabled,definitions_date,disk_encryption,screen_lock,last_seen_date
+family-laptop,laptop,Microsoft Defender Antivirus,Y,2026-10-02,N,N,2026-11-04
+old-phone,phone,,N,,unknown,unknown,2025-05-30
+director-phone,phone,,Y,,Y,Y,2026-11-04

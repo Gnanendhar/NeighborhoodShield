@@ -1,0 +1,3 @@
+device_id,device_type,protection_product,protection_enabled,definitions_date,disk_encryption,screen_lock,last_seen_date
+office-laptop-1,laptop,Microsoft Defender Antivirus,Y,2026-11-04,Y,Y,2026-11-04
+office-laptop-2,laptop,Microsoft Defender for Endpoint (macOS),Y,2026-11-03,Y,Y,2026-11-02

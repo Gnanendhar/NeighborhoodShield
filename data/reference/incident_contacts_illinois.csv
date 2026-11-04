@@ -1,0 +1,11 @@
+contact_id,organization,purpose,phone,web_or_email,address,scope,source_url,verified_on
+fbi_chicago,FBI Chicago Field Office,"Report cyber crime, ransomware, business email compromise in progress",(312) 421-6700,https://www.fbi.gov/chicago,"2111 W. Roosevelt Road, Chicago, IL 60608",Chicago area,https://www.fbi.gov/chicago,2026-11-04
+ic3,FBI Internet Crime Complaint Center (IC3),"File an online complaint; for wire fraud, report fast so the bank can try to recall funds",,https://www.ic3.gov,,National,https://www.ic3.gov,2026-11-04
+cisa_central,CISA Central,Report a cyber incident to the U.S. Cybersecurity and Infrastructure Security Agency,1-844-SAY-CISA (1-844-729-2472),contact@cisa.dhs.gov,,National,https://www.cisa.gov/report-cyber-incident-information-cisa,2026-11-04
+il_ag_idtheft,Illinois Attorney General Identity Theft Hotline,"Help when customer, staff, or owner identity information is stolen",1-866-999-5630,https://illinoisattorneygeneral.gov/Consumer-Protection/Identity-Theft,,Illinois,https://illinoisattorneygeneral.gov/Consumer-Protection/Identity-Theft,2026-11-04
+il_ag_breach,Illinois Attorney General (data breach notice),Required notice if a breach affects more than 500 Illinois residents (815 ILCS 530/10(e)),,https://illinoisattorneygeneral.gov,,Illinois,https://ilga.gov/legislation/ilcs/documents/081505300K10.htm,2026-11-04
+owner_bank,Your bank's fraud line,Stop or recall a fraudulent payment; freeze online banking,(fill in),,,Business-specific,,
+owner_isp,Your internet provider,"Outage, router replacement",(fill in),,,Business-specific,,
+owner_pos,Your register / payment company,Card system down or tampered with,(fill in),,,Business-specific,,
+owner_it,Your IT helper,"Rebuild, restore from backup",(fill in),,,Business-specific,,
+owner_insurer,Your insurance breach hotline,Start a claim before paying anyone,(fill in),,,Business-specific,,

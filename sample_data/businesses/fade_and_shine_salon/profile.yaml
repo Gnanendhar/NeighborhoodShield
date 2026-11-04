@@ -1,0 +1,22 @@
+as_of: '2026-11-04'
+seed: 20261102
+name: Fade & Shine Salon (fictional)
+segment: salon_barber
+chicago_license_category: Limited Business License
+owner_persona: Sharon (fictional)
+story: Four-chair salon and barbershop, open 6 days. One front-desk Windows 10 PC
+  runs the booking website and the camera viewer. The router came from a friend and
+  was never updated. Nobody looks after the computers.
+designed_weaknesses:
+- Front-desk PC on Windows 10 22H2 (end of support 2025-10-14), no antivirus, updates
+  off
+- TP-Link TL-WR841N router on old firmware (model has CVE-2023-50224 in CISA KEV);
+  DMZ allow-all rule
+- Camera DVR web page forwarded to the internet on 8080
+- Only backup is on the same PC plus an unencrypted USB drive in the drawer, 7-day
+  retention
+- Guest Wi-Fi allowed to reach the business network for lobby-TV casting (contradicts
+  the owner's answer)
+- No MFA on online banking
+disclaimer: Fictional business created for testing. Any resemblance to a real business
+  is coincidental.

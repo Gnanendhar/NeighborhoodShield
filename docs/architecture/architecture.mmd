@@ -1,0 +1,39 @@
+%%{init: {"theme":"neutral","flowchart":{"curve":"basis","nodeSpacing":30,"rankSpacing":45}}}%%
+flowchart TB
+  subgraph Browser["Owner's browser (session only)"]
+    Q["Questionnaire<br/>Quick Check ≤36 Qs / Full"]
+    U["Optional uploads<br/>5 CSV/XLSX templates"]
+    OUT["Dashboard · Planner<br/>30-day PDF · JSON · baseline file"]
+  end
+  subgraph App["Streamlit app (Streamlit Community Cloud)"]
+    UI["app/ pages<br/>strings.yaml (all text, i18n-ready)"]
+  end
+  subgraph Engine["engine/ (importable Python package, no Streamlit)"]
+    ING["ingest.py<br/>Pydantic validation +<br/>redact-on-ingest"]
+    EV["evaluate.py<br/>declarative trigger DSL"]
+    SC["score.py<br/>0-100 per module<br/>posture tier"]
+    PL["planner.py<br/>downtime & $ ranges<br/>rank by risk avoided per $"]
+    RP["report.py<br/>fpdf2 PDF · JSON"]
+  end
+  subgraph Data["Versioned data in the repo (no customer data)"]
+    R["rules/*.yaml<br/>58 rules → CIS v8.1 IG1,<br/>NIST CSF 2.0, ATT&CK"]
+    S["rules/scenarios.yaml<br/>8 disruption scenarios"]
+    REF["data/reference/<br/>endoflife.date · CISA KEV ·<br/>CIS IG1 · ATT&CK · Chicago licenses"]
+  end
+  subgraph Ops["Build & quality"]
+    T["tools/refresh_reference_data.py<br/>(monthly snapshot)"]
+    CI["GitHub Actions<br/>ruff · pytest · reproducible samples"]
+    SAMP["sample_data/<br/>4 fictional businesses +<br/>hand-labelled expected findings"]
+  end
+  Q --> UI
+  U --> UI
+  UI --> ING --> EV --> SC --> PL --> RP --> OUT
+  R --> EV
+  REF --> EV
+  S --> PL
+  T --> REF
+  SAMP --> CI
+  R --> CI
+  API["Optional later:<br/>FastAPI wrapper"] -.-> Engine
+  classDef store fill:#EEF3F8,stroke:#1F3A5F;
+  class R,S,REF,SAMP store;

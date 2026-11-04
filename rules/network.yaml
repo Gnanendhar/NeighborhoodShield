@@ -1,0 +1,316 @@
+# Module 2: Network and Remote Access
+module: network
+version: "0.1.0"
+rules:
+  - id: NET-001
+    module: network
+    title: "Customer Wi-Fi shares the register's network"
+    evidence: questionnaire
+    trigger: {kind: answer, q: net_guest_wifi_separate, in: ["no", "dont_know"]}
+    severity: high
+    cis_safeguards: ["4.2"]
+    nist_csf: [PR.IR-01]
+    attack: [T1557]
+    scenario: pos_tampering_or_outage
+    finding_plain: "Customers on your Wi-Fi are on the same network as your register and office computers. Anyone sitting in your shop could try to reach them."
+    finding_technical: "No guest/corporate segmentation. Enable the router's guest SSID with client isolation, or a separate VLAN for POS (PCI DSS also expects cardholder systems to be segmented)."
+    fixes:
+      - {action: "Turn on the router's 'Guest network' and give customers only that password.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner}
+      - {action: "If the router has no guest network, replace it with a small-business router that does.", cost_tier: moderate, effort: "2 hours", effort_minutes: 120, who: owner_or_contractor}
+    sources: [cis_ig1, pci_ssc_small_merchant]
+
+  - id: NET-002
+    module: network
+    title: "Remote desktop or file sharing reachable from the internet"
+    evidence: both
+    trigger:
+      any_of:
+        - kind: rows
+          table: firewall_rules
+          where:
+            - {col: enabled, op: eq, value: "Y"}
+            - {col: action, op: eq, value: allow}
+            - {col: direction, op: eq, value: inbound}
+            - {col: source, op: in, value: [wan, any]}
+            - {col: service_or_port, op: contains_any, value: ["3389", rdp, "445", smb, "23", telnet, "5900", vnc]}
+        - all_of:
+            - {kind: answer, q: net_remote_access_used, in: ["yes"]}
+            - {kind: answer, q: net_remote_access_mfa, in: ["no", "dont_know"]}
+    severity: critical
+    cis_safeguards: ["4.4", "6.4"]
+    nist_csf: [PR.IR-01, PR.AA-03]
+    attack: [T1133, T1021.001]
+    scenario: ransomware_primary_system
+    finding_plain: "A computer here can be reached from the internet with a remote-control connection that only needs a password. This is one of the most common ways ransomware gets into small businesses."
+    finding_technical: "Inbound allow from WAN/any to RDP/SMB/Telnet/VNC, or remote access in use without MFA. Remove the port forward; broker remote access through an MFA-protected tool or VPN."
+    fixes:
+      - {action: "Turn off the inbound rule and switch to a remote support tool that asks for a code on your phone.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner_or_contractor}
+      - {action: "If remote access is truly needed, have a contractor set up a VPN (a private, locked connection) with sign-in codes.", cost_tier: contractor, effort: "2 hours", effort_minutes: 120, who: contractor}
+    sources: [cisa_ransomware_guide, cis_ig1]
+
+  - id: NET-003
+    module: network
+    title: "Remote access without multi-factor authentication"
+    evidence: questionnaire
+    trigger:
+      all_of:
+        - {kind: answer, q: net_remote_access_used, in: ["yes", "dont_know"]}
+        - {kind: answer, q: net_remote_access_mfa, in: ["no", "dont_know"]}
+    severity: critical
+    cis_safeguards: ["6.4"]
+    nist_csf: [PR.AA-03]
+    attack: [T1133, T1219]
+    scenario: ransomware_primary_system
+    finding_plain: "Someone connects to a business computer from outside, and only a password protects that connection."
+    finding_technical: "Remote access (VPN/RMM/remote-control tool) without MFA, IG1 6.4. Enable MFA in the tool's account settings; restrict to named users."
+    fixes:
+      - {action: "Turn on two-step verification in TeamViewer, AnyDesk, or your VPN (private remote connection) account.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner}
+    sources: [cisa_mfa, cis_ig1]
+
+  - id: NET-004
+    module: network
+    title: "Remote-control program always running"
+    evidence: questionnaire
+    trigger: {kind: answer, q: net_remote_tool_always_on, in: ["yes", "dont_know"]}
+    severity: medium
+    cis_safeguards: ["4.1", "6.4"]
+    nist_csf: [PR.PS-01]
+    attack: [T1219]
+    scenario: ransomware_primary_system
+    finding_plain: "A remote-control program is always on, so the door is open even when nobody is using it. Scammers also ask people to install these tools."
+    finding_technical: "Unattended remote access enabled persistently. Disable unattended access or require per-session approval; remove unused remote tools."
+    fixes:
+      - {action: "Set the remote tool to require someone at the computer to approve each session, or uninstall it if it is not needed.", cost_tier: free, effort: "15 minutes", effort_minutes: 15, who: owner}
+    sources: [cis_ig1, cisa_cyber_essentials]
+
+  - id: NET-005
+    module: network
+    title: "Router still has its default admin password"
+    evidence: questionnaire
+    trigger:
+      any_of:
+        - {kind: answer, q: net_router_default_password, in: ["yes", "dont_know"]}
+        - {kind: answer, q: net_router_admin_logged_in, in: ["no"]}
+    severity: high
+    cis_safeguards: ["4.7"]
+    nist_csf: [PR.PS-01]
+    attack: [T1078.001]
+    scenario: router_compromise
+    finding_plain: "The password that controls your router is still the factory one. Those passwords are published online for every model."
+    finding_technical: "Default administrative credentials on network infrastructure (IG1 4.7). Change admin password, disable remote/WAN administration and WPS."
+    fixes:
+      - {action: "Log in to the router, change the admin password, and turn off 'remote management' and 'WPS'.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner_or_contractor}
+    sources: [cis_ig1, cisa_secure_our_world]
+
+  - id: NET-006
+    module: network
+    title: "Router not updated in over a year"
+    evidence: questionnaire
+    trigger: {kind: answer, q: net_router_updated, in: ["longer", "dont_know"]}
+    severity: high
+    cis_safeguards: ["12.1"]
+    nist_csf: [PR.PS-02]
+    attack: [T1190]
+    scenario: router_compromise
+    finding_plain: "Your router has not had an update in over a year. Routers are attacked constantly, and old ones stop getting fixes."
+    finding_technical: "Network infrastructure firmware not current (IG1 12.1). Update firmware; if the model is end-of-life, replace it. ISP-provided gateways: ask the ISP to confirm auto-update."
+    fixes:
+      - {action: "Check for a firmware update in the router's settings or the maker's app. If it is your internet company's router, call and ask them to confirm it updates itself.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner}
+      - {action: "Replace a router the maker no longer supports.", cost_tier: moderate, effort: "2 hours", effort_minutes: 120, who: owner_or_contractor}
+    sources: [cis_ig1, endoflife_date]
+
+  - id: NET-007
+    module: network
+    title: "Firewall rule allows everything"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: firewall_rules
+      where:
+        - {col: enabled, op: eq, value: "Y"}
+        - {col: action, op: eq, value: allow}
+        - {col: source, op: eq, value: any}
+        - {col: destination, op: eq, value: any}
+        - {col: service_or_port, op: in, value: [any, "*", all]}
+    severity: high
+    cis_safeguards: ["4.4", "4.5"]
+    nist_csf: [PR.IR-01]
+    attack: [T1190]
+    scenario: ransomware_primary_system
+    finding_plain: "One firewall rule lets any traffic go anywhere. That is like leaving every door unlocked."
+    finding_technical: "Enabled any/any/any allow rule. Replace with default-deny inbound and explicit, documented allows."
+    fixes:
+      - {action: "Have a contractor replace the 'allow everything' rule with specific rules for what you actually use.", cost_tier: contractor, effort: "2 hours", effort_minutes: 120, who: contractor}
+    sources: [cis_ig1]
+
+  - id: NET-008
+    module: network
+    title: "Router or device admin page open to the internet"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: firewall_rules
+      where:
+        - {col: enabled, op: eq, value: "Y"}
+        - {col: action, op: eq, value: allow}
+        - {col: direction, op: eq, value: inbound}
+        - {col: source, op: in, value: [wan, any]}
+        - {col: service_or_port, op: contains_any, value: ["22", ssh, "8080", "8443", "4433", "80", "443", admin, webui]}
+    severity: high
+    cis_safeguards: ["4.2", "4.4"]
+    nist_csf: [PR.IR-01, PR.PS-01]
+    attack: [T1190, T1133]
+    scenario: router_compromise
+    finding_plain: "A management page or login (for the router, cameras, or a computer) can be reached from the internet. Criminals scan for these all day."
+    finding_technical: "Inbound WAN allow to management/web services (SSH/HTTP/HTTPS/alt-admin ports). Disable WAN administration; publish services only through a hardened, patched, MFA-protected path."
+    fixes:
+      - {action: "Turn off 'remote management' in the router settings and remove the port forward (the rule that lets internet traffic in).", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner_or_contractor}
+    sources: [cis_ig1, cisa_kev]
+
+  - id: NET-009
+    module: network
+    title: "Guest network can reach business devices"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: firewall_rules
+      where:
+        - {col: enabled, op: eq, value: "Y"}
+        - {col: action, op: eq, value: allow}
+        - {col: source, op: eq, value: guest}
+        - {col: destination, op: in, value: [lan, any]}
+    severity: high
+    cis_safeguards: ["4.2"]
+    nist_csf: [PR.IR-01]
+    attack: [T1557]
+    scenario: pos_tampering_or_outage
+    finding_plain: "Your firewall lets devices on the customer Wi-Fi talk to your business computers."
+    finding_technical: "Allow rule from guest to lan/any. Guest should be internet-only with client isolation."
+    fixes:
+      - {action: "Change the guest network to 'internet only' and turn on client isolation.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner_or_contractor}
+    sources: [cis_ig1, pci_ssc_small_merchant]
+
+  - id: NET-010
+    module: network
+    title: "Firewall rules with no explanation"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: firewall_rules
+      where:
+        - {col: enabled, op: eq, value: "Y"}
+        - {col: action, op: eq, value: allow}
+        - {col: comment, op: is_empty}
+    severity: low
+    cis_safeguards: ["4.2"]
+    nist_csf: [PR.PS-01]
+    attack: []
+    scenario: router_compromise
+    finding_plain: "Some firewall rules have no note saying what they are for, so nobody knows if they are still needed."
+    finding_technical: "Allow rules without comment/owner. Document purpose and owner; remove anything unclaimed (IG1 4.2 secure configuration process for network infrastructure)."
+    fixes:
+      - {action: "Ask whoever set up the router to label each rule, and remove the ones nobody needs.", cost_tier: contractor, effort: "1 hour", effort_minutes: 60, who: contractor}
+    sources: [cis_ig1]
+
+  - id: NET-011
+    module: network
+    title: "No blocking of dangerous websites"
+    evidence: questionnaire
+    trigger: {kind: answer, q: net_dns_filtering, in: ["no", "dont_know"]}
+    severity: low
+    cis_safeguards: ["9.2"]
+    nist_csf: [DE.CM-01]
+    attack: [T1566.002, T1204]
+    scenario: malware_outbreak
+    finding_plain: "Nothing stops a computer here from opening a known scam or virus website after a wrong click."
+    finding_technical: "No protective DNS. Point router DNS to a free filtering resolver (e.g., Quad9 9.9.9.9) or enable the router's security subscription."
+    fixes:
+      - {action: "Change the router's DNS setting to a free filtering service such as Quad9 (9.9.9.9).", cost_tier: free, effort: "15 minutes", effort_minutes: 15, who: owner_or_contractor}
+    sources: [cis_ig1, cisa_cyber_essentials]
+
+  - id: NET-012
+    module: network
+    title: "Remote-control software found on devices"
+    evidence: upload
+    trigger:
+      kind: rows
+      table: patch_inventory
+      where:
+        - {col: key_software_name, op: contains_any, value: [teamviewer, anydesk, "screenconnect", "connectwise", "splashtop", "rustdesk", "logmein", "vnc"]}
+    severity: medium
+    cis_safeguards: ["2.3", "6.4"]
+    nist_csf: [ID.AM-02, PR.AA-03]
+    attack: [T1219]
+    scenario: ransomware_primary_system
+    finding_plain: "At least one device has a remote-control program installed. Make sure you know who uses it and that it asks for a code."
+    finding_technical: "Remote access tool present in software inventory. Confirm it is authorized (2.3), patched, MFA-enforced (6.4), and not configured for unattended access."
+    fixes:
+      - {action: "Confirm who uses the remote program; uninstall it if nobody does, or turn on its sign-in code.", cost_tier: free, effort: "20 minutes", effort_minutes: 20, who: owner}
+    sources: [cis_ig1, cisa_ransomware_guide]
+
+  # --- Email domain checks (Week 1 extension). Evidence comes from a public DNS
+  # --- lookup of the owner's own domain, run only when the owner asks for it.
+  - id: NET-013
+    module: network
+    title: "Anyone can send email pretending to be your business"
+    evidence: lookup
+    trigger:
+      kind: rows
+      table: email_domain_check
+      where:
+        - {col: dmarc_policy, op: eq, value: missing}
+    severity: high
+    cis_safeguards: ["9.5"]
+    nist_csf: [PR.PS-01, PR.DS-02]
+    attack: [T1566, T1534, T1657]
+    scenario: account_takeover_fraud
+    finding_plain: "Your email address has no protection against copycats. A criminal can send fake invoices to your customers that look like they came from you."
+    finding_technical: "No _dmarc TXT record. Publish DMARC (start p=none with rua reporting, move to quarantine/reject after 2 to 4 weeks of clean reports). Gmail, Yahoo, Microsoft and Apple now require SPF/DKIM/DMARC for bulk senders (data/reference/email_auth_requirements.csv). CIS v8.1 9.5 is an IG2 safeguard: beyond the IG1 baseline on purpose."
+    fixes:
+      - {action: "Ask whoever set up your email (or your email provider's help page) to add a 'DMARC record'. It is one line of text and free.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner_or_contractor}
+    sources: [cisa_cyber_essentials, fbi_bec]
+
+  - id: NET-014
+    module: network
+    title: "Email protection is only watching, not blocking"
+    evidence: lookup
+    trigger:
+      kind: rows
+      table: email_domain_check
+      where:
+        - {col: dmarc_policy, op: eq, value: none}
+    severity: medium
+    cis_safeguards: ["9.5"]
+    nist_csf: [PR.PS-01]
+    attack: [T1566, T1534]
+    scenario: account_takeover_fraud
+    finding_plain: "Your email protection is set to 'watch only'. Fake emails pretending to be you still get delivered."
+    finding_technical: "DMARC p=none (monitoring). Review aggregate reports, then move to p=quarantine and p=reject. EasyDMARC 2026: 52.1% of top domains publish DMARC but only 22.9% enforce it."
+    fixes:
+      - {action: "Change the DMARC setting from 'none' to 'quarantine' once your real email is passing, then to 'reject'.", cost_tier: contractor, effort: "1 hour", effort_minutes: 60, who: contractor}
+    sources: [cisa_cyber_essentials]
+
+  - id: NET-015
+    module: network
+    title: "No list of who may send your email"
+    evidence: lookup
+    trigger:
+      any_of:
+        - kind: rows
+          table: email_domain_check
+          where:
+            - {col: spf_present, op: eq, value: "N"}
+        - kind: rows
+          table: email_domain_check
+          where:
+            - {col: spf_all_qualifier, op: in, value: ["+all", "?all"]}
+    severity: medium
+    cis_safeguards: ["9.5"]
+    nist_csf: [PR.PS-01]
+    attack: [T1566]
+    scenario: account_takeover_fraud
+    finding_plain: "Your email settings do not say which services are allowed to send email for you, so receiving servers cannot spot fakes."
+    finding_technical: "SPF missing or permissive (+all / ?all). Publish SPF listing the actual senders (e.g. include:_spf.google.com or include:spf.protection.outlook.com) ending in ~all or -all; stay under the 10-DNS-lookup limit."
+    fixes:
+      - {action: "Add or fix the 'SPF record' using your email provider's setup guide.", cost_tier: free, effort: "30 minutes", effort_minutes: 30, who: owner_or_contractor}
+    sources: [cisa_cyber_essentials]
