@@ -60,14 +60,15 @@ python sample_data\generate.py                  # regenerate sample businesses (
 
 ```
 app/                 Streamlit pages (UI only)
-engine/              Importable package: schemas, loader (Weeks 2-6: ingest, evaluate, score, planner, report)
+engine/              Importable package: schemas, loader, ingest (validate + redact uploads),
+                     evaluate (rules engine), samples
 rules/               identity / network / patching / endpoint / recovery .yaml, scenarios.yaml, sources.yaml
 content/             strings.yaml: every owner-facing sentence (Spanish-ready)
 templates/           5 CSV templates, guides/, examples/, export_scripts/ (PowerShell)
 sample_data/         generate.py and businesses/<name>/{profile,answers,expected_findings}.yaml + uploads/
 data/reference/      dated snapshots of public data (no customer data, ever)
 tools/               reference-data refresh, mapping-sheet builder
-docs/                architecture, mapping XLSX, design, ADRs, data sources, gate reviews, LinkedIn drafts
+docs/                architecture, mapping XLSX, design, ADRs, data sources
 tests/               pytest suite (runs in CI on every push)
 ```
 

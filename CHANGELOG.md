@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0 (2026-11-14)
+
+* Upload parsing (`engine/ingest.py`): CSV or Excel, column and value checks with plain-language messages, extra columns dropped on read, size and row limits, Excel read without running formulas.
+* Redaction on read: user IDs hashed with a per-session salt, IP addresses shortened to their network, device and system names replaced with role labels.
+* Rules engine (`engine/evaluate.py`): evaluates the YAML triggers with three outcomes (fired, clear, not evaluable), end-of-life and CISA KEV lookups, plain-language evidence for every finding.
+* Module 1 (identity, 16 rules) marked implemented and shown in the app; the engine also matches the hand-labelled findings for all 62 rules and the legal flags on every sample business.
+* App: Results page, optional file uploads in the Full Assessment, and a one-click sample business.
+* 659 tests.
+
 ## 0.1.1 — Week 1 extension (2026-11-04)
 
 * Ten extensions specified in docs/extensions.md (ADR 0006 to 0008).

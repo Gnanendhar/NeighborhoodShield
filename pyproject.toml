@@ -1,6 +1,6 @@
 [project]
 name = "neighborhoodshield"
-version = "0.1.0"
+version = "0.2.0"
 description = "Self-service cybersecurity assessment for neighborhood businesses (ChiEAC CommunityWealth AI)"
 readme = "README.md"
 requires-python = ">=3.12"

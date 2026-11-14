@@ -1,10 +1,11 @@
 # Module 1: Identity and Privileged Access (+ security awareness, CIS Control 14)
-# status: spec = specified in Week 1, executable from Week 2.
+# status: implemented = evaluated by engine/evaluate.py.
 module: identity
 version: "0.1.0"
 rules:
   - id: IAM-001
     module: identity
+    status: implemented
     title: "Shared logins"
     evidence: both
     trigger:
@@ -29,6 +30,7 @@ rules:
 
   - id: IAM-002
     module: identity
+    status: implemented
     title: "No multi-factor authentication on business email"
     evidence: questionnaire
     trigger: {kind: answer, q: iam_mfa_email, in: ["no", "dont_know"]}
@@ -45,6 +47,7 @@ rules:
 
   - id: IAM-003
     module: identity
+    status: implemented
     title: "Former staff may still have access"
     evidence: questionnaire
     trigger: {kind: answer, q: iam_former_staff_access, in: ["yes", "dont_know"]}
@@ -62,6 +65,7 @@ rules:
 
   - id: IAM-004
     module: identity
+    status: implemented
     title: "Dormant account still active"
     evidence: upload
     trigger:
@@ -84,6 +88,7 @@ rules:
 
   - id: IAM-005
     module: identity
+    status: implemented
     title: "No multi-factor authentication on online banking"
     evidence: questionnaire
     trigger: {kind: answer, q: iam_mfa_banking, in: ["no", "dont_know"]}
@@ -101,6 +106,7 @@ rules:
 
   - id: IAM-006
     module: identity
+    status: implemented
     title: "No multi-factor authentication on register or booking admin"
     evidence: questionnaire
     trigger: {kind: answer, q: iam_mfa_pos_admin, in: ["no", "dont_know"]}
@@ -117,6 +123,7 @@ rules:
 
   - id: IAM-007
     module: identity
+    status: implemented
     title: "Too many people are administrators"
     evidence: both
     trigger:
@@ -142,6 +149,7 @@ rules:
 
   - id: IAM-008
     module: identity
+    status: implemented
     title: "Administrator rights on everyday accounts"
     evidence: upload
     trigger:
@@ -164,6 +172,7 @@ rules:
 
   - id: IAM-009
     module: identity
+    status: implemented
     title: "Administrator accounts without multi-factor authentication"
     evidence: upload
     trigger:
@@ -186,6 +195,7 @@ rules:
 
   - id: IAM-010
     module: identity
+    status: implemented
     title: "Staff accounts without multi-factor authentication"
     evidence: upload
     trigger:
@@ -208,6 +218,7 @@ rules:
 
   - id: IAM-011
     module: identity
+    status: implemented
     title: "Passwords reused or kept in your head"
     evidence: questionnaire
     trigger:
@@ -227,6 +238,7 @@ rules:
 
   - id: IAM-012
     module: identity
+    status: implemented
     title: "Staff have not been shown how to spot scams"
     evidence: questionnaire
     trigger:
@@ -246,6 +258,7 @@ rules:
 
   - id: IAM-013
     module: identity
+    status: implemented
     title: "Payment changes are not double-checked"
     evidence: questionnaire
     trigger: {kind: answer, q: iam_payment_verification, in: ["no", "dont_know"]}
@@ -262,6 +275,7 @@ rules:
 
   - id: IAM-014
     module: identity
+    status: implemented
     title: "No list of accounts"
     evidence: questionnaire
     trigger: {kind: answer, q: iam_account_list, in: ["no", "dont_know"]}
@@ -278,6 +292,7 @@ rules:
 
   - id: IAM-015
     module: identity
+    status: implemented
     title: "Accounts with no known owner"
     evidence: upload
     trigger:
@@ -299,6 +314,7 @@ rules:
 
   - id: IAM-016
     module: identity
+    status: implemented
     title: "Nobody checks for leaked passwords"
     evidence: questionnaire
     trigger: {kind: answer, q: iam_breach_check, in: ["no", "dont_know"]}
