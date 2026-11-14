@@ -5,7 +5,7 @@
 | 1 | PowerShell exporters pass the PowerShell 7.4 parser but have not yet run on a real Windows machine | Run `Export-NSLocalDevice.ps1` on the builder's own laptop and `Export-NSADUsers.ps1` in the home-lab domain; fix and record results (Week 2) |
 | 2 | CIS safeguard titles cross-checked against a secondary index | Confirm against the official v8.1 workbook after free CIS registration |
 | 3 | NIST CSF 2.0 subcategory per rule is the author's mapping | Cross-check in CIS Controls Navigator before external publication |
-| 4 | Calibration statistics taken from secondary summaries | Confirm against IC3, DBIR, IBM primary reports in Week 5 |
+| 4 | Scenario values: Sophos, Nationwide and Hiscox figures read from press releases or coverage; no dataset reports days closed for businesses under 20 staff | Recheck against full reports when available; sanity-check with a real owner (see docs/calibration_notes.md) |
 | 5 | `os_version` must currently match endoflife.date labels (e.g. `11 24H2 (W)`) | Week 3: normalizer for edition and wording variants |
 | 6 | Chicago by-community-area counts not yet captured (portal blocked from build environment) | Run `python tools/refresh_reference_data.py chicago` locally |
 | 7 | NET-002 and NET-003 can both fire on the same questionnaire answers | Planner de-duplicates by shared fix (Week 5) |

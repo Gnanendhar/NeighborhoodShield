@@ -402,7 +402,9 @@ class Scenario(BaseModel):
     systems_affected: list[str]
     attack: list[str] = Field(default_factory=list)
     text_flags: list[str] = Field(default_factory=list)
-    calibration_status: Literal["starting_value", "calibrated"] = "starting_value"
+    # calibrated: taken from published small-business data; estimated: worked out from cited inputs.
+    calibration_status: Literal["calibrated", "estimated"]
+    reviewed_on: date
     source_notes: list[str] = Field(min_length=1)
 
     @model_validator(mode="after")

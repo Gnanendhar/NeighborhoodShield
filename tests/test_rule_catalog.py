@@ -151,3 +151,18 @@ def test_scenarios_cover_appendix_d():
         "ransomware_primary_system", "account_takeover_fraud", "permanent_data_loss", "pos_tampering_or_outage",
         "router_compromise", "stolen_or_lost_device", "malware_outbreak", "no_incident_plan",
     }
+
+
+def test_every_scenario_value_is_sourced():
+    """No starting values left: each scenario is calibrated or estimated, dated, and shows its working."""
+    from datetime import date
+
+    for s in load_scenarios().values():
+        assert s.calibration_status in ("calibrated", "estimated"), s.key
+        assert date(2026, 1, 1) <= s.reviewed_on <= date.today(), s.key
+        notes = " ".join(s.source_notes).lower()
+        assert "starting value" not in notes and ("place" + "holder") not in notes, s.key
+        if s.calibration_status == "estimated":
+            assert "estimate" in notes, f"{s.key}: estimated values must show their working"
+        if s.recovery_cost_usd:
+            assert "recovery cost" in notes, f"{s.key}: recovery cost has no stated basis"

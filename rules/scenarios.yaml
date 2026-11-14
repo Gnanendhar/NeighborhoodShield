@@ -1,7 +1,17 @@
 # Disruption scenarios used by the Business Survival Security Planner.
-# Week 1 status: starting values from Appendix D of the project brief.
-# Week 5 task: calibrate each value against the sources in docs/calibration_notes.md
-# and flip calibration_status to "calibrated" with a dated note.
+#
+# Every value is sourced (reviewed 2026-11-14; full log in docs/calibration_notes.md):
+#   calibrated - taken from published small-business data
+#   estimated  - worked out from cited inputs; the working is in source_notes
+#
+# recovery_cost_usd is what the business pays to get working again (IT help,
+# investigators, replacement hardware). Lost sales are NOT included here: the
+# Planner adds them from downtime days x the owner's daily sales.
+#
+# Labor rate used in estimates: $150 per hour for outside IT help, the middle of
+# the $101-$200 break-fix band most chosen in Kaseya's MSP pricing survey (2020).
+# For comparison, the U.S. median wage for computer support specialists was
+# $30.24 per hour in May 2025 (BLS), so in-house help would cost less.
 #
 # Formula (Appendix D):
 #   exposure_low/high = downtime_days_low/high x midpoint(daily_sales_band)
@@ -9,97 +19,111 @@
 #                       is one the owner cannot operate without, else 0.5)
 #                       + recovery_cost_usd
 #   no_incident_plan is a multiplier: it adds extra_days to any other scenario.
-version: "0.1.0"
+version: "0.2.0"
 scenarios:
   - key: ransomware_primary_system
     name: "Ransomware on the main computer"
     description_plain: "Criminals lock your files and demand money. The register, records, and schedule stop working until the computer is rebuilt."
     downtime_days_low: 3
-    downtime_days_high: 10
-    recovery_cost_usd: 2500
+    downtime_days_high: 30
+    recovery_cost_usd: 18000
     systems_affected: [pos_payments, records, booking, email, payroll]
     attack: [T1133, T1021.001, T1486, T1490]
     text_flags: [notification_if_sensitive_data]
-    calibration_status: starting_value
+    calibration_status: calibrated
+    reviewed_on: 2026-11-14
     source_notes:
-      - "Brief Appendix D starting value."
-      - "Verizon DBIR 2026 (via Cyber Readiness Institute summary): small organizations were 96% of ransomware victims; 69% of SMBs did not pay, citing reliable backups."
-      - "FBI IC3 2025: 3,611 ransomware complaints, >$32M reported losses (complaint data understates downtime cost)."
-      - "Nationwide 2024 (press release): average small-business cyber claim $18,000-21,000; recovery can take up to 75 days; 81% of owners believe an attack would cost them under $5,000."
+      - "Downtime: Sophos State of Ransomware 2025 (3,400 organizations of 100-5,000 employees hit by ransomware, survey January-March 2025; no smaller businesses were surveyed): 53% fully recovered within a week, 18% took more than a month. Low = 3 days for a small business restoring from a working backup; high = 30 days for the slow-recovery tail."
+      - "Recovery cost: Nationwide small-business survey (September 2024; 1-50 employees, under $10M revenue): the average small-business cyber claim is $18,000-$21,000, and recovery can take up to 75 days. The lower end is used because claims can include some lost income, which the Planner adds separately."
+      - "Context only: FBI IC3 2025 recorded 3,611 ransomware complaints with $32,320,105 in reported losses; the FBI notes this excludes lost business, time, wages, files, equipment, and remediation services."
   - key: account_takeover_fraud
     name: "Email or bank account taken over"
     description_plain: "Someone logs in as you, reads your email, and tricks customers, suppliers, or your bank into sending money to them."
     downtime_days_low: 0
     downtime_days_high: 2
-    recovery_cost_usd: 500
+    recovery_cost_usd: 600
     systems_affected: [email, payroll]
     attack: [T1078, T1566, T1114, T1534, T1657]
     text_flags: [direct_fraud_loss_possible]
-    calibration_status: starting_value
+    calibration_status: estimated
+    reviewed_on: 2026-11-14
     source_notes:
-      - "Brief Appendix D starting value."
-      - "FBI IC3 2025: business email compromise losses reported at over $3 billion (via The Record summary of the IC3 report)."
+      - "Downtime: Hiscox Cyber Readiness Report 2026 (6,800 firms under 250 employees, UK, Europe, U.S.): incidents caused about 32 hours of disruption on average, which is 0 to 2 working days."
+      - "Recovery cost (estimate): about 4 hours of outside IT help to lock the account, reset passwords and turn on sign-in codes, at $150 per hour = $600."
+      - "Money stolen is shown as a text warning, not a number, because it varies too widely: FBI IC3 2025 recorded 24,768 business email compromise complaints with $3,046,598,558 in losses (about $123,000 per complaint, across victims of every size)."
   - key: permanent_data_loss
     name: "Records lost for good"
     description_plain: "A computer dies or is wiped and there is no working copy. Records have to be rebuilt by hand."
-    downtime_days_low: 5
-    downtime_days_high: 20
-    recovery_cost_usd: 1000
+    downtime_days_low: 7
+    downtime_days_high: 30
+    recovery_cost_usd: 1500
     systems_affected: [records, payroll, booking]
     attack: [T1485, T1490]
     text_flags: [notification_if_sensitive_data]
-    calibration_status: starting_value
+    calibration_status: estimated
+    reviewed_on: 2026-11-14
     source_notes:
-      - "Brief Appendix D starting value."
+      - "Downtime (estimate): with no backup, recovery is at best like the median ransomware case and often like the slow tail. Sophos 2025: 53% of ransomware victims recovered within a week and 18% took more than a month. Low = 7 days, high = 30 days."
+      - "Recovery cost (estimate): about 10 hours of outside IT help to attempt recovery and set up a replacement drive, at $150 per hour = $1,500. Professional lab data recovery would cost more and is not assumed."
+      - "Nationwide 2024: small-business recovery after a cyber incident can take up to 75 days."
   - key: pos_tampering_or_outage
     name: "Register tampered with or down"
     description_plain: "Someone gets into the register or card system, or it stops working, and you cannot take cards."
     downtime_days_low: 1
     downtime_days_high: 5
-    recovery_cost_usd: 1000
+    recovery_cost_usd: 1200
     systems_affected: [pos_payments, online_orders]
     attack: [T1078.001, T1056, T1565]
     text_flags: [card_data_notification]
-    calibration_status: starting_value
+    calibration_status: estimated
+    reviewed_on: 2026-11-14
     source_notes:
-      - "Brief Appendix D starting value."
+      - "Downtime: Hiscox 2026: about 32 hours of disruption per incident on average for firms under 250 employees (low = 1 day). High = 5 days while the register provider replaces hardware or investigates (estimate)."
+      - "Recovery cost (estimate): about 8 hours of outside IT and register-provider time, at $150 per hour = $1,200."
+      - "If card data may have been taken, the card_data_notification flag explains that the card processor can require a PCI forensic investigation; SecurityMetrics (a PCI forensic firm) puts these at about $8,000 for small merchants. That cost is shown as text, not added here."
   - key: router_compromise
     name: "Router taken over"
     description_plain: "Someone takes control of the box that connects you to the internet and can watch or block everything on your network."
     downtime_days_low: 1
     downtime_days_high: 3
-    recovery_cost_usd: 300
+    recovery_cost_usd: 600
     systems_affected: [pos_payments, booking, email, online_orders, door_camera, records]
     attack: [T1078.001, T1190, T1557]
     text_flags: []
-    calibration_status: starting_value
+    calibration_status: estimated
+    reviewed_on: 2026-11-14
     source_notes:
-      - "Brief Appendix D starting value."
-      - "Verizon DBIR 2026 (via CRI summary): unpatched vulnerabilities in edge devices cited in 29% of cases discussed."
+      - "Downtime: Hiscox 2026: about 32 hours of disruption per incident on average (low = 1 day); high = 3 days if a replacement router has to be bought and set up (estimate)."
+      - "Recovery cost (estimate): about 4 hours of outside IT help to reset or replace and reconfigure the router, at $150 per hour = $600 (hardware not included; many internet providers replace their own router at no charge)."
+      - "Verizon DBIR 2026 (via Cyber Readiness Institute summary): unpatched vulnerabilities in edge devices such as routers were cited in 29% of cases discussed."
   - key: stolen_or_lost_device
     name: "Laptop or phone lost or stolen"
     description_plain: "A device with business information goes missing and whoever has it can read the files."
     downtime_days_low: 1
     downtime_days_high: 3
-    recovery_cost_usd: 800
+    recovery_cost_usd: 1300
     systems_affected: [records, email]
     attack: [T1005, T1052]
     text_flags: [notification_if_sensitive_data]
-    calibration_status: starting_value
+    calibration_status: estimated
+    reviewed_on: 2026-11-14
     source_notes:
-      - "Brief Appendix D starting value."
+      - "Recovery cost (estimate): replacement computer about $1,000 (Omdia: the average U.S. PC sell-in price passed $1,000 in the second quarter of 2026) plus about 2 hours of outside IT help to set it up and lock the old device's accounts, at $150 per hour = $1,300."
+      - "Downtime (estimate): 1 to 3 days to buy and set up a replacement."
   - key: malware_outbreak
     name: "Virus spreads across computers"
     description_plain: "Harmful software spreads from one computer to the others and they all need cleaning."
-    downtime_days_low: 2
+    downtime_days_low: 1
     downtime_days_high: 5
-    recovery_cost_usd: 1000
+    recovery_cost_usd: 1200
     systems_affected: [pos_payments, records, email, booking, payroll]
     attack: [T1204, T1091]
     text_flags: []
-    calibration_status: starting_value
+    calibration_status: estimated
+    reviewed_on: 2026-11-14
     source_notes:
-      - "Brief Appendix D starting value."
+      - "Downtime: Hiscox 2026: about 32 hours of disruption per incident on average (low = 1 day); high = 5 days when several computers need cleaning or rebuilding (estimate)."
+      - "Recovery cost (estimate): about 8 hours of outside IT help to clean or rebuild a few computers, at $150 per hour = $1,200."
   - key: no_incident_plan
     name: "No plan for a bad day"
     description_plain: "Nobody knows who to call, so every problem takes longer to fix."
@@ -112,6 +136,7 @@ scenarios:
     systems_affected: [pos_payments, booking, email, payroll, records, door_camera, online_orders]
     attack: []
     text_flags: []
-    calibration_status: starting_value
+    calibration_status: estimated
+    reviewed_on: 2026-11-14
     source_notes:
-      - "Brief Appendix D starting value (adds 1 to 2 days to any other scenario)."
+      - "Extra days (estimate): without a plan, finding and hiring outside help adds about 1 to 2 working days, roughly the same length as the average incident disruption Hiscox 2026 reports (about 32 hours)."

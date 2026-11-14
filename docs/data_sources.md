@@ -30,9 +30,9 @@ Everything the product knows comes from (1) public frameworks encoded as rules, 
 * **Only 22.9% of the top 1.8 million domains enforce DMARC** (EasyDMARC 2026), while Google, Yahoo and Microsoft (since May 5, 2025) require it from bulk senders.
 * **Illinois BIPA was amended on Aug 2, 2024**: repeat scans of the same person by the same method are one violation, and electronic signatures count as consent.
 
-## Published statistics for Planner calibration (Week 5)
+## Published statistics for Planner calibration
 
-Secondary summaries were used in Week 1; confirm each figure against the primary report before it appears in the app or pitch. See `docs/calibration_notes.md`.
+Each scenario value cites its source, and figures were checked against the primary report where one is public. See `docs/calibration_notes.md` for the full log and which figures came from press coverage.
 
 ## What we will never use
 

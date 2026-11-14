@@ -69,7 +69,7 @@ Row operators: `eq ne in not_in gt lt gte lte older_than_days newer_than_days is
 
 * Module score = `100 − 100 × Σ weight(fired) / Σ weight(all rules evaluable for that business)`, weights critical 10, high 6, medium 3, low 1. Only rules whose evidence was available count in the denominator, so a Quick Check is not penalized for missing uploads.
 * Posture tier from the lowest module score and the count of critical findings (exact thresholds tuned on the four sample businesses in Week 4).
-* Planner formula per brief Appendix D; scenarios in `rules/scenarios.yaml` are starting values until Week 5 calibration (`docs/calibration_notes.md`).
+* Planner formula per brief Appendix D; each scenario in `rules/scenarios.yaml` is calibrated from published small-business data or estimated from cited inputs (`docs/calibration_notes.md`).
 
 ## 7. Out of scope (v1)
 

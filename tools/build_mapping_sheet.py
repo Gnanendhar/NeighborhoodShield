@@ -111,7 +111,7 @@ def main() -> None:
         ("Rules — one row per rule: safeguard, NIST CSF 2.0, MITRE ATT&CK, trigger, severity, scenario, finding text, fixes.", BODY),
         ("IG1_Coverage — all 56 IG1 safeguards with a live count of rules citing each one, and the reason for any gap.", BODY),
         ("Summary — rule counts by module and severity (formulas over the Rules tab).", BODY),
-        ("Scenarios — disruption scenarios used by the Business Survival Security Planner (starting values, Week 5 calibration).", BODY),
+        ("Scenarios — disruption scenarios used by the Business Survival Security Planner, each calibrated or estimated from cited sources.", BODY),
         ("Questionnaire — every question, its tier (core = Quick Check), and the rules it feeds.", BODY),
         ("Sources — citation registry used by the rules.", BODY),
         ("Legal_Flags, Insurance_Readiness, Benchmarks — Week 1 extensions (docs/extensions.md).", BODY),
@@ -233,21 +233,21 @@ def main() -> None:
     ws = wb.create_sheet("Scenarios")
     cols = ["Key", "Name", "Plain description", "Downtime low (days)", "Downtime high (days)",
             "Recovery cost (USD)", "Multiplier?", "Extra days low", "Extra days high", "Systems affected",
-            "ATT&CK", "Rules mapped (live)", "Calibration", "Source notes"]
-    header(ws, 1, cols, [26, 28, 50, 10, 10, 11, 10, 9, 9, 40, 26, 10, 12, 80])
+            "ATT&CK", "Rules mapped (live)", "Calibration", "Reviewed on", "Source notes"]
+    header(ws, 1, cols, [26, 28, 50, 10, 10, 11, 10, 9, 9, 40, 26, 10, 12, 12, 80])
     for i, s in enumerate(scenarios.values(), start=2):
         vals = [s.key, s.name, s.description_plain, s.downtime_days_low, s.downtime_days_high, s.recovery_cost_usd,
                 "yes" if s.is_multiplier else "no", s.extra_days_low, s.extra_days_high, ", ".join(s.systems_affected),
                 ", ".join(s.attack), f"=COUNTIF(Rules!$L$2:$L${last_rule_row},A{i})", s.calibration_status,
-                "\n".join(s.source_notes)]
+                s.reviewed_on.isoformat(), "\n".join(s.source_notes)]
         for c_i, v in enumerate(vals, start=1):
             cell = ws.cell(row=i, column=c_i, value=v)
             body(cell)
             if c_i in (4, 5, 6, 8, 9):
-                cell.font = Font(name=FONT, size=10, color="0000FF")  # inputs to calibrate
+                cell.font = Font(name=FONT, size=10, color="0000FF")  # sourced inputs
         ws.cell(row=i, column=6).number_format = "$#,##0"
     note_row = len(scenarios) + 3
-    ws.cell(row=note_row, column=1, value="Blue values are starting values from brief Appendix D; calibrate in Week 5 and record the source in rules/scenarios.yaml.").font = BODY
+    ws.cell(row=note_row, column=1, value="Blue values are sourced inputs: calibrated = published small-business data; estimated = worked out from cited inputs. Sources and working are in rules/scenarios.yaml and docs/calibration_notes.md.").font = BODY
 
     # --------------------------------------------------------- Questionnaire
     ws = wb.create_sheet("Questionnaire")
