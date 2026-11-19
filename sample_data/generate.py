@@ -1,7 +1,7 @@
-"""Generate the sample businesses used for demos, tests, and LinkedIn posts.
+"""Generate the sample businesses used for demos and tests.
 
-Why synthetic businesses, grounded in real data
------------------------------------------------
+Why sample businesses, grounded in real data
+--------------------------------------------
 The brief forbids storing any real business's data, so the *businesses* are
 samples created for testing. Everything they run, however, is real and dated:
 
@@ -17,10 +17,12 @@ samples created for testing. Everything they run, however, is real and dated:
   categories).
 
 Each business ships with ``expected_findings.yaml``: hand-labelled ground truth
-written from the rule specs (not from engine output). From Week 2 the rules
-engine is tested against these labels, so the sample data is the test oracle.
+written from the rule specs (not from engine output). The rules engine is
+tested against these labels, so the sample data is the test oracle.
 
-Run:  python sample_data/generate.py   (deterministic: fixed seed and as-of date)
+Run:  python sample_data/generate.py   (deterministic: fixed seed and as-of date;
+only the standard library's random module is used, so output is identical on
+every Python version)
 """
 
 from __future__ import annotations

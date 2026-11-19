@@ -58,7 +58,7 @@ TEMPLATE_TITLES = {
 state = st.session_state
 state.setdefault("answers", {})
 state.setdefault("uploaded_tables", {})   # validated + redacted rows from the owner's files
-state.setdefault("sample_tables", {})     # rows from a sample business
+state.setdefault("sample_tables", {})     # rows from a sample business (created for testing)
 state.setdefault("lookup_tables", {})     # public lookups the owner asked for (email domain)
 state.setdefault("salt", secrets.token_bytes(16))  # per-session: hashed IDs cannot be linked across sessions
 
