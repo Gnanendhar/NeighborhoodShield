@@ -7,7 +7,7 @@
 | device_id | label | `office-pc`, `owner-laptop` |
 | device_type | `desktop` `laptop` `tablet` `phone` `server` `pos_terminal` `router` | |
 | os_name | text | `Windows`, `macOS`, `iPadOS`, router maker |
-| os_version | text | `10 22H2`, `11 24H2`, `Sonoma 14` (from `winver`) |
+| os_version | text | `11 Pro 24H2`, `10 Home 22H2`, `Sonoma 14.6`, `iOS 18.1` (from `winver` or Settings > About). Include the edition (Home, Pro, Enterprise) on Windows: support ends at different dates |
 | auto_update_enabled | `Y` `N` | |
 | last_patch_date | YYYY-MM-DD | |
 | pending_critical_updates | whole number | 0 if none |

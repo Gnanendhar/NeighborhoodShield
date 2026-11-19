@@ -1,5 +1,5 @@
 # Runtime dependencies (Streamlit Community Cloud installs this file).
-# Ranges are tested in CI on Python 3.12; tighten to exact pins before the Week 6 deployment.
+# Ranges are tested in CI on Python 3.12; tighten to exact pins before deployment.
 streamlit>=1.50,<2
 pandas>=2.2,<4
 openpyxl>=3.1,<4
@@ -7,3 +7,4 @@ pydantic>=2.7,<3
 PyYAML>=6.0,<7
 plotly>=5.24,<8
 fpdf2>=2.8,<3
+dnspython>=2.6,<3

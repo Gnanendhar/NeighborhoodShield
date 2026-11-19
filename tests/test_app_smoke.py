@@ -52,3 +52,18 @@ def test_results_page_without_answers_explains_what_to_do():
     at = _app()
     at.sidebar.radio[0].set_value("Results").run()
     assert any("Answer some questions first" in i.value for i in at.info)
+
+
+def test_results_are_grouped_by_area_and_include_email_and_update_findings():
+    at = _app()
+    at.sidebar.radio[0].set_value("Questionnaire").run()
+    at.selectbox(key="sample_choice").set_value("Little Sprouts Home Daycare (sample)").run()
+    next(b for b in at.button if b.label.startswith("Fill in")).click().run()
+    assert any("littlesprouts-daycare.example" in m.value for m in at.markdown), "sample email check not shown"
+    at.sidebar.radio[0].set_value("Results").run()
+    assert not at.exception, at.exception
+    headers = [h.value for h in at.subheader]
+    assert headers[:3] == ["Logins and passwords", "Wi-Fi, internet, and remote access", "Updates"], headers
+    titles = " | ".join(e.label for e in at.expander)
+    assert "Anyone can send email pretending to be your business" in titles
+    assert "Device operating system past end of life" in titles or "Computer running an operating system" in titles

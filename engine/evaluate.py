@@ -30,6 +30,7 @@ from functools import cache
 from typing import Any, Literal
 
 from .loader import load_legal_flags, load_rules, load_strings
+from .normalize import candidate_labels, port_matches
 from .paths import REFERENCE_DIR
 from .schemas import (
     SEVERITY_WEIGHT,
@@ -106,29 +107,30 @@ def _eol_date(v: str) -> date | None:
     return date.fromisoformat(v)
 
 
-# os_name as owners and export scripts write it -> endoflife.date product key.
-OS_PRODUCT = {
-    "windows": "windows", "microsoft windows": "windows",
-    "windows server": "windows-server",
-    "macos": "macos", "mac os": "macos", "os x": "macos",
-    "ios": "ios", "ipados": "ipados", "android": "android", "ubuntu": "ubuntu",
-}
+def eol_release(os_name: str | None, os_version: str | None) -> tuple[str, str] | None:
+    """The (product, release label) in the snapshot that this device's OS matches, if any."""
+    if not os_version:
+        return None
+    product, labels = candidate_labels(os_name, os_version)
+    if product is None:
+        return None
+    idx = _eol_index()
+    for label in [os_version.strip(), *labels]:
+        if (product, label.lower()) in idx:
+            return product, label
+    return None
 
 
 def is_end_of_life(os_name: str | None, os_version: str | None, as_of: date) -> bool:
     """True when every matching release in the snapshot ended support on or before ``as_of``.
 
-    Unknown products or versions are not flagged. Wording variants such as
-    "Windows 11 Home 24H2" are not normalized yet.
+    Wording variants ("Windows 11 Home 24H2", "macOS Sonoma 14.6") are normalized
+    first (engine/normalize.py). Unknown products or versions are never flagged.
     """
-    if not os_name or not os_version:
+    hit = eol_release(os_name, os_version)
+    if hit is None:
         return False
-    product = OS_PRODUCT.get(os_name.strip().lower())
-    if not product:
-        return False
-    eols = _eol_index().get((product, os_version.strip().lower()))
-    if not eols:
-        return False
+    eols = _eol_index()[(hit[0], hit[1].lower())]
     return all(e is not None and e <= as_of for e in eols)
 
 
@@ -214,6 +216,8 @@ def _row_matches(where: Where, row: dict[str, Any], as_of: date) -> bool:
         return is_end_of_life(_s(row.get("os_name")), _s(v), as_of)
     if op == "in_kev":
         return bool(kev_matches(_s(v)))
+    if op == "port_in":
+        return port_matches(_s(v), list(target or []))
     raise ValueError(f"operator {op!r} has no implementation")  # schema and engine out of sync
 
 

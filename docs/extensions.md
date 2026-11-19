@@ -4,7 +4,7 @@ Ten additions that make NeighborhoodShield more useful to owners and easier for 
 
 | # | Extension | Week | Est. hours | Real data behind it | Status in repo |
 |---|---|---|---|---|---|
-| 1 | Email domain check (SPF / DMARC) | 3 | 4 | Mailbox-provider sender rules (Google, Yahoo, Microsoft, Apple); EasyDMARC 2026 adoption | Rules NET-013/014/015, lookup schema, sample lookups |
+| 1 | Email domain check (SPF / DMARC) | 3 | 4 | Mailbox-provider sender rules (Google, Yahoo, Microsoft, Apple); EasyDMARC 2026 adoption | Built: `engine/lookups.py`, app check in the Full Assessment, rules NET-013/014/015 |
 | 2 | Illinois & Chicago legal flags | 5 | 3 | 740 ILCS 14 (BIPA, amended Aug 2, 2024); 815 ILCS 530/10 (PIPA); PCI DSS v4.0.1; HIPAA scope; FTC Safeguards Rule | `rules/legal_flags.yaml` (6 flags), new question `bp_biometrics` |
 | 3 | Cyber-insurance readiness view | 5 | 4 | Common underwriting controls; Nationwide 2024: 42% of small businesses carry cyber coverage | `rules/insurance_readiness.yaml` (12 controls) |
 | 4 | Calendar reminders (.ics) | 6 | 2 | RFC 5545 standard; CIS 11.1 (quarterly restore test), 5.3, 6.2 | Spec below |

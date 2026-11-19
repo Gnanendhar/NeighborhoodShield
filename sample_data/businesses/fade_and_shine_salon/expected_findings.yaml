@@ -28,6 +28,7 @@ expected_rule_ids:
 - IAM-012
 - IAM-014
 - IAM-016
+- NET-002
 - NET-005
 - NET-006
 - NET-007

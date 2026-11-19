@@ -6,6 +6,7 @@ version: "0.1.0"
 rules:
   - id: PAT-001
     module: patching
+    status: implemented
     title: "Automatic updates are off"
     evidence: both
     trigger:
@@ -29,6 +30,7 @@ rules:
 
   - id: PAT-002
     module: patching
+    status: implemented
     title: "Computer running an operating system with no more security fixes"
     evidence: questionnaire
     trigger: {kind: answer, q: pat_old_os, in: ["yes", "dont_know"]}
@@ -46,6 +48,7 @@ rules:
 
   - id: PAT-003
     module: patching
+    status: implemented
     title: "Register or booking software no longer supported"
     evidence: questionnaire
     trigger: {kind: answer, q: pat_pos_supported, in: ["no", "dont_know"]}
@@ -62,6 +65,7 @@ rules:
 
   - id: PAT-004
     module: patching
+    status: implemented
     title: "Updates waiting for more than a month"
     evidence: questionnaire
     trigger: {kind: answer, q: pat_update_reminder_month, in: ["yes", "dont_know"]}
@@ -78,6 +82,7 @@ rules:
 
   - id: PAT-005
     module: patching
+    status: implemented
     title: "Critical updates pending for over 30 days"
     evidence: upload
     trigger:
@@ -99,6 +104,7 @@ rules:
 
   - id: PAT-006
     module: patching
+    status: implemented
     title: "Device operating system past end of life"
     evidence: upload
     trigger:
@@ -119,6 +125,7 @@ rules:
 
   - id: PAT-007
     module: patching
+    status: implemented
     title: "Key software no longer supported by its maker"
     evidence: upload
     trigger:
@@ -139,6 +146,7 @@ rules:
 
   - id: PAT-008
     module: patching
+    status: implemented
     title: "Software with weaknesses criminals are actively using"
     evidence: upload
     trigger:
@@ -159,6 +167,7 @@ rules:
 
   - id: PAT-009
     module: patching
+    status: implemented
     title: "Web browsers may be out of date"
     evidence: questionnaire
     trigger: {kind: answer, q: pat_browser_updates, in: ["no", "dont_know"]}
@@ -175,6 +184,7 @@ rules:
 
   - id: PAT-010
     module: patching
+    status: implemented
     title: "No list of software in use"
     evidence: questionnaire
     trigger: {kind: answer, q: pat_software_list, in: ["no", "dont_know"]}

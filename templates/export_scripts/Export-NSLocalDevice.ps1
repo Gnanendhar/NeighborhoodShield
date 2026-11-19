@@ -51,7 +51,16 @@ $build = [int]$cv.CurrentBuild
 $major = if ($build -ge 22000) { '11' } else { '10' }   # Windows 11 still reports "10.0" as its version
 $display = if ($cv.PSObject.Properties.Name -contains 'DisplayVersion') { $cv.DisplayVersion } else { $cv.ReleaseId }
 $edition = $cv.EditionID   # Core = Home, Professional = Pro, Enterprise, Education ...
-$osVersion = "$major $display"
+# End-of-life dates differ by edition (Home/Pro end sooner than Enterprise/Education), so record it.
+$editionLabel = switch -Wildcard ($edition) {
+    'Core*'         { 'Home' }
+    'Professional*' { 'Pro' }
+    'IoT*'          { 'IoT Enterprise' }
+    'Enterprise*'   { 'Enterprise' }
+    'Education*'    { 'Education' }
+    default         { '' }
+}
+$osVersion = ("$major $editionLabel $display" -replace '\s+', ' ').Trim()   # e.g. "11 Pro 24H2"
 $osName = if ($os.ProductType -ne 1) { 'Windows Server' } else { 'Windows' }
 
 if (-not $DeviceType) {

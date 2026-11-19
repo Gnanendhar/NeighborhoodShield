@@ -37,9 +37,9 @@ from engine.loader import (  # noqa: E402
     load_scenarios,
     load_strings,
 )
+from engine.lookups import LookupProblem, check_email_domain  # noqa: E402
 from engine.paths import REFERENCE_DIR, SAMPLE_DIR  # noqa: E402
 from engine.samples import load_profile, load_sample, sample_businesses  # noqa: E402
-from engine.schemas import TEMPLATE_MODELS  # noqa: E402
 
 S = load_strings()
 st.set_page_config(page_title=S["app"]["name"], page_icon="🛡️", layout="centered")
@@ -59,6 +59,7 @@ state = st.session_state
 state.setdefault("answers", {})
 state.setdefault("uploaded_tables", {})   # validated + redacted rows from the owner's files
 state.setdefault("sample_tables", {})     # rows from a sample business
+state.setdefault("lookup_tables", {})     # public lookups the owner asked for (email domain)
 state.setdefault("salt", secrets.token_bytes(16))  # per-session: hashed IDs cannot be linked across sessions
 
 
@@ -94,7 +95,7 @@ def page_start() -> None:
     st.title(f"🛡️ {S['app']['name']}")
     st.subheader(S["app"]["tagline"])
     st.info("Preview: answer the questions (and optionally upload files), then open **Results**. This version "
-            "checks logins and access; more areas are being added.")
+            "checks logins, Wi-Fi and remote access, and updates; more areas are being added.")
     for key in ("privacy", "acceptable_use", "self_assessment"):
         st.markdown(f"**{key.replace('_', ' ').title()}.** {S['statements'][key]}")
     footer()
@@ -112,7 +113,8 @@ def load_sample_into_session() -> None:
     state["answers"] = dict(a.answers)
     for qid, val in a.answers.items():
         state[f"q_{qid}"] = val
-    state["sample_tables"] = {k: v for k, v in a.tables.items() if k in TEMPLATE_MODELS}
+    state["sample_tables"] = dict(a.tables)
+    state["lookup_tables"] = {}
     state["sample_as_of"] = a.as_of
     state["mode"] = "Full Assessment"
 
@@ -120,7 +122,7 @@ def load_sample_into_session() -> None:
 def clear_session() -> None:
     for key in [k for k in state.keys() if str(k).startswith(("q_", "up_"))]:
         del state[key]
-    state["answers"], state["uploaded_tables"], state["sample_tables"] = {}, {}, {}
+    state["answers"], state["uploaded_tables"], state["sample_tables"], state["lookup_tables"] = {}, {}, {}, {}
     state.pop("sample_as_of", None)
 
 
@@ -144,6 +146,42 @@ def render_uploads() -> None:
         else:
             state["uploaded_tables"].pop(table, None)
             st.error("This file was not used:\n\n" + "\n".join(f"- {e}" for e in res.errors))
+
+
+def describe_email_check(row: dict) -> list[str]:
+    """Plain-language summary of one email_domain_check row."""
+    lines = [{
+        "missing": "No DMARC record: anyone can send email that looks like it comes from you.",
+        "none": "DMARC is set to watch only (p=none): forged emails sent in your name are still delivered.",
+        "quarantine": "DMARC sends forged emails in your name to spam (p=quarantine). Good.",
+        "reject": "DMARC blocks forged emails in your name (p=reject). Best setting.",
+    }[row["dmarc_policy"]]]
+    if str(row["spf_present"]) == "N":
+        lines.append("No SPF record: there is no list of the services allowed to send your email.")
+    elif row["spf_all_qualifier"] in ("+all", "?all"):
+        lines.append(f"Your SPF record ends in {row['spf_all_qualifier']}, so it does not stop other senders.")
+    else:
+        lines.append(f"Your SPF record lists your senders and ends in {row['spf_all_qualifier']}. Good.")
+    return lines
+
+
+def render_email_check() -> None:
+    st.subheader("Email domain check (optional)")
+    st.caption(S["extensions"]["email_check_consent"])
+    domain = state["answers"].get("bp_email_domain")
+    if not domain:
+        st.caption("Type your email domain under 'About your business' (the part after the @) to use this check.")
+    elif st.button(f"Check {domain}", key="email_check_btn"):
+        try:
+            state["lookup_tables"]["email_domain_check"] = [check_email_domain(domain)]
+        except LookupProblem as exc:
+            state["lookup_tables"].pop("email_domain_check", None)
+            st.warning(str(exc))
+    rows = state["lookup_tables"].get("email_domain_check") or state["sample_tables"].get("email_domain_check")
+    if rows:
+        row = rows[0]
+        st.markdown(f"**{row['domain']}** (checked {row['checked_on']}):\n\n"
+                    + "\n".join(f"- {line}" for line in describe_email_check(row)))
 
 
 def page_questionnaire() -> None:
@@ -178,6 +216,7 @@ def page_questionnaire() -> None:
     st.progress(done / len(shown), text=S["app"]["progress"].format(current=done, total=len(shown)))
     if mode == "Full Assessment":
         render_uploads()
+        render_email_check()
     if done:
         st.download_button("Download my answers (stays on your device)",
                            yaml.safe_dump(answers, sort_keys=False), file_name="neighborhoodshield_answers.yaml")
@@ -186,7 +225,7 @@ def page_questionnaire() -> None:
 
 
 def current_assessment() -> Assessment:
-    tables = {**state["sample_tables"], **state["uploaded_tables"]}
+    tables = {**state["sample_tables"], **state["lookup_tables"], **state["uploaded_tables"]}
     return Assessment(answers=dict(state["answers"]), tables=tables, as_of=state.get("sample_as_of", date.today()))
 
 
@@ -216,14 +255,19 @@ def page_results() -> None:
     fired = [r for r in results if r.fired]
     skipped = [r for r in results if r.status == "not_evaluated"]
 
-    st.subheader("Logins and access")
     cols = st.columns(4)
     for col, sev in zip(cols, SEV_ORDER, strict=True):
         col.metric(f"{SEV_ICON[sev]} {S['results']['severity'][sev]}", sum(r.rule.severity.value == sev for r in fired))
     if not fired:
         st.success("No problems found in the checks we could run. Keep checking every three months.")
-    for r in fired:
-        render_finding(r)
+    titles = {s["id"]: s["title"] for s in S["sections"]}
+    for module in dict.fromkeys(r.rule.module.value for r in sorted(results, key=lambda r: r.rule.id)):
+        found = [r for r in fired if r.rule.module.value == module]
+        st.subheader(titles.get(module, module.title()))
+        if not found:
+            st.caption("No problems found in this area.")
+        for r in found:
+            render_finding(r)
     st.caption(f"{len(results) - len(skipped)} of {len(results)} checks could be run with what you provided.")
     if skipped:
         with st.expander(f"{len(skipped)} checks need more information"):

@@ -340,7 +340,8 @@ def salon() -> dict:
         "expected_legal_flags": ["LEG-001", "LEG-003"],
         "expected": [
             "IAM-001", "IAM-002", "IAM-005", "IAM-007", "IAM-009", "IAM-010", "IAM-011", "IAM-012", "IAM-014",
-            "NET-005", "NET-006", "NET-007", "NET-008", "NET-009", "NET-010", "NET-011",
+            # NET-002: the inbound any/any/any "dmz" rule also exposes remote desktop (3389) and file sharing (445).
+            "NET-002", "NET-005", "NET-006", "NET-007", "NET-008", "NET-009", "NET-010", "NET-011",
             "PAT-001", "PAT-002", "PAT-004", "PAT-005", "PAT-006", "PAT-007", "PAT-008", "PAT-009", "PAT-010",
             "END-001", "END-002", "END-003", "END-004", "END-006", "END-009", "END-011",
             "BKP-002", "BKP-003", "BKP-004", "BKP-005", "BKP-006", "BKP-007", "BKP-008", "BKP-009", "BKP-010",

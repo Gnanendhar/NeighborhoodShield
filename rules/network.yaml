@@ -4,6 +4,7 @@ version: "0.1.0"
 rules:
   - id: NET-001
     module: network
+    status: implemented
     title: "Customer Wi-Fi shares the register's network"
     evidence: questionnaire
     trigger: {kind: answer, q: net_guest_wifi_separate, in: ["no", "dont_know"]}
@@ -21,6 +22,7 @@ rules:
 
   - id: NET-002
     module: network
+    status: implemented
     title: "Remote desktop or file sharing reachable from the internet"
     evidence: both
     trigger:
@@ -32,7 +34,7 @@ rules:
             - {col: action, op: eq, value: allow}
             - {col: direction, op: eq, value: inbound}
             - {col: source, op: in, value: [wan, any]}
-            - {col: service_or_port, op: contains_any, value: ["3389", rdp, "445", smb, "23", telnet, "5900", vnc]}
+            - {col: service_or_port, op: port_in, value: ["3389", rdp, "445", smb, "23", telnet, "5900", vnc]}
         - all_of:
             - {kind: answer, q: net_remote_access_used, in: ["yes"]}
             - {kind: answer, q: net_remote_access_mfa, in: ["no", "dont_know"]}
@@ -50,6 +52,7 @@ rules:
 
   - id: NET-003
     module: network
+    status: implemented
     title: "Remote access without multi-factor authentication"
     evidence: questionnaire
     trigger:
@@ -69,6 +72,7 @@ rules:
 
   - id: NET-004
     module: network
+    status: implemented
     title: "Remote-control program always running"
     evidence: questionnaire
     trigger: {kind: answer, q: net_remote_tool_always_on, in: ["yes", "dont_know"]}
@@ -85,6 +89,7 @@ rules:
 
   - id: NET-005
     module: network
+    status: implemented
     title: "Router still has its default admin password"
     evidence: questionnaire
     trigger:
@@ -104,6 +109,7 @@ rules:
 
   - id: NET-006
     module: network
+    status: implemented
     title: "Router not updated in over a year"
     evidence: questionnaire
     trigger: {kind: answer, q: net_router_updated, in: ["longer", "dont_know"]}
@@ -121,6 +127,7 @@ rules:
 
   - id: NET-007
     module: network
+    status: implemented
     title: "Firewall rule allows everything"
     evidence: upload
     trigger:
@@ -145,6 +152,7 @@ rules:
 
   - id: NET-008
     module: network
+    status: implemented
     title: "Router or device admin page open to the internet"
     evidence: upload
     trigger:
@@ -155,7 +163,7 @@ rules:
         - {col: action, op: eq, value: allow}
         - {col: direction, op: eq, value: inbound}
         - {col: source, op: in, value: [wan, any]}
-        - {col: service_or_port, op: contains_any, value: ["22", ssh, "8080", "8443", "4433", "80", "443", admin, webui]}
+        - {col: service_or_port, op: port_in, value: ["22", ssh, "8080", "8443", "4433", "80", "443", admin, webui]}
     severity: high
     cis_safeguards: ["4.2", "4.4"]
     nist_csf: [PR.IR-01, PR.PS-01]
@@ -169,6 +177,7 @@ rules:
 
   - id: NET-009
     module: network
+    status: implemented
     title: "Guest network can reach business devices"
     evidence: upload
     trigger:
@@ -192,6 +201,7 @@ rules:
 
   - id: NET-010
     module: network
+    status: implemented
     title: "Firewall rules with no explanation"
     evidence: upload
     trigger:
@@ -214,6 +224,7 @@ rules:
 
   - id: NET-011
     module: network
+    status: implemented
     title: "No blocking of dangerous websites"
     evidence: questionnaire
     trigger: {kind: answer, q: net_dns_filtering, in: ["no", "dont_know"]}
@@ -230,6 +241,7 @@ rules:
 
   - id: NET-012
     module: network
+    status: implemented
     title: "Remote-control software found on devices"
     evidence: upload
     trigger:
@@ -252,6 +264,7 @@ rules:
   # --- lookup of the owner's own domain, run only when the owner asks for it.
   - id: NET-013
     module: network
+    status: implemented
     title: "Anyone can send email pretending to be your business"
     evidence: lookup
     trigger:
@@ -272,6 +285,7 @@ rules:
 
   - id: NET-014
     module: network
+    status: implemented
     title: "Email protection is only watching, not blocking"
     evidence: lookup
     trigger:
@@ -292,6 +306,7 @@ rules:
 
   - id: NET-015
     module: network
+    status: implemented
     title: "No list of who may send your email"
     evidence: lookup
     trigger:

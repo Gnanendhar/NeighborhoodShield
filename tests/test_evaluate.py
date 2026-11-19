@@ -111,7 +111,7 @@ def test_every_operator_used_by_the_catalog_is_implemented():
     from engine.evaluate import _row_matches
 
     for op in used:
-        _row_matches(Where(col="x", op=op, value=[] if op in ("in", "not_in", "contains_any") else 1),
+        _row_matches(Where(col="x", op=op, value=[] if op in ("in", "not_in", "contains_any", "port_in") else 1),
                      {"x": None, "os_name": None}, AS_OF)
 
 
@@ -137,7 +137,7 @@ def test_answer_evidence_uses_the_owners_wording():
     ("windows", "11 23h2 (w)", True),      # case does not matter
     ("iPadOS", "18", False),
     ("TP-Link firmware", "v14", False),    # not in the snapshot: never guessed
-    ("Windows", "11 Home 24H2", False),    # wording variant: not normalized yet
+    ("Windows", "11 Home 24H2", True),     # wording variant, normalized to 11 24H2 (W)
     (None, "10 22H2", False),
 ])
 def test_end_of_life_lookup(os_name, version, expected):

@@ -21,7 +21,7 @@ Owner uploads  ─┘        │                 │                  ▲       
 
 Rules live in `rules/<module>.yaml` and are validated at load by `engine/schemas.py::RuleSpec`. A malformed rule raises at start-up.
 
-**Trigger DSL** (evaluated from Week 2):
+**Trigger DSL** (evaluated by `engine/evaluate.py`):
 
 | Node | Meaning |
 |---|---|
@@ -30,10 +30,10 @@ Rules live in `rules/<module>.yaml` and are validated at load by `engine/schemas
 | `{kind: rows, table, where: [...], match: any \| none \| ratio}` | Rows of an upload matching every `where` |
 | `any_of: [...]`, `all_of: [...]` | Composition |
 
-Row operators: `eq ne in not_in gt lt gte lte older_than_days newer_than_days is_empty not_empty contains_any is_end_of_life in_kev`. Two are lookups into dated reference snapshots:
+Row operators: `eq ne in not_in gt lt gte lte older_than_days newer_than_days is_empty not_empty contains_any port_in is_end_of_life in_kev`. `port_in` reads firewall ports exactly (`tcp/3389`, `8080-8090`, `rdp`, `any`), so `8000` never matches `80`. Two operators are lookups into dated reference snapshots:
 
-* `is_end_of_life` — matches `os_version` against `release_label` in `data/reference/eol_table.csv` (endoflife.date) and fires if `eol` ≤ assessment date. Week 3 adds normalization (e.g. "Windows 11 Home 24H2" → `11 24H2 (W)`).
-* `in_kev` — the KEV product name (4+ characters, not equal to its vendor name, not a generic term) appears in `key_software_name`. Advisory only (name, not version). Week 1 testing found a KEV entry whose product is literally "Microsoft", which would flag every Microsoft program; the rule above excludes it.
+* `is_end_of_life` — matches `os_version` against `release_label` in `data/reference/eol_table.csv` (endoflife.date) and fires if `eol` ≤ assessment date. `engine/normalize.py` first maps owner wording onto the snapshot's labels ("Windows 11 Home 24H2" → `11 24H2 (W)`, "macOS Sonoma 14.6" → `14`); a version it cannot place is never reported as end of life.
+* `in_kev` — the KEV product name (4+ characters, not equal to its vendor name, not a generic term) appears in `key_software_name`. Advisory only (name, not version). Testing found a KEV entry whose product is literally "Microsoft", which would flag every Microsoft program; the rule above excludes it.
 
 **Integrity checks enforced by tests:** IDs sequential per module; every safeguard is a real IG1 safeguard; every ATT&CK ID exists in the official STIX bundle; every question ID and answer code exists; every upload column and enum value exists in the template; `evidence` field matches what the trigger actually uses; owner-facing text has no unexplained acronyms and stays under 50 words.
 

@@ -213,7 +213,7 @@ def template_columns(name: str) -> list[str]:
 RowOp = Literal[
     "eq", "ne", "in", "not_in", "gt", "lt", "gte", "lte",
     "older_than_days", "newer_than_days", "is_empty", "not_empty",
-    "contains_any", "is_end_of_life", "in_kev",
+    "contains_any", "is_end_of_life", "in_kev", "port_in",
 ]
 
 

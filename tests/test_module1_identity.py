@@ -53,7 +53,7 @@ CASES = {
 def test_every_identity_rule_has_cases_and_is_implemented():
     iam = {r.id for r in load_rules() if r.module.value == "identity"}
     assert iam == {k.split("/")[0] for k in CASES}
-    assert iam == {r.id for r in implemented_rules()}
+    assert iam <= {r.id for r in implemented_rules()}
 
 
 def test_admin_count_codes_used_here_exist():
@@ -88,9 +88,9 @@ def test_quick_check_without_uploads_skips_upload_only_rules():
 def test_module1_end_to_end_on_samples(biz, uploads):
     """Full Assessment matches the hand labels; a Quick Check never invents upload-only findings."""
     expected = {r for r in load_expected(biz)["expected_rule_ids"] if r.startswith("IAM-")}
-    fired = {r.rule.id for r in evaluate(load_sample(biz, with_uploads=uploads)) if r.fired}
+    fired = {r.rule.id for r in evaluate(load_sample(biz, with_uploads=uploads)) if r.fired and r.rule.id.startswith("IAM-")}
     if uploads:
         assert fired == expected
     else:
-        upload_only = {r.id for r in implemented_rules() if r.evidence == "upload"}
+        upload_only = {r.id for r in implemented_rules() if r.evidence in ("upload", "lookup")}
         assert fired <= expected and not (fired & upload_only)

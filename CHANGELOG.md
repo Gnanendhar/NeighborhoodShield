@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 (2026-11-19)
+
+* Modules 2 (network, 15 rules) and 3 (patching, 10 rules) implemented and shown in the app, each rule with a firing and a clear test. 41 of 62 rules are now live.
+* End-of-life checks understand how owners write versions: "Windows 11 Home 24H2", "10 Pro 22H2", "macOS Sonoma 14.6", "iOS 18.1", "Android 8.1". Unknown versions are never guessed.
+* Fix: the Windows export script wrote "11 24H2" without the edition, which never matched the end-of-life snapshot. It now writes "11 Pro 24H2".
+* Firewall ports are read exactly (`port_in`): ranges, service names and `any` are understood, and port 8000 no longer counts as port 80. The salon sample's inbound allow-all rule now correctly raises NET-002 (remote desktop and file sharing exposed); its hand label was updated.
+* Email domain check (`engine/lookups.py`): reads only public SPF, DMARC, MX and DKIM records for the owner's own domain, skips free webmail, feeds NET-013 to NET-015. Adds `dnspython`.
+* Results page grouped by area. 802 tests.
+
 ## 0.2.0 (2026-11-14)
 
 * Upload parsing (`engine/ingest.py`): CSV or Excel, column and value checks with plain-language messages, extra columns dropped on read, size and row limits, Excel read without running formulas.

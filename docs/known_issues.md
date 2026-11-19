@@ -6,7 +6,7 @@
 | 2 | CIS safeguard titles cross-checked against a secondary index | Confirm against the official v8.1 workbook after free CIS registration |
 | 3 | NIST CSF 2.0 subcategory per rule is the author's mapping | Cross-check in CIS Controls Navigator before external publication |
 | 4 | Scenario values: Sophos, Nationwide and Hiscox figures read from press releases or coverage; no dataset reports days closed for businesses under 20 staff | Recheck against full reports when available; sanity-check with a real owner (see docs/calibration_notes.md) |
-| 5 | `os_version` must currently match endoflife.date labels (e.g. `11 24H2 (W)`) | Week 3: normalizer for edition and wording variants |
+| 5 | Windows versions without an edition ("11 24H2") are treated as Home/Pro, which end support sooner than Enterprise | The export script now records the edition; owners typing by hand are asked to include it |
 | 6 | Chicago by-community-area counts not yet captured (portal blocked from build environment) | Run `python tools/refresh_reference_data.py chicago` locally |
 | 7 | NET-002 and NET-003 can both fire on the same questionnaire answers | Planner de-duplicates by shared fix (Week 5) |
 | 8 | Free-tool URLs could not be reached from the build environment | Run `python tools/check_links.py` locally before Week 6 |
