@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0 (2026-11-24)
+
+* Modules 4 (devices, 11 rules) and 5 (backups and recovery, 10 rules) implemented, each rule with a firing and a clear test. All 62 rules are now live.
+* Scoring (`engine/score.py`): a 0-100 score per area from the severity weights, skipped checks left out, and an overall posture tier (Exposed, Fragile, Developing, Resilient). The sample businesses rank as ADR 0005 expected.
+* Results dashboard: overall rating, a gauge per area, and area scores next to each section.
+
 ## 0.3.0 (2026-11-19)
 
 * Modules 2 (network, 15 rules) and 3 (patching, 10 rules) implemented and shown in the app, each rule with a firing and a clear test. 41 of 62 rules are now live.

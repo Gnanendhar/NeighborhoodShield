@@ -65,10 +65,10 @@ Row operators: `eq ne in not_in gt lt gte lte older_than_days newer_than_days is
 | Denial of service | Huge upload | 5 MB cap, row limit per template (Week 2) |
 | Elevation of privilege | Code execution from YAML | `yaml.safe_load` only; no `eval` in the trigger DSL |
 
-## 6. Scoring and Planner (spec for Weeks 4 and 5)
+## 6. Scoring and Planner
 
 * Module score = `100 − 100 × Σ weight(fired) / Σ weight(all rules evaluable for that business)`, weights critical 10, high 6, medium 3, low 1. Only rules whose evidence was available count in the denominator, so a Quick Check is not penalized for missing uploads.
-* Posture tier from the lowest module score and the count of critical findings (exact thresholds tuned on the four sample businesses in Week 4).
+* Posture tier (`engine/score.py`), worst first: **Exposed** if 2+ critical findings or any area below 40; **Fragile** if 1 critical finding or any area below 60; **Developing** if any area below 80; otherwise **Resilient**. No tier until every area has at least one answered check. Checked against the four sample businesses (ADR 0005).
 * Planner formula per brief Appendix D; each scenario in `rules/scenarios.yaml` is calibrated from published small-business data or estimated from cited inputs (`docs/calibration_notes.md`).
 
 ## 7. Out of scope (v1)

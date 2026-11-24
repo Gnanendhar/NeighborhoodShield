@@ -4,6 +4,7 @@ version: "0.1.0"
 rules:
   - id: BKP-001
     module: recovery
+    status: implemented
     title: "No backups"
     evidence: questionnaire
     trigger:
@@ -23,6 +24,7 @@ rules:
 
   - id: BKP-002
     module: recovery
+    status: implemented
     title: "Backups only on the same computer or in the same building"
     evidence: both
     trigger:
@@ -48,6 +50,7 @@ rules:
 
   - id: BKP-003
     module: recovery
+    status: implemented
     title: "Backup never tested"
     evidence: both
     trigger:
@@ -74,6 +77,7 @@ rules:
 
   - id: BKP-004
     module: recovery
+    status: implemented
     title: "Recovery would take days, or nobody knows"
     evidence: questionnaire
     trigger: {kind: answer, q: bkp_recovery_time, in: ["days", "dont_know"]}
@@ -90,6 +94,7 @@ rules:
 
   - id: BKP-005
     module: recovery
+    status: implemented
     title: "No list of who to call"
     evidence: questionnaire
     trigger: {kind: answer, q: bkp_contact_list, in: ["no", "dont_know"]}
@@ -106,6 +111,7 @@ rules:
 
   - id: BKP-006
     module: recovery
+    status: implemented
     title: "Nobody is named to take charge"
     evidence: questionnaire
     trigger: {kind: answer, q: bkp_incident_owner, in: ["no", "dont_know"]}
@@ -122,6 +128,7 @@ rules:
 
   - id: BKP-007
     module: recovery
+    status: implemented
     title: "Backup job has not succeeded recently"
     evidence: upload
     trigger:
@@ -143,6 +150,7 @@ rules:
 
   - id: BKP-008
     module: recovery
+    status: implemented
     title: "Backups not encrypted"
     evidence: upload
     trigger:
@@ -164,6 +172,7 @@ rules:
 
   - id: BKP-009
     module: recovery
+    status: implemented
     title: "Backups kept for too short a time"
     evidence: upload
     trigger:
@@ -184,6 +193,7 @@ rules:
 
   - id: BKP-010
     module: recovery
+    status: implemented
     title: "Outside companies with access are not tracked"
     evidence: questionnaire
     trigger: {kind: answer, q: bkp_vendor_list, in: ["no", "dont_know"]}

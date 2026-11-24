@@ -21,6 +21,7 @@ from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import streamlit as st
 import yaml
 
@@ -40,6 +41,7 @@ from engine.loader import (  # noqa: E402
 from engine.lookups import LookupProblem, check_email_domain  # noqa: E402
 from engine.paths import REFERENCE_DIR, SAMPLE_DIR  # noqa: E402
 from engine.samples import load_profile, load_sample, sample_businesses  # noqa: E402
+from engine.score import DEVELOPING_BELOW, EXPOSED_BELOW, FRAGILE_BELOW, score  # noqa: E402
 
 S = load_strings()
 st.set_page_config(page_title=S["app"]["name"], page_icon="🛡️", layout="centered")
@@ -94,8 +96,8 @@ def render_question(q: dict, key: str):
 def page_start() -> None:
     st.title(f"🛡️ {S['app']['name']}")
     st.subheader(S["app"]["tagline"])
-    st.info("Preview: answer the questions (and optionally upload files), then open **Results**. This version "
-            "checks logins, Wi-Fi and remote access, and updates; more areas are being added.")
+    st.info("Preview: answer the questions (and optionally upload files), then open **Results**. It checks "
+            "logins, Wi-Fi and remote access, updates, devices, and backups.")
     for key in ("privacy", "acceptable_use", "self_assessment"):
         st.markdown(f"**{key.replace('_', ' ').title()}.** {S['statements'][key]}")
     footer()
@@ -242,6 +244,67 @@ def render_finding(r) -> None:
         st.caption(f"CIS Controls v8.1: {', '.join(rule.cis_safeguards)} · rule {rule.id}")
 
 
+TIER_COLORS = {"exposed": "#B42318", "fragile": "#DC6803", "developing": "#CA8504", "resilient": "#3B7C0F"}
+# Gauge bands match the tier thresholds in engine/score.py.
+GAUGE_STEPS = [(0, EXPOSED_BELOW, "#FDE2E1"), (EXPOSED_BELOW, FRAGILE_BELOW, "#FEE9D6"),
+               (FRAGILE_BELOW, DEVELOPING_BELOW, "#FEF3C7"), (DEVELOPING_BELOW, 100, "#DCFCE7")]
+
+
+def _gauge_color(value: int) -> str:
+    if value < EXPOSED_BELOW:
+        return TIER_COLORS["exposed"]
+    if value < FRAGILE_BELOW:
+        return TIER_COLORS["fragile"]
+    if value < DEVELOPING_BELOW:
+        return TIER_COLORS["developing"]
+    return TIER_COLORS["resilient"]
+
+
+def gauge_figure(card) -> go.Figure:
+    """Overall score plus one gauge per area, in a 2 x 3 grid."""
+    R = S["results"]
+    items = [(R["overall_label"], card.overall)] + [
+        (R["area_short"].get(m.value, m.value.title()), ms.score) for m, ms in card.modules.items()]
+    fig = go.Figure()
+    for i, (label, value) in enumerate(items):
+        row, col = divmod(i, 3)
+        x0, x1 = col / 3 + 0.02, (col + 1) / 3 - 0.02
+        y0, y1 = (0.60, 0.98) if row == 0 else (0.12, 0.50)
+        text = f"<b>{label}</b>" if i == 0 else label
+        # Labels are annotations under each gauge: Indicator titles get dropped on narrow (phone) screens.
+        fig.add_annotation(text=text, showarrow=False, font={"size": 13}, x=(x0 + x1) / 2, y=y0 - 0.02,
+                           xref="paper", yref="paper", yanchor="top")
+        if value is None:
+            fig.add_annotation(text=R["not_checked"], showarrow=False, font={"size": 12}, x=(x0 + x1) / 2,
+                               y=(y0 + y1) / 2, xref="paper", yref="paper")
+            continue
+        fig.add_trace(go.Indicator(
+            mode="gauge+number", value=value, domain={"x": [x0, x1], "y": [y0, y1]},
+            number={"font": {"size": 26 if i == 0 else 22}},
+            gauge={"axis": {"range": [0, 100], "showticklabels": False, "ticks": ""},
+                   "bar": {"color": _gauge_color(value), "thickness": 0.35},
+                   "steps": [{"range": [lo, hi], "color": c} for lo, hi, c in GAUGE_STEPS]}))
+    fig.update_layout(height=360, margin={"t": 10, "b": 10, "l": 10, "r": 10})
+    return fig
+
+
+def render_dashboard(card) -> None:
+    R = S["results"]
+    if card.tier:
+        color = TIER_COLORS[card.tier]
+        st.markdown(
+            f"<div style='border-left:6px solid {color};padding:0.6rem 1rem;background:{color}14;border-radius:4px'>"
+            f"<div style='font-size:0.85rem;opacity:0.8'>Overall rating</div>"
+            f"<div style='font-size:1.6rem;font-weight:700;color:{color}'>{R['posture_tiers'][card.tier]}</div>"
+            f"<div>{R['posture_tier_help'][card.tier]}</div>"
+            f"<div style='font-size:0.85rem;opacity:0.8;margin-top:0.3rem'>{card.reason}</div></div>",
+            unsafe_allow_html=True)
+    else:
+        st.info(R["no_tier"])
+    st.plotly_chart(gauge_figure(card), use_container_width=True, config={"displayModeBar": False})
+    st.caption(R["score_help"])
+
+
 def page_results() -> None:
     st.title("Results")
     a = current_assessment()
@@ -252,19 +315,22 @@ def page_results() -> None:
     if "sample_as_of" in state:
         st.caption(f"Sample business, checked as of {a.as_of.isoformat()}.")
     results = evaluate(a)
+    card = score(results)
     fired = [r for r in results if r.fired]
     skipped = [r for r in results if r.status == "not_evaluated"]
 
+    render_dashboard(card)
     cols = st.columns(4)
     for col, sev in zip(cols, SEV_ORDER, strict=True):
         col.metric(f"{SEV_ICON[sev]} {S['results']['severity'][sev]}", sum(r.rule.severity.value == sev for r in fired))
     if not fired:
         st.success("No problems found in the checks we could run. Keep checking every three months.")
     titles = {s["id"]: s["title"] for s in S["sections"]}
-    for module in dict.fromkeys(r.rule.module.value for r in sorted(results, key=lambda r: r.rule.id)):
-        found = [r for r in fired if r.rule.module.value == module]
-        st.subheader(titles.get(module, module.title()))
-        if not found:
+    for module, ms in card.modules.items():
+        found = [r for r in fired if r.rule.module == module]
+        score_txt = f" · {ms.score}/100" if ms.score is not None else f" · {S['results']['not_checked']}"
+        st.subheader(titles.get(module.value, module.value.title()) + score_txt)
+        if ms.score is not None and not found:
             st.caption("No problems found in this area.")
         for r in found:
             render_finding(r)

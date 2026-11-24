@@ -3,4 +3,4 @@
 Kept free of Streamlit imports so it can be wrapped by FastAPI or a CLI later.
 """
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"

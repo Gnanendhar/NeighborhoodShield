@@ -503,7 +503,7 @@ results:
     developing: "Developing"
     resilient: "Resilient"
   posture_tier_help:
-    exposed: "Someone could get in or you could lose important records today. Start with the 'This week' list."
+    exposed: "Someone could get in or you could lose important records today. Start with the findings marked Fix now."
     fragile: "Some important protections are missing. A few free changes will make a big difference."
     developing: "The basics are mostly in place. Close the remaining gaps this month."
     resilient: "Strong basics. Keep checking every three months."
@@ -516,6 +516,16 @@ results:
     this_week: "Do this week"
     this_month: "Do this month"
     with_contractor: "Do with a contractor"
+  area_short:
+    identity: "Logins"
+    network: "Network"
+    patching: "Updates"
+    endpoint: "Devices"
+    recovery: "Backups"
+  overall_label: "Overall"
+  score_help: "Each area scores 0 to 100: higher is better. Checks you skipped are not counted against you."
+  not_checked: "Not checked yet"
+  no_tier: "Answer at least one question in every area to see your overall rating."
   severity:
     critical: "Fix now"
     high: "Fix soon"

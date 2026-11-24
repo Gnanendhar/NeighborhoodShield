@@ -63,7 +63,12 @@ def test_results_are_grouped_by_area_and_include_email_and_update_findings():
     at.sidebar.radio[0].set_value("Results").run()
     assert not at.exception, at.exception
     headers = [h.value for h in at.subheader]
-    assert headers[:3] == ["Logins and passwords", "Wi-Fi, internet, and remote access", "Updates"], headers
+    areas = ["Logins and passwords", "Wi-Fi, internet, and remote access", "Updates", "Computers, tablets, and phones",
+             "Backups and bad days"]
+    assert [h.split(" · ")[0] for h in headers[:5]] == areas, headers
+    assert all(h.endswith("/100") for h in headers[:5]), headers
+    page = " ".join(str(m.value) for m in at.markdown)
+    assert "Overall rating" in page and "Exposed" in page
     titles = " | ".join(e.label for e in at.expander)
     assert "Anyone can send email pretending to be your business" in titles
     assert "Device operating system past end of life" in titles or "Computer running an operating system" in titles

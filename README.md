@@ -62,7 +62,7 @@ python sample_data\generate.py                  # regenerate sample businesses (
 app/                 Streamlit pages (UI only)
 engine/              Importable package: schemas, loader, ingest (validate + redact uploads),
                      evaluate (rules engine), normalize (OS versions, firewall ports),
-                     lookups (email domain check), samples
+                     lookups (email domain check), score (area scores, posture tier), samples
 rules/               identity / network / patching / endpoint / recovery .yaml, scenarios.yaml, sources.yaml
 content/             strings.yaml: every owner-facing sentence (Spanish-ready)
 templates/           5 CSV templates, guides/, examples/, export_scripts/ (PowerShell)

@@ -4,6 +4,7 @@ version: "0.1.0"
 rules:
   - id: END-001
     module: endpoint
+    status: implemented
     title: "Not every computer has antivirus turned on"
     evidence: both
     trigger:
@@ -27,6 +28,7 @@ rules:
 
   - id: END-002
     module: endpoint
+    status: implemented
     title: "Laptops are not encrypted"
     evidence: questionnaire
     trigger: {kind: answer, q: end_encryption, in: ["no", "dont_know"]}
@@ -43,6 +45,7 @@ rules:
 
   - id: END-003
     module: endpoint
+    status: implemented
     title: "Computers do not lock themselves"
     evidence: questionnaire
     trigger: {kind: answer, q: end_screen_lock, in: ["no", "dont_know"]}
@@ -59,6 +62,7 @@ rules:
 
   - id: END-004
     module: endpoint
+    status: implemented
     title: "Business email on personal phones"
     evidence: questionnaire
     trigger: {kind: answer, q: end_personal_phones_email, in: ["yes", "dont_know"]}
@@ -75,6 +79,7 @@ rules:
 
   - id: END-005
     module: endpoint
+    status: implemented
     title: "Old devices with business data not wiped"
     evidence: questionnaire
     trigger: {kind: answer, q: end_old_devices, in: ["yes", "dont_know"]}
@@ -91,6 +96,7 @@ rules:
 
   - id: END-006
     module: endpoint
+    status: implemented
     title: "Protection turned off on a device"
     evidence: upload
     trigger:
@@ -112,6 +118,7 @@ rules:
 
   - id: END-007
     module: endpoint
+    status: implemented
     title: "Antivirus definitions out of date"
     evidence: upload
     trigger:
@@ -133,6 +140,7 @@ rules:
 
   - id: END-008
     module: endpoint
+    status: implemented
     title: "Portable device not encrypted"
     evidence: upload
     trigger:
@@ -154,6 +162,7 @@ rules:
 
   - id: END-009
     module: endpoint
+    status: implemented
     title: "Device without screen lock"
     evidence: upload
     trigger:
@@ -174,6 +183,7 @@ rules:
 
   - id: END-010
     module: endpoint
+    status: implemented
     title: "Device not seen in over 30 days"
     evidence: upload
     trigger:
@@ -194,6 +204,7 @@ rules:
 
   - id: END-011
     module: endpoint
+    status: implemented
     title: "No list of devices"
     evidence: questionnaire
     trigger: {kind: answer, q: end_device_list, in: ["no", "dont_know"]}
